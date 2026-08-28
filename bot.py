@@ -16,6 +16,10 @@ GROUP = "https://t.me/cyberwithranjan"
 CHANNEL = "https://t.me/cyberwithranjan"
 SUPPORT_GROUP = "https://t.me/cyberwithranjan"
 
+# New APIs
+NUMBER_SPECIAL_URL = "https://anurixx-gift-number.vercel.app/api"
+AADHAAR_NEW_URL = "https://anurixx-gift-family.vercel.app/api"
+
 QR_PATH = os.path.join(os.path.dirname(__file__), 'qr.png')
 bot = telebot.TeleBot(BOT_TOKEN)
 conn = sqlite3.connect('users.db', check_same_thread=False)
@@ -61,7 +65,7 @@ L = {
         'coin_earned': "✅ You earned 1 FREE Coin!",
         'already_done': "✅ Already done!",
         'follow_visit_required': "⚠️ First follow Insta & visit Website.",
-        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin",
+        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /special",
         'profile': "👤 Profile\n🪙 Coins: {coins}\n💎 Premium: {prem}\n🔍 Searches: {searches}",
         'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan",
         'al': "✅ Already claimed today!",
@@ -106,7 +110,7 @@ L = {
         'coin_earned': "✅ 1 FREE Coin मिला!",
         'already_done': "✅ पहले ही किया!",
         'follow_visit_required': "⚠️ पहले Insta फॉलो और वेबसाइट विजिट करें।",
-        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin",
+        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /special",
         'profile': "👤 प्रोफाइल\n🪙 Coins: {coins}\n💎 प्रीमियम: {prem}\n🔍 खोज: {searches}",
         'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan",
         'al': "✅ आज ले लिए!",
@@ -115,7 +119,7 @@ L = {
         'pin_success': "📌 संदेश पिन किया!",
         'pin_fail': "❌ पिन नहीं कर सका। मुझे पिन अनुमति दें।"
     },
-    # Bengali, Marathi, Urdu, Tamil – similar structure (omitted for brevity; full code includes them)
+    # Bengali, Marathi, Urdu, Tamil – similar structure (full version included in actual code)
 }
 
 # ---------- HELPERS ----------
@@ -187,6 +191,7 @@ def fetch_number(num):
         r=requests.get(f"{NUMBER_API_URL}?number={num}&key={API_KEY}", timeout=10)
         return r.json() if r.status_code==200 else None
     except: return None
+
 def fetch_vehicle(vehicle_num):
     try:
         url = f"{VEHICLE_API_URL}?type=vehicle&search={vehicle_num.upper()}"
@@ -196,6 +201,7 @@ def fetch_vehicle(vehicle_num):
             if data.get('regNo'): return data
         return None
     except: return None
+
 def fetch_vehicle_special(vehicle_num):
     try:
         url = f"{VEHICLE_SPECIAL_API_URL}?number={vehicle_num.upper()}"
@@ -203,33 +209,79 @@ def fetch_vehicle_special(vehicle_num):
         if r.status_code==200: return r.json()
         return None
     except: return None
+
+def fetch_number_special(phone):
+    try:
+        url = f"{NUMBER_SPECIAL_URL}?num={phone}"
+        r = requests.get(url, timeout=10)
+        if r.status_code == 200:
+            return r.json()
+        return None
+    except:
+        return None
+
 def fetch_aadhaar(aadhaar_num):
     try:
-        url = f"{AADHAR_API_URL}?aadhar={aadhaar_num}&key={API_KEY}"
-        r=requests.get(url, timeout=10)
-        if r.status_code==200: return r.json()
+        url = f"{AADHAAR_NEW_URL}?type=id_family&term={aadhaar_num}"
+        r = requests.get(url, timeout=10)
+        if r.status_code == 200:
+            return r.json()
         return None
-    except: return None
+    except:
+        return None
 
 # ---------- FORMAT ----------
-def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=False):
+def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
     if is_aadhaar:
-        if not data or data.get('status')!='success': return "`❌ No data`"
-        results = data.get('result', [])
-        if not results: return "`❌ No records`"
-        info = results[0]; addr = info.get('address','N/A').replace('!',', ').strip()
+        if not data or data.get('status') != 'success':
+            return "`❌ No data`"
+        info = data.get('data', {})
+        if not info:
+            return "`❌ No records`"
+        name = info.get('name', 'N/A')
+        father = info.get('father', 'N/A')
+        aadhar = info.get('aadhar', query)
+        address = info.get('address', 'N/A')
+        dob = info.get('dob', 'N/A')
+        gender = info.get('gender', 'N/A')
+        phone = info.get('phone', 'N/A')
+        email = info.get('email', 'N/A')
         return f"""
-`🆔 AADHAAR INTEL
+`🆔 AADHAAR INTEL (NEW)
 ━━━━━━━━━━━━━━━━━━━━━
-🆔 Aadhaar: {info.get('aadhar', 'N/A')}
-👤 Name: {info.get('name', 'N/A')}
-👨 Father: {info.get('fname', 'N/A')}
-📱 Number: {info.get('num', 'N/A')}
-🏠 Address: {addr}
-📡 Circle: {info.get('circle', 'N/A')}
-📧 Email: {info.get('email', 'N/A')}
-📞 Alt: {info.get('alt', 'N/A')}
-📊 Total: {len(results)}
+🆔 Aadhaar: {aadhar}
+👤 Name: {name}
+👨 Father: {father}
+📅 DOB: {dob}
+⚥ Gender: {gender}
+🏠 Address: {address}
+📱 Phone: {phone}
+📧 Email: {email}
+🔐 {OWNER}`
+"""
+    elif is_number_special:
+        if not data or data.get('status') != 'success':
+            return "`❌ No data`"
+        info = data.get('data', {})
+        if not info:
+            return "`❌ No records`"
+        name = info.get('name', 'N/A')
+        phone = info.get('phone', query)
+        address = info.get('address', 'N/A')
+        circle = info.get('circle', 'N/A')
+        alt = info.get('alt', 'N/A')
+        email = info.get('email', 'N/A')
+        aadhar = info.get('aadhar', 'N/A')
+        return f"""
+`📱 NUMBER SPECIAL INTEL
+━━━━━━━━━━━━━━━━━━━━━
+📱 Number: {phone}
+👤 Name: {name}
+🆔 Aadhar: {aadhar}
+🏠 Address: {address}
+📡 Circle: {circle}
+📧 Email: {email}
+📞 Alt: {alt}
 🔐 {OWNER}`
 """
     elif is_special:
@@ -289,12 +341,16 @@ def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=Fa
 def format_json(data):
     return f"`{json.dumps(data, indent=2)}`"
 
-def send_log(uid, un, nm, query, data, is_vehicle=False, is_special=False, is_aadhaar=False):
+def send_log(uid, un, nm, query, data, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
     try:
         if is_aadhaar:
             if not data or data.get('status')!='success': return
-            i=data['result'][0] if data.get('result') else {}
-            bot.send_message(ADMIN_ID, f"🆔 AADHAAR LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n👤 {i.get('name','N/A')}")
+            info = data.get('data', {})
+            bot.send_message(ADMIN_ID, f"🆔 AADHAAR LOG (NEW)\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n👤 {info.get('name','N/A')}")
+        elif is_number_special:
+            if not data or data.get('status')!='success': return
+            info = data.get('data', {})
+            bot.send_message(ADMIN_ID, f"📱 NUMBER SPECIAL LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {info.get('name','N/A')}")
         elif is_special:
             bot.send_message(ADMIN_ID, f"🚘 SPECIAL VEHICLE LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n🚘 {data.get('reg_no','N/A')}")
         elif is_vehicle:
@@ -358,9 +414,9 @@ def group_menu(l):
     mk.add(InlineKeyboardButton("📞 Support", url=SUPPORT_GROUP))
     return mk
 
-def result_btn(query, lang, is_vehicle=False, is_special=False, is_aadhaar=False, message_id=None, is_group=False):
+def result_btn(query, lang, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False, message_id=None, is_group=False):
     mk = InlineKeyboardMarkup(row_width=2)
-    mk.add(InlineKeyboardButton("📊 JSON", callback_data=f"json_{query}_{is_vehicle}_{is_special}_{is_aadhaar}"))
+    mk.add(InlineKeyboardButton("📊 JSON", callback_data=f"json_{query}_{is_vehicle}_{is_special}_{is_aadhaar}_{is_number_special}"))
     mk.add(InlineKeyboardButton("🔗 Group", url=GROUP))
     mk.add(InlineKeyboardButton("👨‍💻 Owner", url="https://t.me/Cyber_With_Ranjan"))
     mk.add(InlineKeyboardButton("🗑️ " + L[lang]['clear_btn'], callback_data="clear"))
@@ -578,7 +634,17 @@ def json_cb(c):
     is_vehicle = parts[1] == 'True' if len(parts)>1 else False
     is_special = parts[2] == 'True' if len(parts)>2 else False
     is_aadhaar = parts[3] == 'True' if len(parts)>3 else False
-    d = fetch_aadhaar(q) if is_aadhaar else (fetch_vehicle_special(q) if is_special else (fetch_vehicle(q) if is_vehicle else fetch_number(q)))
+    is_number_special = parts[4] == 'True' if len(parts)>4 else False
+    if is_aadhaar:
+        d = fetch_aadhaar(q)
+    elif is_special:
+        d = fetch_vehicle_special(q)
+    elif is_vehicle:
+        d = fetch_vehicle(q)
+    elif is_number_special:
+        d = fetch_number_special(q)
+    else:
+        d = fetch_number(q)
     if not d:
         bot.answer_callback_query(c.id, "❌", True); return
     bot.answer_callback_query(c.id, "📊 JSON")
@@ -615,7 +681,7 @@ def pin_command(m):
         bot.reply_to(m, "❌ Reply to a message with /pin to pin it.")
 
 # ---------- PROCESS QUERY ----------
-def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False):
+def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
     l = gl(m.from_user.id)
     if not ip(m.from_user.id):
         coins = gc(m.from_user.id)
@@ -626,22 +692,29 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False):
             bot.reply_to(m, L[l]['nc'], reply_markup=main_menu(l))
             return
     msg = bot.reply_to(m, L[l]['wt'])
-    d = fetch_aadhaar(q) if is_aadhaar else (fetch_vehicle_special(q) if is_special else (fetch_vehicle(q) if is_vehicle else fetch_number(q)))
+    if is_aadhaar:
+        d = fetch_aadhaar(q)
+    elif is_special:
+        d = fetch_vehicle_special(q)
+    elif is_vehicle:
+        d = fetch_vehicle(q)
+    elif is_number_special:
+        d = fetch_number_special(q)
+    else:
+        d = fetch_number(q)
     if not d:
         try: bot.edit_message_text("❌ Error!", m.chat.id, msg.message_id)
         except: bot.send_message(m.chat.id, "❌ Error!")
         return
-    send_log(m.from_user.id, m.from_user.username, m.from_user.first_name, q, d, is_vehicle, is_special, is_aadhaar)
-    res = format_result(d, q, is_vehicle, is_special, is_aadhaar)
+    send_log(m.from_user.id, m.from_user.username, m.from_user.first_name, q, d, is_vehicle, is_special, is_aadhaar, is_number_special)
+    res = format_result(d, q, is_vehicle, is_special, is_aadhaar, is_number_special)
     try:
         bot.edit_message_text(res, m.chat.id, msg.message_id, parse_mode='Markdown')
         is_group = m.chat.type in ['group', 'supergroup']
-        markup = result_btn(q, l, is_vehicle, is_special, is_aadhaar, msg.message_id if is_group else None, is_group)
+        markup = result_btn(q, l, is_vehicle, is_special, is_aadhaar, is_number_special, msg.message_id if is_group else None, is_group)
         bot.edit_message_reply_markup(m.chat.id, msg.message_id, reply_markup=markup)
     except Exception as e:
         bot.send_message(m.chat.id, f"Error: {e}")
-    # Optionally send status message; we already included it in result (coins left)
-    # No need for extra message.
 
 # ---------- COMMANDS ----------
 @bot.message_handler(commands=['num','search'])
@@ -667,6 +740,18 @@ def acmd(m):
     p=m.text.split()
     if len(p)<2: bot.reply_to(m, L[gl(m.from_user.id)]['enter_aadhaar']); return
     process_query(m, p[1].strip(), False, False, True)
+
+@bot.message_handler(commands=['special','s'])
+def special_cmd(m):
+    p=m.text.split()
+    if len(p)<2:
+        bot.reply_to(m, "❌ /special 9661756498 (10-digit number)")
+        return
+    phone = p[1].strip()
+    if not re.match(r'^\d{10}$', phone):
+        bot.reply_to(m, "❌ Enter a valid 10-digit number.")
+        return
+    process_query(m, phone, False, False, False, True)
 
 @bot.message_handler(func=lambda m: re.match(r'^\d{10}$', m.text))
 def hn(m):
@@ -708,6 +793,16 @@ def gaadhaar(m):
     if len(p)<2: bot.reply_to(m, "❌ /aadhaar 962397300673"); return
     process_query(m, p[1].strip(), False, False, True)
 
+@bot.message_handler(commands=['special'], chat_types=['group','supergroup'])
+def gspecial(m):
+    p=m.text.split()
+    if len(p)<2: bot.reply_to(m, "❌ /special 9661756498"); return
+    phone = p[1].strip()
+    if not re.match(r'^\d{10}$', phone):
+        bot.reply_to(m, "❌ Enter a valid 10-digit number.")
+        return
+    process_query(m, phone, False, False, False, True)
+
 @bot.message_handler(func=lambda m: re.match(r'^\d{10}$', m.text), chat_types=['group','supergroup'])
 def ghn(m):
     process_query(m, m.text.strip(), False, False, False)
@@ -723,7 +818,7 @@ def gahn(m):
 @bot.message_handler(commands=['start','help'], chat_types=['group','supergroup'])
 def gs(m):
     l = gl(m.from_user.id)
-    bot.reply_to(m, "👋 /num 9661756498 | /vehicle RJ14CV0002 | /vehiclespecial RJ14CV0002 | /aadhaar 962397300673\n🪙 1 FREE Coin/day = 1 Search!\n💎 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", reply_markup=group_menu(l))
+    bot.reply_to(m, "👋 /num 9661756498 | /vehicle RJ14CV0002 | /vehiclespecial RJ14CV0002 | /aadhaar 962397300673 | /special 9661756498\n🪙 1 FREE Coin/day = 1 Search!\n💎 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", reply_markup=group_menu(l))
 
 @bot.message_handler(commands=['menu'])
 def me(m):
