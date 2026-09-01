@@ -2,23 +2,27 @@ import telebot, requests, re, sqlite3, datetime, json, os
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # ---------- CONFIG ----------
-BOT_TOKEN = "8622116851:AAGFGCmwV6ijVGxEpLsVBW7LQbmZvqElmTk"
-NUMBER_API_URL = "https://movements-invoice-amanda-victoria.trycloudflare.com/search/number"
-API_KEY = "mysecretkey123"
+BOT_TOKEN = "8622116851:AAGFGCmwV6ijVGxEpLsVBW7LQbmZvqElmTk"  # आपका टोकन
+ADMIN_ID = 6936978343  # आपकी Chat ID (Admin)
+
+# NEW APIs
+NUMBER_API_URL = "https://num-info-redzone.susxbunny.workers.dev/api"
+NUMBER_API_KEY = "redzone@12"
+
+AADHAAR_API_URL = "https://leak-osint-redzone.vercel.app/api"
+AADHAAR_API_KEY = "REDZONE"
+
+# Old APIs (unchanged)
 VEHICLE_API_URL = "https://nitin-api-free-user-1k-spacial.vercel.app/api"
 VEHICLE_SPECIAL_API_URL = "https://reseller-host.vercel.app/api/rc"
-AADHAR_API_URL = "https://movements-invoice-amanda-victoria.trycloudflare.com/search/aadhar"
-ADMIN_ID = 6936978343
+NUMBER_SPECIAL_URL = "https://anurixx-gift-number.vercel.app/api"
+
 OWNER = "@Cyber_With_Ranjan"
 INSTA = "https://www.instagram.com/ranjan_bhai_194?igsh=ZTM2enVsNmt3MnJv"
 WEBSITE = "https://cyberwithranjan.in"
 GROUP = "https://t.me/cyberwithranjan"
 CHANNEL = "https://t.me/cyberwithranjan"
 SUPPORT_GROUP = "https://t.me/cyberwithranjan"
-
-# New APIs
-NUMBER_SPECIAL_URL = "https://anurixx-gift-number.vercel.app/api"
-AADHAAR_NEW_URL = "https://anurixx-gift-family.vercel.app/api"
 
 QR_PATH = os.path.join(os.path.dirname(__file__), 'qr.png')
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -27,7 +31,7 @@ c = conn.cursor()
 c.execute('''CREATE TABLE IF NOT EXISTS users (user_id INTEGER PRIMARY KEY, username TEXT, first_name TEXT, lang TEXT DEFAULT 'en', coins INTEGER DEFAULT 0, last_claim TEXT, access INTEGER DEFAULT 0, premium INTEGER DEFAULT 0, premium_expiry TEXT, searches INTEGER DEFAULT 0, insta_followed INTEGER DEFAULT 0, website_visited INTEGER DEFAULT 0)''')
 conn.commit()
 
-# ---------- LANGUAGE ----------
+# ---------- FULL LANGUAGE DICTIONARIES ----------
 L = {
     'en': {
         'lang': "🌐 Select Language:",
@@ -119,7 +123,186 @@ L = {
         'pin_success': "📌 संदेश पिन किया!",
         'pin_fail': "❌ पिन नहीं कर सका। मुझे पिन अनुमति दें।"
     },
-    # Bengali, Marathi, Urdu, Tamil – similar structure (full version included in actual code)
+    'bn': {
+        'lang': "🌐 ভাষা নির্বাচন করুন:",
+        'welcome_premium': "💎 **প্রিমিয়াম প্রয়োজন**\n📅 প্ল্যান:\n• ১ দিন – ₹১০\n• ৫ দিন – ₹৩০\n• ১ সপ্তাহ – ₹৩৫\n• ১ মাস – ₹৭০",
+        'buy_premium': "💳 প্রিমিয়াম কিনুন",
+        'payment_info': "💳 **UPI দিয়ে পে করুন**\nUPI: `desi.hacker@ybl`\nপ্ল্যান: 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 QR স্ক্যান করুন।",
+        'already_premium': "🎉 আপনি ইতিমধ্যে প্রিমিয়াম!",
+        'main_menu': "📱 **মেনু**",
+        'search': "🔍 অনুসন্ধান",
+        'premium': "💎 প্রিমিয়াম",
+        'number': "📱 নম্বর",
+        'vehicle': "🚗 গাড়ি",
+        'vehicle_special': "🚘 গাড়ি স্পেশাল",
+        'aadhaar': "🆔 আধার",
+        'claim_btn': "🪙 Coin দাবি",
+        'profile_btn': "👤 প্রোফাইল",
+        'help_btn': "❓ সাহায্য",
+        'about_btn': "ℹ️ তথ্য",
+        'clear_btn': "🗑️ মুছুন",
+        'back': "🔙 ফিরে",
+        'owner': "👨‍💻 মালিক",
+        'group': "🔗 গ্রুপ",
+        'admin_only': "⚠️ আপনার অনুমতি নেই।",
+        'stats_text': "📊 পরিসংখ্যান\n👥 মোট: {total}\n✅ সক্রিয়: {access}\n💎 প্রিমিয়াম: {premium}\n🪙 Coins: {coins}\n🔍 অনুসন্ধান: {searches}",
+        'enter_number': "📱 ১০ অঙ্কের নম্বর দিন:",
+        'enter_vehicle': "🚗 গাড়ির নম্বর দিন:",
+        'enter_vehicle_special': "🚘 স্পেশালের জন্য গাড়ি:",
+        'enter_aadhaar': "🆔 ১২ অঙ্কের আধার:",
+        'coins_left': "🪙 {coins} coins বাকি",
+        'premium_active': "💎 প্রিমিয়াম সক্রিয়",
+        'not_premium': "❌ প্রিমিয়াম নয়।",
+        'follow_insta': "📸 Insta ফলো",
+        'visit_website': "🌐 ওয়েবসাইট",
+        'get_coin': "🪙 ১টি FREE Coin পান",
+        'coin_earned': "✅ ১টি FREE Coin পেলেন!",
+        'already_done': "✅ আগেই করা!",
+        'follow_visit_required': "⚠️ আগে Insta ফলো ও ওয়েবসাইট দেখুন।",
+        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /special",
+        'profile': "👤 প্রোফাইল\n🪙 Coins: {coins}\n💎 প্রিমিয়াম: {prem}\n🔍 অনুসন্ধান: {searches}",
+        'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan",
+        'al': "✅ আজ দাবি করেছেন!",
+        'wt': "⏳ আনছি...",
+        'nc': "❌ Coin নেই! দৈনিক ১টি FREE Coin দাবি করুন।",
+        'pin_success': "📌 বার্তা পিন করা হয়েছে!",
+        'pin_fail': "❌ পিন করতে ব্যর্থ। আমাকে পিন অনুমতি দিন।"
+    },
+    'mr': {
+        'lang': "🌐 भाषा निवडा:",
+        'welcome_premium': "💎 **प्रीमियम आवश्यक**\n📅 प्लान:\n• १ दिवस – ₹१०\n• ५ दिवस – ₹३०\n• १ आठवडा – ₹३५\n• १ महिना – ₹७०",
+        'buy_premium': "💳 प्रीमियम खरेदी",
+        'payment_info': "💳 **UPI द्वारा पैसे द्या**\nUPI: `desi.hacker@ybl`\nप्लान: 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 QR स्कॅन करा.",
+        'already_premium': "🎉 तुम्ही आधीच प्रीमियम आहात!",
+        'main_menu': "📱 **मुख्य मेनू**",
+        'search': "🔍 शोध",
+        'premium': "💎 प्रीमियम",
+        'number': "📱 क्रमांक",
+        'vehicle': "🚗 वाहन",
+        'vehicle_special': "🚘 वाहन स्पेशल",
+        'aadhaar': "🆔 आधार",
+        'claim_btn': "🪙 Coin मागा",
+        'profile_btn': "👤 प्रोफाइल",
+        'help_btn': "❓ मदत",
+        'about_btn': "ℹ️ माहिती",
+        'clear_btn': "🗑️ साफ करा",
+        'back': "🔙 मागे",
+        'owner': "👨‍💻 मालक",
+        'group': "🔗 ग्रुप",
+        'admin_only': "⚠️ तुम्हाला अधिकार नाही.",
+        'stats_text': "📊 आकडेवारी\n👥 एकूण: {total}\n✅ सक्रिय: {access}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 शोध: {searches}",
+        'enter_number': "📱 १० अंकी क्रमांक पाठवा:",
+        'enter_vehicle': "🚗 वाहन क्रमांक पाठवा:",
+        'enter_vehicle_special': "🚘 स्पेशलसाठी वाहन:",
+        'enter_aadhaar': "🆔 १२ अंकी आधार:",
+        'coins_left': "🪙 {coins} coins शिल्लक",
+        'premium_active': "💎 प्रीमियम सक्रिय",
+        'not_premium': "❌ प्रीमियम नाही.",
+        'follow_insta': "📸 Insta फॉलो करा",
+        'visit_website': "🌐 वेबसाइट",
+        'get_coin': "🪙 १ FREE Coin मिळवा",
+        'coin_earned': "✅ १ FREE Coin मिळाला!",
+        'already_done': "✅ आधीच केले!",
+        'follow_visit_required': "⚠️ प्रथम Insta फॉलो व वेबसाइट पहा.",
+        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /special",
+        'profile': "👤 प्रोफाइल\n🪙 Coins: {coins}\n💎 प्रीमियम: {prem}\n🔍 शोध: {searches}",
+        'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan",
+        'al': "✅ आज मागितले!",
+        'wt': "⏳ आणत आहे...",
+        'nc': "❌ Coin नाही! दररोज १ FREE Coin मागा.",
+        'pin_success': "📌 संदेश पिन केला!",
+        'pin_fail': "❌ पिन करता आला नाही. मला पिन परवानगी द्या."
+    },
+    'ur': {
+        'lang': "🌐 زبان منتخب کریں:",
+        'welcome_premium': "💎 **پریمیم ضروری**\n📅 پلان:\n• ۱ دن – ₹۱۰\n• ۵ دن – ₹۳۰\n• ۱ ہفتہ – ₹۳۵\n• ۱ مہینہ – ₹۷۰",
+        'buy_premium': "💳 پریمیم خریدیں",
+        'payment_info': "💳 **UPI سے ادائیگی کریں**\nUPI: `desi.hacker@ybl`\nپلان: 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 QR اسکین کریں۔",
+        'already_premium': "🎉 آپ پہلے سے پریمیم ہیں!",
+        'main_menu': "📱 **مین مینو**",
+        'search': "🔍 تلاش",
+        'premium': "💎 پریمیم",
+        'number': "📱 نمبر",
+        'vehicle': "🚗 گاڑی",
+        'vehicle_special': "🚘 گاڑی سپیشل",
+        'aadhaar': "🆔 آدھار",
+        'claim_btn': "🪙 Coin کا دعوی",
+        'profile_btn': "👤 پروفائل",
+        'help_btn': "❓ مدد",
+        'about_btn': "ℹ️ معلومات",
+        'clear_btn': "🗑️ صاف کریں",
+        'back': "🔙 واپس",
+        'owner': "👨‍💻 مالک",
+        'group': "🔗 گروپ",
+        'admin_only': "⚠️ آپ مجاز نہیں۔",
+        'stats_text': "📊 اعداد و شمار\n👥 کل: {total}\n✅ فعال: {access}\n💎 پریمیم: {premium}\n🪙 Coins: {coins}\n🔍 تلاش: {searches}",
+        'enter_number': "📱 ۱۰ ہندسی نمبر بھیجیں:",
+        'enter_vehicle': "🚗 گاڑی کا نمبر بھیجیں:",
+        'enter_vehicle_special': "🚘 سپیشل کے لیے گاڑی:",
+        'enter_aadhaar': "🆔 ۱۲ ہندسی آدھار:",
+        'coins_left': "🪙 {coins} coins باقی",
+        'premium_active': "💎 پریمیم فعال",
+        'not_premium': "❌ پریمیم نہیں۔",
+        'follow_insta': "📸 Insta فالو کریں",
+        'visit_website': "🌐 ویب سائٹ",
+        'get_coin': "🪙 ۱ FREE Coin حاصل کریں",
+        'coin_earned': "✅ ۱ FREE Coin ملا!",
+        'already_done': "✅ پہلے ہی کیا!",
+        'follow_visit_required': "⚠️ پہلے Insta فالو اور ویب سائٹ وزٹ کریں۔",
+        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /special",
+        'profile': "👤 پروفائل\n🪙 Coins: {coins}\n💎 پریمیم: {prem}\n🔍 تلاش: {searches}",
+        'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan",
+        'al': "✅ آج دعوی کر چکے!",
+        'wt': "⏳ لا رہا ہوں...",
+        'nc': "❌ Coin نہیں! روزانہ ۱ FREE Coin حاصل کریں۔",
+        'pin_success': "📌 پیغام پن کیا!",
+        'pin_fail': "❌ پن نہیں کر سکا۔ مجھے پن کی اجازت دیں۔"
+    },
+    'ta': {
+        'lang': "🌐 மொழியைத் தேர்ந்தெடுக்கவும்:",
+        'welcome_premium': "💎 **பிரீமியம் தேவை**\n📅 திட்டங்கள்:\n• 1 நாள் – ₹10\n• 5 நாட்கள் – ₹30\n• 1 வாரம் – ₹35\n• 1 மாதம் – ₹70",
+        'buy_premium': "💳 பிரீமியம் வாங்க",
+        'payment_info': "💳 **UPI மூலம் செலுத்து**\nUPI: `desi.hacker@ybl`\nதிட்டங்கள்: 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 QR ஸ்கேன் செய்யவும்.",
+        'already_premium': "🎉 நீங்கள் ஏற்கனவே பிரீமியம்!",
+        'main_menu': "📱 **முதன்மை மெனு**",
+        'search': "🔍 தேடு",
+        'premium': "💎 பிரீமியம்",
+        'number': "📱 எண்",
+        'vehicle': "🚗 வாகனம்",
+        'vehicle_special': "🚘 வாகனம் ஸ்பெஷல்",
+        'aadhaar': "🆔 ஆதார்",
+        'claim_btn': "🪙 Coin கோருக",
+        'profile_btn': "👤 சுயவிவரம்",
+        'help_btn': "❓ உதவி",
+        'about_btn': "ℹ️ தகவல்",
+        'clear_btn': "🗑️ அழி",
+        'back': "🔙 பின்",
+        'owner': "👨‍💻 உரிமையாளர்",
+        'group': "🔗 குழு",
+        'admin_only': "⚠️ உங்களுக்கு அனுமதி இல்லை.",
+        'stats_text': "📊 புள்ளிவிவரங்கள்\n👥 மொத்தம்: {total}\n✅ செயலில்: {access}\n💎 பிரீமியம்: {premium}\n🪙 Coins: {coins}\n🔍 தேடல்கள்: {searches}",
+        'enter_number': "📱 10 இலக்க எண்ணை அனுப்பவும்:",
+        'enter_vehicle': "🚗 வாகன எண்ணை அனுப்பவும்:",
+        'enter_vehicle_special': "🚘 ஸ்பெஷலுக்கான வாகனம்:",
+        'enter_aadhaar': "🆔 12 இலக்க ஆதார்:",
+        'coins_left': "🪙 {coins} coins மீதம்",
+        'premium_active': "💎 பிரீமியம் செயலில்",
+        'not_premium': "❌ பிரீமியம் இல்லை.",
+        'follow_insta': "📸 Insta பின்தொடரவும்",
+        'visit_website': "🌐 இணையதளம்",
+        'get_coin': "🪙 1 FREE Coin பெற",
+        'coin_earned': "✅ 1 FREE Coin கிடைத்தது!",
+        'already_done': "✅ ஏற்கனவே செய்துவிட்டீர்கள்!",
+        'follow_visit_required': "⚠️ முதலில் Insta பின்தொடரவும் & இணையதளத்தை பார்க்கவும்.",
+        'help': "📖 /start, /menu, /num, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /special",
+        'profile': "👤 சுயவிவரம்\n🪙 Coins: {coins}\n💎 பிரீமியம்: {prem}\n🔍 தேடல்கள்: {searches}",
+        'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan",
+        'al': "✅ இன்று கோரியுள்ளீர்கள்!",
+        'wt': "⏳ பெற்று வருகிறது...",
+        'nc': "❌ Coin இல்லை! தினமும் 1 FREE Coin பெறவும்.",
+        'pin_success': "📌 செய்தி பொருத்தப்பட்டது!",
+        'pin_fail': "❌ பொருத்த முடியவில்லை. எனக்கு பொருத்த அனுமதி கொடுக்கவும்."
+    }
 }
 
 # ---------- HELPERS ----------
@@ -187,10 +370,26 @@ def get_total_searches():
 
 # ---------- API FUNCTIONS ----------
 def fetch_number(num):
+    """Fetch number info using new API"""
     try:
-        r=requests.get(f"{NUMBER_API_URL}?number={num}&key={API_KEY}", timeout=10)
-        return r.json() if r.status_code==200 else None
-    except: return None
+        url = f"{NUMBER_API_URL}?key={NUMBER_API_KEY}&number={num}"
+        r = requests.get(url, timeout=10)
+        if r.status_code == 200:
+            return r.json()
+        return None
+    except:
+        return None
+
+def fetch_aadhaar(aadhaar_num):
+    """Fetch Aadhaar info using new API"""
+    try:
+        url = f"{AADHAAR_API_URL}?key={AADHAAR_API_KEY}&aadhaar={aadhaar_num}"
+        r = requests.get(url, timeout=10)
+        if r.status_code == 200:
+            return r.json()
+        return None
+    except:
+        return None
 
 def fetch_vehicle(vehicle_num):
     try:
@@ -220,32 +419,28 @@ def fetch_number_special(phone):
     except:
         return None
 
-def fetch_aadhaar(aadhaar_num):
-    try:
-        url = f"{AADHAAR_NEW_URL}?type=id_family&term={aadhaar_num}"
-        r = requests.get(url, timeout=10)
-        if r.status_code == 200:
-            return r.json()
-        return None
-    except:
-        return None
-
 # ---------- FORMAT ----------
 def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
     if is_aadhaar:
-        if not data or data.get('status') != 'success':
+        if not data:
             return "`❌ No data`"
-        info = data.get('data', {})
-        if not info:
+        if isinstance(data, dict):
+            if 'status' in data and data['status'] == 'success' and 'data' in data:
+                info = data['data']
+            else:
+                info = data
+        else:
+            info = {}
+        if not info or not info.get('name'):
             return "`❌ No records`"
         name = info.get('name', 'N/A')
-        father = info.get('father', 'N/A')
-        aadhar = info.get('aadhar', query)
-        address = info.get('address', 'N/A')
-        dob = info.get('dob', 'N/A')
-        gender = info.get('gender', 'N/A')
-        phone = info.get('phone', 'N/A')
-        email = info.get('email', 'N/A')
+        father = info.get('father') or info.get('fname', 'N/A')
+        aadhar = info.get('aadhaar') or info.get('aadhar', query)
+        address = info.get('address') or info.get('addr', 'N/A')
+        dob = info.get('dob') or info.get('DOB', 'N/A')
+        gender = info.get('gender') or info.get('sex', 'N/A')
+        phone = info.get('phone') or info.get('mobile', 'N/A')
+        email = info.get('email') or info.get('mail', 'N/A')
         return f"""
 `🆔 AADHAAR INTEL (NEW)
 ━━━━━━━━━━━━━━━━━━━━━
@@ -322,19 +517,38 @@ def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=Fa
 🔐 {OWNER}`
 """
     else:
-        if not data or data.get('status')!='success': return "`❌ No data`"
-        i=data['result'][0]; a=i.get('address','N/A').replace('!',', ')
+        # Number info (new API)
+        if not data:
+            return "`❌ No data`"
+        if isinstance(data, dict):
+            if 'result' in data and isinstance(data['result'], list) and data['result']:
+                info = data['result'][0]
+            elif 'data' in data and isinstance(data['data'], dict):
+                info = data['data']
+            else:
+                info = data
+        else:
+            info = {}
+        if not info or not info.get('name'):
+            return "`❌ No records`"
+        name = info.get('name', 'N/A')
+        father = info.get('fname') or info.get('father', 'N/A')
+        aadhar = info.get('aadhar') or info.get('aadhaar', 'N/A')
+        address = info.get('address') or info.get('addr', 'N/A')
+        circle = info.get('circle') or info.get('operator', 'N/A')
+        email = info.get('email') or info.get('mail', 'N/A')
+        alt = info.get('alt') or info.get('alternate', 'N/A')
         return f"""
-`📱 NUMBER INTEL
+`📱 NUMBER INTEL (NEW)
 ━━━━━━━━━━━━━━━━━━━━━
 📱 Number: {query}
-👤 Name: {i.get('name','N/A')}
-👨 Father: {i.get('fname','N/A')}
-🆔 Aadhar: {i.get('aadhar','N/A')}
-🏠 Address: {a}
-📡 Circle: {i.get('circle','N/A')}
-📧 Email: {i.get('email','N/A')}
-📞 Alt: {i.get('alt','N/A')}
+👤 Name: {name}
+👨 Father: {father}
+🆔 Aadhar: {aadhar}
+🏠 Address: {address}
+📡 Circle: {circle}
+📧 Email: {email}
+📞 Alt: {alt}
 🔐 {OWNER}`
 """
 
@@ -344,8 +558,14 @@ def format_json(data):
 def send_log(uid, un, nm, query, data, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
     try:
         if is_aadhaar:
-            if not data or data.get('status')!='success': return
-            info = data.get('data', {})
+            if not data: return
+            if isinstance(data, dict):
+                if 'status' in data and data['status'] == 'success' and 'data' in data:
+                    info = data['data']
+                else:
+                    info = data
+            else:
+                info = {}
             bot.send_message(ADMIN_ID, f"🆔 AADHAAR LOG (NEW)\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n👤 {info.get('name','N/A')}")
         elif is_number_special:
             if not data or data.get('status')!='success': return
@@ -357,9 +577,17 @@ def send_log(uid, un, nm, query, data, is_vehicle=False, is_special=False, is_aa
             i = data.get('response', {})
             bot.send_message(ADMIN_ID, f"🚗 VEHICLE LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n🚘 {i.get('vehicle','N/A')}")
         else:
-            if not data or data.get('status')!='success': return
-            i=data['result'][0]
-            bot.send_message(ADMIN_ID, f"📊 NUMBER LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {i.get('name','N/A')}")
+            if not data: return
+            if isinstance(data, dict):
+                if 'result' in data and isinstance(data['result'], list) and data['result']:
+                    i = data['result'][0]
+                elif 'data' in data and isinstance(data['data'], dict):
+                    i = data['data']
+                else:
+                    i = data
+            else:
+                i = {}
+            bot.send_message(ADMIN_ID, f"📊 NUMBER LOG (NEW)\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {i.get('name','N/A')}")
     except: pass
 
 # ---------- KEYBOARDS ----------
@@ -650,7 +878,6 @@ def json_cb(c):
     bot.answer_callback_query(c.id, "📊 JSON")
     bot.send_message(c.message.chat.id, format_json(d), parse_mode='Markdown')
 
-# ---------- PIN CALLBACK ----------
 @bot.callback_query_handler(func=lambda c: c.data.startswith('pin_'))
 def pin_callback(c):
     if c.from_user.id != ADMIN_ID:
@@ -665,7 +892,6 @@ def pin_callback(c):
         bot.answer_callback_query(c.id, "❌ " + L[gl(c.from_user.id)]['pin_fail'], True)
         bot.send_message(c.message.chat.id, f"❌ {L[gl(c.from_user.id)]['pin_fail']}")
 
-# ---------- PIN COMMAND ----------
 @bot.message_handler(commands=['pin'])
 def pin_command(m):
     if m.from_user.id != ADMIN_ID:
