@@ -2,7 +2,7 @@ import telebot, requests, re, sqlite3, datetime, json, os
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # ---------- CONFIG ----------
-BOT_TOKEN = "8622116851:AAGFGCmwV6ijVGxEpLsVBW7LQbmZvqElmTk"
+BOT_TOKEN = "8654008990:AAEbFOpj658dagBy92qIcvZDQd1mxhDkI50"
 ADMIN_ID = 6936978343
 
 NUMBER_API_URL = "https://num-info-redzone.susxbunny.workers.dev/api"
