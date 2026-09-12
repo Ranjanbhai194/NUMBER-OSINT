@@ -83,7 +83,7 @@ def gc(i):
     except: return 0
 
 def dc(i):
-    """Deduct 1 coin, increment search count"""
+    """Deduct 1 coin, increment search count. Premium = no deduction."""
     try:
         if ip(i):
             c.execute("UPDATE users SET searches=searches+1 WHERE user_id=?", (i,)); conn.commit()
@@ -95,23 +95,22 @@ def dc(i):
     except: return False
 
 def auto_daily_coin(i):
-    """Auto give 1 free coin daily — used by /claim, search, and get_coin button"""
+    """Auto give 1 free coin daily"""
     try:
         t = datetime.datetime.now().date().isoformat()
         c.execute("SELECT last_claim FROM users WHERE user_id=?", (i,))
         r = c.fetchone()
         if r and r[0] == t:
-            return False  # Already claimed today
+            return False
         c.execute("UPDATE users SET coins=coins+1, last_claim=? WHERE user_id=?", (t, i))
         conn.commit()
         return True
     except: return False
 
-# Alias for backward compatibility
-adc = auto_daily_coin
+adc = auto_daily_coin  # Alias
 
 def ga(i):
-    """Grant access (Insta + Website completed)"""
+    """Grant access after Insta + Website click"""
     try:
         t = datetime.datetime.now().date().isoformat()
         c.execute("SELECT last_claim FROM users WHERE user_id=?", (i,)); r = c.fetchone()
@@ -192,7 +191,7 @@ Buy Premium now!
 🎁 **FREE Daily Coin System**
 • **रोज 1 FREE Coin** पाएं
 • 1 Coin = 1 Search
-• रोज बॉट खोलें और अपना coin claim करें
+• रोज बॉट खोलें और coin claim करें
 
 💎 **अनलिमिटेड खोज चाहिए?**
 अभी प्रीमियम खरीदें!
@@ -209,7 +208,7 @@ Buy Premium now!
 🎁 **FREE Daily Coin System**
 • **প্রতিদিন ১ FREE Coin** পান
 • ১ Coin = ১ Search
-• প্রতিদিন বট খুলুন ও coin claim করুন
+• প্রতিদিন বট খুলুন & coin claim করুন
 
 💎 **আনলিমিটেড সার্চ চান?**
 এখনই প্রিমিয়াম কিনুন!
@@ -301,7 +300,6 @@ def no_coin_msg(lang='en'):
 
 # ==================== ULTRA HACKER LOADING ====================
 def hacker_loading(chat_id, msg_id, query, lang='en', search_type='NUMBER'):
-    """Ultra premium cinematic hacker terminal animation"""
     spinners = ["◐", "◓", "◑", "◒"]
     
     frames = [
@@ -607,12 +605,12 @@ def lang_selection():
     )
     return mk
 
-# ==================== PROCESS QUERY ====================
+# ==================== PROCESS QUERY (CORE LOGIC) ====================
 def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
     l = gl(m.from_user.id)
     is_premium_user = ip(m.from_user.id)
     
-    # 🪙 AUTO DAILY COIN + COIN CHECK
+    # 🪙 COIN CHECK for non-premium
     if not is_premium_user:
         auto_daily_coin(m.from_user.id)
         coins = gc(m.from_user.id)
@@ -629,7 +627,7 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
     elif is_number_special: stype = "NUMBER NORMAL"
     else: stype = "NUMBER SPECIAL"
 
-    # Fetch data FIRST (before animation)
+    # Fetch data FIRST
     if is_aadhaar: d = fetch_aadhaar(q)
     elif is_special: d = fetch_vehicle_special(q)
     elif is_vehicle: d = fetch_vehicle(q)
@@ -655,7 +653,7 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
     send_log(m.from_user.id, m.from_user.username, m.from_user.first_name, q, d, is_vehicle, is_special, is_aadhaar, is_number_special)
     res = format_result(d, q, is_vehicle, is_special, is_aadhaar, is_number_special)
 
-    # Show result with cinematic header
+    # Show result
     try:
         bot.edit_message_text(
             f"`╔══════════════════════════════╗`\n"
@@ -677,11 +675,10 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         bot.send_message(m.chat.id, f"Error: {e}")
         return
 
-    # Auto JSON output (cinematic)
+    # Auto JSON
     try:
         jtext = json.dumps(d, indent=2, ensure_ascii=False)
-        if len(jtext) > 3600:
-            jtext = jtext[:3600] + "\n... (truncated)"
+        if len(jtext) > 3600: jtext = jtext[:3600] + "\n... (truncated)"
         bot.send_message(
             m.chat.id,
             f"`╔══════════════════════════════╗`\n"
@@ -696,7 +693,7 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         try: bot.send_message(m.chat.id, f"📊 JSON:\n`{str(d)[:3500]}`", parse_mode='Markdown')
         except: pass
 
-    # 💎 PREMIUM UPSELL (private chats, non-premium only)
+    # 💎 PREMIUM UPSELL
     if not is_premium_user and m.chat.type == 'private':
         coins_left = gc(m.from_user.id)
         try:
@@ -713,16 +710,27 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
 def lc(c):
     l = c.data.split('_')[1]
     sl(c.from_user.id, l)
+    # ✅ Show premium menu OR main menu (both premium & non-premium)
     if ip(c.from_user.id):
         try: bot.edit_message_text(L[l]['main_menu'], c.message.chat.id, c.message.message_id, reply_markup=main_menu(l), parse_mode='Markdown')
         except: bot.send_message(c.message.chat.id, L[l]['main_menu'], reply_markup=main_menu(l), parse_mode='Markdown')
     else:
+        # ✅ Non-premium gets main menu too (can use coins to search)
+        coins = gc(c.from_user.id)
         try:
-            with open(QR_PATH, 'rb') as qr:
-                bot.send_photo(c.message.chat.id, qr, caption=L[l]['welcome_premium'], reply_markup=premium_start_menu(l), parse_mode='Markdown')
-                bot.delete_message(c.message.chat.id, c.message.message_id)
+            bot.edit_message_text(
+                f"{L[l]['main_menu']}\n\n🪙 Coins: {coins}",
+                c.message.chat.id, c.message.message_id,
+                reply_markup=main_menu(l),
+                parse_mode='Markdown'
+            )
         except:
-            bot.send_message(c.message.chat.id, L[l]['welcome_premium'], reply_markup=premium_start_menu(l), parse_mode='Markdown')
+            bot.send_message(
+                c.message.chat.id,
+                f"{L[l]['main_menu']}\n\n🪙 Coins: {coins}",
+                reply_markup=main_menu(l),
+                parse_mode='Markdown'
+            )
     bot.answer_callback_query(c.id, "✅")
 
 @bot.callback_query_handler(func=lambda c: c.data == "get_coin")
@@ -733,10 +741,10 @@ def get_coin_cb(c):
         return
     mark_insta(c.from_user.id)
     mark_website(c.from_user.id)
-    ga(c.from_user.id)  # Grants access + coin (if not claimed today)
+    ga(c.from_user.id)
     coin = gc(c.from_user.id)
     bot.answer_callback_query(c.id, f"🪙 +1! Total: {coin}")
-    bot.send_message(c.message.chat.id, L[l]['coin_earned'] + f"\n🪙 Total: {coin}", reply_markup=premium_start_menu(l))
+    bot.send_message(c.message.chat.id, L[l]['coin_earned'] + f"\n🪙 Total: {coin}", reply_markup=main_menu(l))
     try:
         with open(QR_PATH, 'rb') as qr:
             bot.send_photo(c.message.chat.id, qr, caption=L[l]['payment_info'], parse_mode='Markdown')
@@ -804,7 +812,6 @@ def premium_cb(c):
         bot.send_message(c.message.chat.id, L[l]['welcome_premium'], reply_markup=premium_start_menu(l), parse_mode='Markdown')
     bot.answer_callback_query(c.id, "💎 Premium")
 
-# ✅ FIXED BUG #1: profile_cb variable shadowing
 @bot.callback_query_handler(func=lambda cb: cb.data == "profile")
 def profile_cb(cb):
     uid = cb.from_user.id
@@ -843,32 +850,63 @@ def clear_cb(c):
 @bot.callback_query_handler(func=lambda c: c.data == "main_menu")
 def main_menu_cb(c):
     l = gl(c.from_user.id)
+    # ✅ Show coins info for non-premium
+    if ip(c.from_user.id):
+        text = L[l]['main_menu']
+    else:
+        coins = gc(c.from_user.id)
+        text = f"{L[l]['main_menu']}\n\n🪙 Coins: {coins}"
     try:
-        bot.edit_message_text(L[l]['main_menu'], c.message.chat.id, c.message.message_id, reply_markup=main_menu(l), parse_mode='Markdown')
+        bot.edit_message_text(text, c.message.chat.id, c.message.message_id, reply_markup=main_menu(l), parse_mode='Markdown')
     except:
-        bot.send_message(c.message.chat.id, L[l]['main_menu'], reply_markup=main_menu(l), parse_mode='Markdown')
+        bot.send_message(c.message.chat.id, text, reply_markup=main_menu(l), parse_mode='Markdown')
     bot.answer_callback_query(c.id, "🔙")
 
+# ✅ FIXED: search_menu now works for non-premium with coins
 @bot.callback_query_handler(func=lambda c: c.data == "search_menu")
 def search_menu_cb(c):
     l = gl(c.from_user.id)
+    # ✅ Show coins info for non-premium
+    coins_info = ""
     if not ip(c.from_user.id):
-        bot.answer_callback_query(c.id, "❌ Premium required!", True); return
+        coins = gc(c.from_user.id)
+        coins_info = f"\n\n🪙 Coins Left: {coins}"
     try:
-        bot.edit_message_text("🔍 " + L[l]['search'], c.message.chat.id, c.message.message_id, reply_markup=search_menu(l), parse_mode='Markdown')
+        bot.edit_message_text(
+            "🔍 " + L[l]['search'] + coins_info,
+            c.message.chat.id, c.message.message_id,
+            reply_markup=search_menu(l),
+            parse_mode='Markdown'
+        )
     except:
-        bot.send_message(c.message.chat.id, "🔍 " + L[l]['search'], reply_markup=search_menu(l), parse_mode='Markdown')
+        bot.send_message(
+            c.message.chat.id,
+            "🔍 " + L[l]['search'] + coins_info,
+            reply_markup=search_menu(l),
+            parse_mode='Markdown'
+        )
     bot.answer_callback_query(c.id, "🔍")
 
+# ✅ FIXED: info_cb now works for non-premium with coins
 @bot.callback_query_handler(func=lambda c: c.data in ["info", "vehicle_info", "vehicle_special_info", "aadhaar_info"])
 def info_cb(c):
     l = gl(c.from_user.id)
+    # ✅ Check coins for non-premium, but DON'T block if has coins
     if not ip(c.from_user.id):
-        bot.answer_callback_query(c.id, "❌ Premium required!", True); return
-    if c.data == "aadhaar_info": bot.send_message(c.message.chat.id, L[l]['enter_aadhaar'])
-    elif c.data == "vehicle_special_info": bot.send_message(c.message.chat.id, L[l]['enter_vehicle_special'])
-    elif c.data == "vehicle_info": bot.send_message(c.message.chat.id, L[l]['enter_vehicle'])
-    else: bot.send_message(c.message.chat.id, L[l]['enter_number'])
+        coins = gc(c.from_user.id)
+        if coins <= 0:
+            bot.answer_callback_query(c.id, "❌ No coins! Claim daily 1 FREE", True)
+            bot.send_message(c.message.chat.id, no_coin_msg(l), reply_markup=premium_upsell_kb(l), parse_mode='Markdown')
+            return
+    # Show prompt
+    if c.data == "aadhaar_info":
+        bot.send_message(c.message.chat.id, L[l]['enter_aadhaar'])
+    elif c.data == "vehicle_special_info":
+        bot.send_message(c.message.chat.id, L[l]['enter_vehicle_special'])
+    elif c.data == "vehicle_info":
+        bot.send_message(c.message.chat.id, L[l]['enter_vehicle'])
+    else:
+        bot.send_message(c.message.chat.id, L[l]['enter_number'])
     bot.answer_callback_query(c.id, "🔍")
 
 @bot.callback_query_handler(func=lambda c: c.data.startswith('json_'))
@@ -1014,14 +1052,24 @@ def gs(m):
     bot.reply_to(m, "👋 /num 9661756498 | /vehicle RJ14CV0002 | /vehiclespecial RJ14CV0002 | /aadhaar 962397300673 | /special 9661756498\n🪙 1 FREE Coin/day = 1 Search!\n💎 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n🌐 cyberwithranjan.in", reply_markup=group_menu(l))
 
 # ==================== GENERAL COMMANDS ====================
+# ✅ FIXED: Non-premium can also see main menu
 @bot.message_handler(commands=['menu'])
 def me(m):
     l = gl(m.from_user.id)
     if m.chat.type in ['group', 'supergroup']:
-        bot.send_message(m.chat.id, "📱 Menu", reply_markup=group_menu(l)); return
-    if not ip(m.from_user.id):
-        bot.send_message(m.chat.id, L[l]['welcome_premium'], reply_markup=premium_start_menu(l), parse_mode='Markdown'); return
-    bot.send_message(m.chat.id, L[l]['main_menu'], reply_markup=main_menu(l), parse_mode='Markdown')
+        bot.send_message(m.chat.id, "📱 Menu", reply_markup=group_menu(l))
+        return
+    if ip(m.from_user.id):
+        status = "💎 **Premium** — Unlimited Access"
+    else:
+        coins = gc(m.from_user.id)
+        status = f"🪙 **Coins:** {coins}\n_1 Coin = 1 Search_"
+    bot.send_message(
+        m.chat.id,
+        f"{L[l]['main_menu']}\n\n{status}",
+        reply_markup=main_menu(l),
+        parse_mode='Markdown'
+    )
 
 @bot.message_handler(commands=['claim'])
 def cl2(m):
@@ -1107,7 +1155,7 @@ def ap2(m):
         _, uid, days = m.text.split()
         if ap(int(uid), int(days)):
             bot.reply_to(m, f"✅ Premium added to {uid} for {days} days!")
-            bot.send_message(int(uid), f"🎉 Premium activated for {days} days!\n✅ Unlimited access!")
+            bot.send_message(int(uid), f"🎉 Premium activated for {days} days!\n✅ Unlimited access to all searches!")
     except: bot.reply_to(m, "❌ /addpremium [uid] [days]")
 
 @bot.message_handler(commands=['removepremium'])
@@ -1125,8 +1173,9 @@ def ac(m):
     try:
         _, uid, coins = m.text.split()
         c.execute("UPDATE users SET coins=coins+? WHERE user_id=?", (int(coins), int(uid))); conn.commit()
-        bot.reply_to(m, f"✅ Added {coins} coins to {uid}")
-        bot.send_message(int(uid), f"🪙 +{coins} coins added!")
+        new_coins = gc(int(uid))
+        bot.reply_to(m, f"✅ Added {coins} coins to {uid}\n🪙 Total now: {new_coins}")
+        bot.send_message(int(uid), f"🪙 +{coins} coins added!\n🪙 Total: {new_coins}\n\n✅ Now you can search {new_coins} times!")
     except: bot.reply_to(m, "❌ /addcoins [uid] [coins]")
 
 @bot.message_handler(commands=['users'])
@@ -1211,6 +1260,8 @@ if __name__ == "__main__":
     print("💎 Premium Upsell Message        : ON")
     print("🌍 6 Languages                   : ON")
     print("🌐 Website Button (11x)          : ON")
+    print("✅ Non-Premium Coins Working     : ON")
+    print("✅ Add Premium / Add Coins       : ON")
     print("=" * 55)
     print("✅ ALL SYSTEMS READY")
     print("=" * 55)
