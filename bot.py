@@ -44,12 +44,12 @@ conn.commit()
 
 # ==================== LANGUAGE DICTIONARIES ====================
 L = {
-    'en': {'lang': "🌐 Select Language:", 'welcome_premium': "💎 **Premium Required**\n\n🎁 **FREE Daily Coin System:**\n• Get **1 FREE Coin every day**\n• 1 Coin = 1 Search\n• Just open bot daily & claim it\n\n📅 Premium Plans:\n• 1 Day – ₹10\n• 5 Days – ₹30\n• 1 Week – ₹35\n• 1 Month – ₹70", 'buy_premium': "💳 Buy Premium", 'payment_info': "💳 **Pay via UPI**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 Scan QR below.", 'already_premium': "🎉 You are already premium!", 'main_menu': "📱 **Main Menu**", 'search': "🔍 Search", 'premium': "💎 Premium", 'number': "📱 Number", 'vehicle': "🚗 Vehicle", 'vehicle_special': "🚘 Vehicle Special", 'aadhaar': "🆔 Aadhaar", 'claim_btn': "🪙 Claim Coin", 'profile_btn': "👤 Profile", 'help_btn': "❓ Help", 'about_btn': "ℹ️ About", 'clear_btn': "🗑️ Clear", 'back': "🔙 Back", 'owner': "👨‍💻 Owner", 'group': "🔗 Group", 'admin_only': "⚠️ Not authorized.", 'stats_text': "📊 Stats\n👥 Total: {total}\n✅ Active: {access}\n💎 Premium: {premium}\n🪙 Coins: {coins}\n🔍 Searches: {searches}", 'enter_number': "📱 Send 10-digit number:", 'enter_vehicle': "🚗 Send vehicle number:", 'enter_vehicle_special': "🚘 Send vehicle for Special:", 'enter_aadhaar': "🆔 Send 12-digit Aadhaar:", 'follow_insta': "📸 Follow Insta", 'visit_website': "🌐 Visit Website", 'get_coin': "🪙 Get 1 FREE Coin", 'coin_earned': "✅ You earned 1 FREE Coin!", 'already_done': "✅ Already done!", 'follow_visit_required': "⚠️ First follow Insta & visit Website.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website", 'profile': "👤 Profile\n🪙 Coins: {coins}\n💎 Premium: {prem}\n🔍 Searches: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ Already claimed today!", 'nc': "❌ No coins! Claim daily 1 FREE Coin.", 'pin_success': "📌 Message pinned!", 'pin_fail': "❌ Pin failed. Make me admin."},
-    'hi': {'lang': "🌐 भाषा चुनें:", 'welcome_premium': "💎 **प्रीमियम आवश्यक**\n\n🎁 **FREE Daily Coin System:**\n• **रोज 1 FREE Coin** पाएं\n• 1 Coin = 1 Search\n• रोज बॉट खोलें & claim करें\n\n📅 प्रीमियम प्लान:\n• 1 दिन – ₹10\n• 5 दिन – ₹30\n• 1 सप्ताह – ₹35\n• 1 महीना – ₹70", 'buy_premium': "💳 प्रीमियम खरीदें", 'payment_info': "💳 **UPI से भुगतान**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 QR स्कैन करें।", 'already_premium': "🎉 आप प्रीमियम हैं!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 खोज", 'premium': "💎 प्रीमियम", 'number': "📱 नंबर", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Special", 'aadhaar': "🆔 आधार", 'claim_btn': "🪙 Coin लें", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदद", 'about_btn': "ℹ️ जानकारी", 'clear_btn': "🗑️ साफ करें", 'back': "🔙 वापस", 'owner': "👨‍💻 मालिक", 'group': "🔗 ग्रुप", 'admin_only': "⚠️ अधिकृत नहीं।", 'stats_text': "📊 आँकड़े\n👥 कुल: {total}\n✅ सक्रिय: {access}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 खोज: {searches}", 'enter_number': "📱 10 अंकों का नंबर भेजें:", 'enter_vehicle': "🚗 वाहन नंबर भेजें:", 'enter_vehicle_special': "🚘 Special वाहन:", 'enter_aadhaar': "🆔 12 अंकों का आधार:", 'follow_insta': "📸 Insta फॉलो", 'visit_website': "🌐 वेबसाइट", 'get_coin': "🪙 1 FREE Coin पाएं", 'coin_earned': "✅ 1 FREE Coin मिला!", 'already_done': "✅ पहले ही किया!", 'follow_visit_required': "⚠️ पहले Insta फॉलो + Website विजिट करें।", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website", 'profile': "👤 प्रोफाइल\n🪙 Coins: {coins}\n💎 प्रीमियम: {prem}\n🔍 खोज: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ आज ले लिए!", 'nc': "❌ Coin नहीं! रोज 1 FREE Coin लें।", 'pin_success': "📌 पिन किया!", 'pin_fail': "❌ पिन नहीं कर सका।"},
-    'bn': {'lang': "🌐 ভাষা নির্বাচন:", 'welcome_premium': "💎 **প্রিমিয়াম প্রয়োজন**\n\n🎁 **FREE Daily Coin System:**\n• **প্রতিদিন ১ FREE Coin** পান\n• ১ Coin = ১ Search\n• প্রতিদিন বট খুলুন & claim করুন\n\n📅 প্রিমিয়াম প্ল্যান:\n• ১ দিন – ₹১০\n• ৫ দিন – ₹৩০\n• ১ সপ্তাহ – ₹৩৫\n• ১ মাস – ₹৭০", 'buy_premium': "💳 প্রিমিয়াম কিনুন", 'payment_info': "💳 **UPI দিয়ে পে**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 আপনি প্রিমিয়াম!", 'main_menu': "📱 **মেনু**", 'search': "🔍 অনুসন্ধান", 'premium': "💎 প্রিমিয়াম", 'number': "📱 নম্বর", 'vehicle': "🚗 গাড়ি", 'vehicle_special': "🚘 গাড়ি স্পেশাল", 'aadhaar': "🆔 আধার", 'claim_btn': "🪙 Coin দাবি", 'profile_btn': "👤 প্রোফাইল", 'help_btn': "❓ সাহায্য", 'about_btn': "ℹ️ তথ্য", 'clear_btn': "🗑️ মুছুন", 'back': "🔙 ফিরে", 'owner': "👨‍💻 মালিক", 'group': "🔗 গ্রুপ", 'admin_only': "⚠️ অনুমতি নেই।", 'stats_text': "📊 পরিসংখ্যান\n👥 মোট: {total}\n✅ সক্রিয়: {access}\n💎 প্রিমিয়াম: {premium}\n🪙 Coins: {coins}\n🔍 অনুসন্ধান: {searches}", 'enter_number': "📱 ১০ অঙ্কের নম্বর:", 'enter_vehicle': "🚗 গাড়ির নম্বর:", 'enter_vehicle_special': "🚘 স্পেশাল গাড়ি:", 'enter_aadhaar': "🆔 ১২ অঙ্কের আধার:", 'follow_insta': "📸 Insta ফলো", 'visit_website': "🌐 ওয়েবসাইট", 'get_coin': "🪙 ১ FREE Coin পান", 'coin_earned': "✅ ১ FREE Coin পেলেন!", 'already_done': "✅ আগেই করা!", 'follow_visit_required': "⚠️ আগে Insta ফলো + Website দেখুন।", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website", 'profile': "👤 প্রোফাইল\n🪙 Coins: {coins}\n💎 প্রিমিয়াম: {prem}\n🔍 অনুসন্ধান: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ আজ দাবি করেছেন!", 'nc': "❌ Coin নেই! দৈনিক ১ FREE Coin নিন।", 'pin_success': "📌 পিন করা হয়েছে!", 'pin_fail': "❌ পিন ব্যর্থ।"},
-    'mr': {'lang': "🌐 भाषा निवडा:", 'welcome_premium': "💎 **प्रीमियम आवश्यक**\n\n🎁 **FREE Daily Coin System:**\n• **रोज १ FREE Coin** मिळवा\n• १ Coin = १ Search\n• रोज बॉट उघडा & claim करा\n\n📅 प्रीमियम प्लान:\n• १ दिवस – ₹१०\n• ५ दिवस – ₹३०\n• १ आठवडा – ₹३५\n• १ महिना – ₹७०", 'buy_premium': "💳 प्रीमियम खरेदी", 'payment_info': "💳 **UPI ने पैसे**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 तुम्ही प्रीमियम!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 शोध", 'premium': "💎 प्रीमियम", 'number': "📱 क्रमांक", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन स्पेशल", 'aadhaar': "🆔 आधार", 'claim_btn': "🪙 Coin मागा", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदत", 'about_btn': "ℹ️ माहिती", 'clear_btn': "🗑️ साफ करा", 'back': "🔙 मागे", 'owner': "👨‍💻 मालक", 'group': "🔗 ग्रुप", 'admin_only': "⚠️ अधिकार नाही.", 'stats_text': "📊 आकडेवारी\n👥 एकूण: {total}\n✅ सक्रिय: {access}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 शोध: {searches}", 'enter_number': "📱 १० अंकी क्रमांक:", 'enter_vehicle': "🚗 वाहन क्रमांक:", 'enter_vehicle_special': "🚘 स्पेशल वाहन:", 'enter_aadhaar': "🆔 १२ अंकी आधार:", 'follow_insta': "📸 Insta फॉलो", 'visit_website': "🌐 वेबसाइट", 'get_coin': "🪙 १ FREE Coin", 'coin_earned': "✅ १ FREE Coin!", 'already_done': "✅ आधीच केले!", 'follow_visit_required': "⚠️ आधी Insta फॉलो + Website पहा.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website", 'profile': "👤 प्रोफाइल\n🪙 Coins: {coins}\n💎 प्रीमियम: {prem}\n🔍 शोध: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ आज मागितले!", 'nc': "❌ Coin नाही! रोज १ FREE Coin.", 'pin_success': "📌 पिन केला!", 'pin_fail': "❌ पिन अयशस्वी."},
-    'ur': {'lang': "🌐 زبان منتخب:", 'welcome_premium': "💎 **پریمیم ضروری**\n\n🎁 **FREE Daily Coin System:**\n• **روزانہ ۱ FREE Coin** حاصل کریں\n• ۱ Coin = ۱ Search\n• روز بوت کھولیں & claim کریں\n\n📅 پریمیم پلان:\n• ۱ دن – ₹۱۰\n• ۵ دن – ₹۳۰\n• ۱ ہفتہ – ₹۳۵\n• ۱ مہینہ – ₹۷۰", 'buy_premium': "💳 پریمیم خریدیں", 'payment_info': "💳 **UPI سے ادائیگی**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 آپ پریمیم!", 'main_menu': "📱 **مین مینو**", 'search': "🔍 تلاش", 'premium': "💎 پریمیم", 'number': "📱 نمبر", 'vehicle': "🚗 گاڑی", 'vehicle_special': "🚘 گاڑی سپیشل", 'aadhaar': "🆔 آدھار", 'claim_btn': "🪙 Coin", 'profile_btn': "👤 پروفائل", 'help_btn': "❓ مدد", 'about_btn': "ℹ️ معلومات", 'clear_btn': "🗑️ صاف", 'back': "🔙 واپس", 'owner': "👨‍💻 مالک", 'group': "🔗 گروپ", 'admin_only': "⚠️ مجاز نہیں۔", 'stats_text': "📊 اعداد\n👥 کل: {total}\n✅ فعال: {access}\n💎 پریمیم: {premium}\n🪙 Coins: {coins}\n🔍 تلاش: {searches}", 'enter_number': "📱 ۱۰ ہندسی نمبر:", 'enter_vehicle': "🚗 گاڑی نمبر:", 'enter_vehicle_special': "🚘 سپیشل گاڑی:", 'enter_aadhaar': "🆔 ۱۲ ہندسی آدھار:", 'follow_insta': "📸 Insta فالو", 'visit_website': "🌐 ویب سائٹ", 'get_coin': "🪙 ۱ FREE Coin", 'coin_earned': "✅ ۱ FREE Coin!", 'already_done': "✅ پہلے کیا!", 'follow_visit_required': "⚠️ پہلے Insta + Website.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website", 'profile': "👤 پروفائل\n🪙 Coins: {coins}\n💎 پریمیم: {prem}\n🔍 تلاش: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ آج دعوی!", 'nc': "❌ Coin نہیں! روزانہ ۱ FREE.", 'pin_success': "📌 پن ہوا!", 'pin_fail': "❌ پن ناکام."},
-    'ta': {'lang': "🌐 மொழி தேர்வு:", 'welcome_premium': "💎 **பிரீமியம் தேவை**\n\n🎁 **FREE Daily Coin System:**\n• **தினமும் 1 FREE Coin** பெறுங்கள்\n• 1 Coin = 1 Search\n• தினமும் போட்டை திறந்து & claim செய்யுங்கள்\n\n📅 பிரீமியம் திட்டம்:\n• 1 நாள் – ₹10\n• 5 நாட்கள் – ₹30\n• 1 வாரம் – ₹35\n• 1 மாதம் – ₹70", 'buy_premium': "💳 பிரீமியம் வாங்க", 'payment_info': "💳 **UPI மூலம்**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 நீங்கள் பிரீமியம்!", 'main_menu': "📱 **மெனு**", 'search': "🔍 தேடு", 'premium': "💎 பிரீமியம்", 'number': "📱 எண்", 'vehicle': "🚗 வாகனம்", 'vehicle_special': "🚘 வாகனம் ஸ்பெஷல்", 'aadhaar': "🆔 ஆதார்", 'claim_btn': "🪙 Coin", 'profile_btn': "👤 சுயவிவரம்", 'help_btn': "❓ உதவி", 'about_btn': "ℹ️ தகவல்", 'clear_btn': "🗑️ அழி", 'back': "🔙 பின்", 'owner': "👨‍💻 உரிமை", 'group': "🔗 குழு", 'admin_only': "⚠️ அனுமதி இல்லை.", 'stats_text': "📊 புள்ளி\n👥 மொத்தம்: {total}\n✅ செயல்: {access}\n💎 பிரீமியம்: {premium}\n🪙 Coins: {coins}\n🔍 தேடல்: {searches}", 'enter_number': "📱 10 இலக்க எண்:", 'enter_vehicle': "🚗 வாகன எண்:", 'enter_vehicle_special': "🚘 ஸ்பெஷல் வாகனம்:", 'enter_aadhaar': "🆔 12 இலக்க ஆதார்:", 'follow_insta': "📸 Insta பின்தொடரவும்", 'visit_website': "🌐 இணையதளம்", 'get_coin': "🪙 1 FREE Coin", 'coin_earned': "✅ 1 FREE Coin!", 'already_done': "✅ ஏற்கனவே!", 'follow_visit_required': "⚠️ முதலில் Insta + Website.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website", 'profile': "👤 சுயவிவரம்\n🪙 Coins: {coins}\n💎 பிரீமியம்: {prem}\n🔍 தேடல்: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ இன்று கோரியது!", 'nc': "❌ Coin இல்லை! தினமும் 1 FREE.", 'pin_success': "📌 பொருத்தப்பட்டது!", 'pin_fail': "❌ பொருத்த முடியவில்லை."}
+    'en': {'lang': "🌐 Select Language:", 'welcome_premium': "💎 **Premium Required**\n\n🎁 **FREE Daily Coin System:**\n• Get **1 FREE Coin every day**\n• 1 Coin = 1 Search\n• Just open bot daily & claim it\n\n📅 Premium Plans:\n• 1 Day – ₹10\n• 5 Days – ₹30\n• 1 Week – ₹35\n• 1 Month – ₹70", 'buy_premium': "💳 Buy Premium", 'payment_info': "💳 **Pay via UPI**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 Scan QR below.", 'already_premium': "🎉 You are already premium!", 'main_menu': "📱 **Main Menu**", 'search': "🔍 Search", 'premium': "💎 Premium", 'number': "📱 Number", 'vehicle': "🚗 Vehicle", 'vehicle_special': "🚘 Vehicle Special", 'aadhaar': "🆔 Aadhaar", 'claim_btn': "🪙 Claim Coin", 'profile_btn': "👤 Profile", 'help_btn': "❓ Help", 'about_btn': "ℹ️ About", 'clear_btn': "🗑️ Clear", 'back': "🔙 Back", 'owner': "👨‍💻 Owner", 'group': "🔗 Group", 'admin_only': "⚠️ Not authorized.", 'stats_text': "📊 Stats\n👥 Total: {total}\n✅ Active: {access}\n💎 Premium: {premium}\n🪙 Coins: {coins}\n🔍 Searches: {searches}", 'enter_number': "📱 Send 10-digit number:", 'enter_vehicle': "🚗 Send vehicle number:", 'enter_vehicle_special': "🚘 Send vehicle for Special:", 'enter_aadhaar': "🆔 Send 12-digit Aadhaar:", 'follow_insta': "📸 Follow Insta", 'visit_website': "🌐 Visit Website", 'get_coin': "🪙 Get 1 FREE Coin", 'coin_earned': "✅ You earned 1 FREE Coin!", 'already_done': "✅ Already done!", 'follow_visit_required': "⚠️ First follow Insta & visit Website.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website, /myid", 'profile': "👤 Profile\n🪙 Coins: {coins}\n💎 Premium: {prem}\n🔍 Searches: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ Already claimed today!", 'nc': "❌ No coins! Claim daily 1 FREE Coin.", 'pin_success': "📌 Message pinned!", 'pin_fail': "❌ Pin failed. Make me admin."},
+    'hi': {'lang': "🌐 भाषा चुनें:", 'welcome_premium': "💎 **प्रीमियम आवश्यक**\n\n🎁 **FREE Daily Coin System:**\n• **रोज 1 FREE Coin** पाएं\n• 1 Coin = 1 Search\n• रोज बॉट खोलें & claim करें\n\n📅 प्रीमियम प्लान:\n• 1 दिन – ₹10\n• 5 दिन – ₹30\n• 1 सप्ताह – ₹35\n• 1 महीना – ₹70", 'buy_premium': "💳 प्रीमियम खरीदें", 'payment_info': "💳 **UPI से भुगतान**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n📸 QR स्कैन करें।", 'already_premium': "🎉 आप प्रीमियम हैं!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 खोज", 'premium': "💎 प्रीमियम", 'number': "📱 नंबर", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Special", 'aadhaar': "🆔 आधार", 'claim_btn': "🪙 Coin लें", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदद", 'about_btn': "ℹ️ जानकारी", 'clear_btn': "🗑️ साफ करें", 'back': "🔙 वापस", 'owner': "👨‍💻 मालिक", 'group': "🔗 ग्रुप", 'admin_only': "⚠️ अधिकृत नहीं।", 'stats_text': "📊 आँकड़े\n👥 कुल: {total}\n✅ सक्रिय: {access}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 खोज: {searches}", 'enter_number': "📱 10 अंकों का नंबर भेजें:", 'enter_vehicle': "🚗 वाहन नंबर भेजें:", 'enter_vehicle_special': "🚘 Special वाहन:", 'enter_aadhaar': "🆔 12 अंकों का आधार:", 'follow_insta': "📸 Insta फॉलो", 'visit_website': "🌐 वेबसाइट", 'get_coin': "🪙 1 FREE Coin पाएं", 'coin_earned': "✅ 1 FREE Coin मिला!", 'already_done': "✅ पहले ही किया!", 'follow_visit_required': "⚠️ पहले Insta फॉलो + Website विजिट करें।", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website, /myid", 'profile': "👤 प्रोफाइल\n🪙 Coins: {coins}\n💎 प्रीमियम: {prem}\n🔍 खोज: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ आज ले लिए!", 'nc': "❌ Coin नहीं! रोज 1 FREE Coin लें।", 'pin_success': "📌 पिन किया!", 'pin_fail': "❌ पिन नहीं कर सका।"},
+    'bn': {'lang': "🌐 ভাষা নির্বাচন:", 'welcome_premium': "💎 **প্রিমিয়াম প্রয়োজন**\n\n🎁 **FREE Daily Coin System:**\n• **প্রতিদিন ১ FREE Coin** পান\n• ১ Coin = ১ Search\n• প্রতিদিন বট খুলুন & claim করুন\n\n📅 প্রিমিয়াম প্ল্যান:\n• ১ দিন – ₹১০\n• ৫ দিন – ₹৩০\n• ১ সপ্তাহ – ₹৩৫\n• ১ মাস – ₹৭০", 'buy_premium': "💳 প্রিমিয়াম কিনুন", 'payment_info': "💳 **UPI দিয়ে পে**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 আপনি প্রিমিয়াম!", 'main_menu': "📱 **মেনু**", 'search': "🔍 অনুসন্ধান", 'premium': "💎 প্রিমিয়াম", 'number': "📱 নম্বর", 'vehicle': "🚗 গাড়ি", 'vehicle_special': "🚘 গাড়ি স্পেশাল", 'aadhaar': "🆔 আধার", 'claim_btn': "🪙 Coin দাবি", 'profile_btn': "👤 প্রোফাইল", 'help_btn': "❓ সাহায্য", 'about_btn': "ℹ️ তথ্য", 'clear_btn': "🗑️ মুছুন", 'back': "🔙 ফিরে", 'owner': "👨‍💻 মালিক", 'group': "🔗 গ্রুপ", 'admin_only': "⚠️ অনুমতি নেই।", 'stats_text': "📊 পরিসংখ্যান\n👥 মোট: {total}\n✅ সক্রিয়: {access}\n💎 প্রিমিয়াম: {premium}\n🪙 Coins: {coins}\n🔍 অনুসন্ধান: {searches}", 'enter_number': "📱 ১০ অঙ্কের নম্বর:", 'enter_vehicle': "🚗 গাড়ির নম্বর:", 'enter_vehicle_special': "🚘 স্পেশাল গাড়ি:", 'enter_aadhaar': "🆔 ১২ অঙ্কের আধার:", 'follow_insta': "📸 Insta ফলো", 'visit_website': "🌐 ওয়েবসাইট", 'get_coin': "🪙 ১ FREE Coin পান", 'coin_earned': "✅ ১ FREE Coin পেলেন!", 'already_done': "✅ আগেই করা!", 'follow_visit_required': "⚠️ আগে Insta ফলো + Website দেখুন।", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website, /myid", 'profile': "👤 প্রোফাইল\n🪙 Coins: {coins}\n💎 প্রিমিয়াম: {prem}\n🔍 অনুসন্ধান: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ আজ দাবি করেছেন!", 'nc': "❌ Coin নেই! দৈনিক ১ FREE Coin নিন।", 'pin_success': "📌 পিন করা হয়েছে!", 'pin_fail': "❌ পিন ব্যর্থ।"},
+    'mr': {'lang': "🌐 भाषा निवडा:", 'welcome_premium': "💎 **प्रीमियम आवश्यक**\n\n🎁 **FREE Daily Coin System:**\n• **रोज १ FREE Coin** मिळवा\n• १ Coin = १ Search\n• रोज बॉट उघडा & claim करा\n\n📅 प्रीमियम प्लान:\n• १ दिवस – ₹१०\n• ५ दिवस – ₹३०\n• १ आठवडा – ₹३५\n• १ महिना – ₹७०", 'buy_premium': "💳 प्रीमियम खरेदी", 'payment_info': "💳 **UPI ने पैसे**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 तुम्ही प्रीमियम!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 शोध", 'premium': "💎 प्रीमियम", 'number': "📱 क्रमांक", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन स्पेशल", 'aadhaar': "🆔 आधार", 'claim_btn': "🪙 Coin मागा", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदत", 'about_btn': "ℹ️ माहिती", 'clear_btn': "🗑️ साफ करा", 'back': "🔙 मागे", 'owner': "👨‍💻 मालक", 'group': "🔗 ग्रुप", 'admin_only': "⚠️ अधिकार नाही.", 'stats_text': "📊 आकडेवारी\n👥 एकूण: {total}\n✅ सक्रिय: {access}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 शोध: {searches}", 'enter_number': "📱 १० अंकी क्रमांक:", 'enter_vehicle': "🚗 वाहन क्रमांक:", 'enter_vehicle_special': "🚘 स्पेशल वाहन:", 'enter_aadhaar': "🆔 १२ अंकी आधार:", 'follow_insta': "📸 Insta फॉलो", 'visit_website': "🌐 वेबसाइट", 'get_coin': "🪙 १ FREE Coin", 'coin_earned': "✅ १ FREE Coin!", 'already_done': "✅ आधीच केले!", 'follow_visit_required': "⚠️ आधी Insta फॉलो + Website पहा.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website, /myid", 'profile': "👤 प्रोफाइल\n🪙 Coins: {coins}\n💎 प्रीमियम: {prem}\n🔍 शोध: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ आज मागितले!", 'nc': "❌ Coin नाही! रोज १ FREE Coin.", 'pin_success': "📌 पिन केला!", 'pin_fail': "❌ पिन अयशस्वी."},
+    'ur': {'lang': "🌐 زبان منتخب:", 'welcome_premium': "💎 **پریمیم ضروری**\n\n🎁 **FREE Daily Coin System:**\n• **روزانہ ۱ FREE Coin** حاصل کریں\n• ۱ Coin = ۱ Search\n• روز بوت کھولیں & claim کریں\n\n📅 پریمیم پلان:\n• ۱ دن – ₹۱۰\n• ۵ دن – ₹۳۰\n• ۱ ہفتہ – ₹۳۵\n• ۱ مہینہ – ₹۷۰", 'buy_premium': "💳 پریمیم خریدیں", 'payment_info': "💳 **UPI سے ادائیگی**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 آپ پریمیم!", 'main_menu': "📱 **مین مینو**", 'search': "🔍 تلاش", 'premium': "💎 پریمیم", 'number': "📱 نمبر", 'vehicle': "🚗 گاڑی", 'vehicle_special': "🚘 گاڑی سپیشل", 'aadhaar': "🆔 آدھار", 'claim_btn': "🪙 Coin", 'profile_btn': "👤 پروفائل", 'help_btn': "❓ مدد", 'about_btn': "ℹ️ معلومات", 'clear_btn': "🗑️ صاف", 'back': "🔙 واپس", 'owner': "👨‍💻 مالک", 'group': "🔗 گروپ", 'admin_only': "⚠️ مجاز نہیں۔", 'stats_text': "📊 اعداد\n👥 کل: {total}\n✅ فعال: {access}\n💎 پریمیم: {premium}\n🪙 Coins: {coins}\n🔍 تلاش: {searches}", 'enter_number': "📱 ۱۰ ہندسی نمبر:", 'enter_vehicle': "🚗 گاڑی نمبر:", 'enter_vehicle_special': "🚘 سپیشل گاڑی:", 'enter_aadhaar': "🆔 ۱۲ ہندسی آدھار:", 'follow_insta': "📸 Insta فالو", 'visit_website': "🌐 ویب سائٹ", 'get_coin': "🪙 ۱ FREE Coin", 'coin_earned': "✅ ۱ FREE Coin!", 'already_done': "✅ پہلے کیا!", 'follow_visit_required': "⚠️ پہلے Insta + Website.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website, /myid", 'profile': "👤 پروفائل\n🪙 Coins: {coins}\n💎 پریمیم: {prem}\n🔍 تلاش: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ آج دعوی!", 'nc': "❌ Coin نہیں! روزانہ ۱ FREE.", 'pin_success': "📌 پن ہوا!", 'pin_fail': "❌ پن ناکام."},
+    'ta': {'lang': "🌐 மொழி தேர்வு:", 'welcome_premium': "💎 **பிரீமியம் தேவை**\n\n🎁 **FREE Daily Coin System:**\n• **தினமும் 1 FREE Coin** பெறுங்கள்\n• 1 Coin = 1 Search\n• தினமும் போட்டை திறந்து & claim செய்யுங்கள்\n\n📅 பிரீமியம் திட்டம்:\n• 1 நாள் – ₹10\n• 5 நாட்கள் – ₹30\n• 1 வாரம் – ₹35\n• 1 மாதம் – ₹70", 'buy_premium': "💳 பிரீமியம் வாங்க", 'payment_info': "💳 **UPI மூலம்**\nUPI: `desi.hacker@ybl`\n📅 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70", 'already_premium': "🎉 நீங்கள் பிரீமியம்!", 'main_menu': "📱 **மெனு**", 'search': "🔍 தேடு", 'premium': "💎 பிரீமியம்", 'number': "📱 எண்", 'vehicle': "🚗 வாகனம்", 'vehicle_special': "🚘 வாகனம் ஸ்பெஷல்", 'aadhaar': "🆔 ஆதார்", 'claim_btn': "🪙 Coin", 'profile_btn': "👤 சுயவிவரம்", 'help_btn': "❓ உதவி", 'about_btn': "ℹ️ தகவல்", 'clear_btn': "🗑️ அழி", 'back': "🔙 பின்", 'owner': "👨‍💻 உரிமை", 'group': "🔗 குழு", 'admin_only': "⚠️ அனுமதி இல்லை.", 'stats_text': "📊 புள்ளி\n👥 மொத்தம்: {total}\n✅ செயல்: {access}\n💎 பிரீமியம்: {premium}\n🪙 Coins: {coins}\n🔍 தேடல்: {searches}", 'enter_number': "📱 10 இலக்க எண்:", 'enter_vehicle': "🚗 வாகன எண்:", 'enter_vehicle_special': "🚘 ஸ்பெஷல் வாகனம்:", 'enter_aadhaar': "🆔 12 இலக்க ஆதார்:", 'follow_insta': "📸 Insta பின்தொடரவும்", 'visit_website': "🌐 இணையதளம்", 'get_coin': "🪙 1 FREE Coin", 'coin_earned': "✅ 1 FREE Coin!", 'already_done': "✅ ஏற்கனவே!", 'follow_visit_required': "⚠️ முதலில் Insta + Website.", 'help': "📖 /start, /menu, /num, /special, /vehicle, /vehiclespecial, /aadhaar, /claim, /premium, /profile, /contact, /clear, /language, /pin, /website, /myid", 'profile': "👤 சுயவிவரம்\n🪙 Coins: {coins}\n💎 பிரீமியம்: {prem}\n🔍 தேடல்: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'al': "✅ இன்று கோரியது!", 'nc': "❌ Coin இல்லை! தினமும் 1 FREE.", 'pin_success': "📌 பொருத்தப்பட்டது!", 'pin_fail': "❌ பொருத்த முடியவில்லை."}
 }
 
 # ==================== HELPERS ====================
@@ -64,10 +64,14 @@ def sl(i, l):
         c.execute("UPDATE users SET lang=? WHERE user_id=?", (l, i)); conn.commit()
     except: pass
 
-def au(i, n, u=""):
+def ensure_user(i, name="User", un=""):
     try:
-        c.execute("INSERT OR IGNORE INTO users (user_id, first_name, username) VALUES (?,?,?)", (i, n, u)); conn.commit()
+        c.execute("INSERT OR IGNORE INTO users (user_id, first_name, username) VALUES (?, ?, ?)", (i, name, un))
+        conn.commit()
     except: pass
+
+def au(i, n, u=""):
+    ensure_user(i, n, u)
 
 def ha(i):
     if i == ADMIN_ID: return True
@@ -83,7 +87,6 @@ def gc(i):
     except: return 0
 
 def dc(i):
-    """Deduct 1 coin, increment search count. Premium = no deduction."""
     try:
         if ip(i):
             c.execute("UPDATE users SET searches=searches+1 WHERE user_id=?", (i,)); conn.commit()
@@ -95,23 +98,22 @@ def dc(i):
     except: return False
 
 def auto_daily_coin(i):
-    """Auto give 1 free coin daily"""
     try:
+        ensure_user(i)
         t = datetime.datetime.now().date().isoformat()
         c.execute("SELECT last_claim FROM users WHERE user_id=?", (i,))
         r = c.fetchone()
-        if r and r[0] == t:
-            return False
+        if r and r[0] == t: return False
         c.execute("UPDATE users SET coins=coins+1, last_claim=? WHERE user_id=?", (t, i))
         conn.commit()
         return True
     except: return False
 
-adc = auto_daily_coin  # Alias
+adc = auto_daily_coin
 
 def ga(i):
-    """Grant access after Insta + Website click"""
     try:
+        ensure_user(i)
         t = datetime.datetime.now().date().isoformat()
         c.execute("SELECT last_claim FROM users WHERE user_id=?", (i,)); r = c.fetchone()
         if r and r[0] == t:
@@ -123,25 +125,39 @@ def ga(i):
     except: return False
 
 def ip(i):
-    """Check premium"""
     if i == ADMIN_ID: return True
     try:
         c.execute("SELECT premium, premium_expiry FROM users WHERE user_id=?", (i,)); r = c.fetchone()
         if not r or r[0] == 0: return False
         if r[1]:
-            if datetime.datetime.fromisoformat(r[1]) > datetime.datetime.now(): return True
-            else:
-                c.execute("UPDATE users SET premium=0, premium_expiry=NULL WHERE user_id=?", (i,)); conn.commit()
-                return False
+            try:
+                if datetime.datetime.fromisoformat(r[1]) > datetime.datetime.now(): return True
+            except: return True
+            c.execute("UPDATE users SET premium=0, premium_expiry=NULL WHERE user_id=?", (i,)); conn.commit()
+            return False
         return True
     except: return False
 
 def ap(i, d=30):
     try:
+        ensure_user(i, "Admin_Added")
         e = (datetime.datetime.now() + datetime.timedelta(days=d)).isoformat()
         c.execute("UPDATE users SET premium=1, premium_expiry=?, access=1 WHERE user_id=?", (e, i))
-        conn.commit(); return True
-    except: return False
+        conn.commit()
+        return True
+    except Exception as ex:
+        print(f"ap() error: {ex}")
+        return False
+
+def add_coins_db(i, coins):
+    try:
+        ensure_user(i, "Admin_Added")
+        c.execute("UPDATE users SET coins=coins+? WHERE user_id=?", (coins, i))
+        conn.commit()
+        return gc(i)
+    except Exception as ex:
+        print(f"add_coins error: {ex}")
+        return 0
 
 def mark_insta(i):
     try:
@@ -298,10 +314,9 @@ def no_coin_msg(lang='en'):
     }
     return msgs.get(lang, msgs['en'])
 
-# ==================== ULTRA HACKER LOADING ====================
+# ==================== HACKER LOADING ====================
 def hacker_loading(chat_id, msg_id, query, lang='en', search_type='NUMBER'):
     spinners = ["◐", "◓", "◑", "◒"]
-    
     frames = [
         (5,   "⚡", "SYSTEM BOOT",       "boot --kernel=dark",       "IPv6 : 192.***.***.7"),
         (15,  "🔌", "VPN TUNNEL",        "vpn connect tor_node7",    "Proxy : ACTIVE ✔"),
@@ -315,12 +330,10 @@ def hacker_loading(chat_id, msg_id, query, lang='en', search_type='NUMBER'):
         (95,  "💚", "FINALIZING",        "verify --checksum --int",  "Status: READY ✔"),
         (100, "✅", "ACCESS GRANTED",    "root@hacker:~$ SUCCESS",   "SYSTEM: COMPLETE")
     ]
-    
     for idx, (percent, icon, status, cmd, extra) in enumerate(frames):
         filled = percent // 10
         bar = "█" * filled + "░" * (10 - filled)
         spin = spinners[idx % 4]
-        
         try:
             bot.edit_message_text(
                 f"`╔══════════════════════════════╗`\n"
@@ -344,7 +357,7 @@ def hacker_loading(chat_id, msg_id, query, lang='en', search_type='NUMBER'):
                 f"`⚡ UPTIME : 00:00:{idx+1:02d}`",
                 chat_id, msg_id, parse_mode='Markdown'
             )
-            time.sleep(0.7)
+            time.sleep(0.6)
         except: pass
 
 # ==================== API FUNCTIONS ====================
@@ -496,7 +509,7 @@ def send_log(uid, un, nm, query, data, is_vehicle=False, is_special=False, is_aa
                 elif 'data' in data and isinstance(data['data'], dict): i = data['data']
                 else: i = data
             else: i = {}
-            bot.send_message(ADMIN_ID, f"📊 NUMBER NORMAL LOG (/special)\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {i.get('name', 'N/A')}")
+            bot.send_message(ADMIN_ID, f"📊 NUMBER NORMAL LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {i.get('name', 'N/A')}")
         elif is_special:
             bot.send_message(ADMIN_ID, f"🚘 SPECIAL VEHICLE LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n🚘 {data.get('reg_no', 'N/A')}")
         elif is_vehicle:
@@ -505,7 +518,7 @@ def send_log(uid, un, nm, query, data, is_vehicle=False, is_special=False, is_aa
         else:
             if not data or data.get('status') != 'success': return
             info = data.get('data', {})
-            bot.send_message(ADMIN_ID, f"📊 NUMBER SPECIAL LOG (/num)\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {info.get('name', 'N/A')}")
+            bot.send_message(ADMIN_ID, f"📊 NUMBER SPECIAL LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {info.get('name', 'N/A')}")
     except: pass
 
 # ==================== KEYBOARDS ====================
@@ -605,12 +618,12 @@ def lang_selection():
     )
     return mk
 
-# ==================== PROCESS QUERY (CORE LOGIC) ====================
+# ==================== PROCESS QUERY ====================
 def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
     l = gl(m.from_user.id)
+    ensure_user(m.from_user.id, m.from_user.first_name or "User", m.from_user.username or "")
     is_premium_user = ip(m.from_user.id)
     
-    # 🪙 COIN CHECK for non-premium
     if not is_premium_user:
         auto_daily_coin(m.from_user.id)
         coins = gc(m.from_user.id)
@@ -627,7 +640,6 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
     elif is_number_special: stype = "NUMBER NORMAL"
     else: stype = "NUMBER SPECIAL"
 
-    # Fetch data FIRST
     if is_aadhaar: d = fetch_aadhaar(q)
     elif is_special: d = fetch_vehicle_special(q)
     elif is_vehicle: d = fetch_vehicle(q)
@@ -638,7 +650,6 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         try: bot.send_message(ADMIN_ID, f"🔍 **RAW API** for `{q}`:\n```json\n{json.dumps(d, indent=2)}\n```", parse_mode='Markdown')
         except: pass
 
-    # Hacker animation
     try: msg = bot.reply_to(m, "`💻 HACKER MODE ACTIVE`\n`> Initializing...`", parse_mode='Markdown')
     except: msg = bot.reply_to(m, "💻 HACKER MODE ACTIVE...")
 
@@ -653,7 +664,6 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
     send_log(m.from_user.id, m.from_user.username, m.from_user.first_name, q, d, is_vehicle, is_special, is_aadhaar, is_number_special)
     res = format_result(d, q, is_vehicle, is_special, is_aadhaar, is_number_special)
 
-    # Show result
     try:
         bot.edit_message_text(
             f"`╔══════════════════════════════╗`\n"
@@ -675,7 +685,6 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         bot.send_message(m.chat.id, f"Error: {e}")
         return
 
-    # Auto JSON
     try:
         jtext = json.dumps(d, indent=2, ensure_ascii=False)
         if len(jtext) > 3600: jtext = jtext[:3600] + "\n... (truncated)"
@@ -693,7 +702,6 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         try: bot.send_message(m.chat.id, f"📊 JSON:\n`{str(d)[:3500]}`", parse_mode='Markdown')
         except: pass
 
-    # 💎 PREMIUM UPSELL
     if not is_premium_user and m.chat.type == 'private':
         coins_left = gc(m.from_user.id)
         try:
@@ -710,26 +718,23 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
 def lc(c):
     l = c.data.split('_')[1]
     sl(c.from_user.id, l)
-    # ✅ Show premium menu OR main menu (both premium & non-premium)
+    ensure_user(c.from_user.id, c.from_user.first_name or "User", c.from_user.username or "")
     if ip(c.from_user.id):
         try: bot.edit_message_text(L[l]['main_menu'], c.message.chat.id, c.message.message_id, reply_markup=main_menu(l), parse_mode='Markdown')
         except: bot.send_message(c.message.chat.id, L[l]['main_menu'], reply_markup=main_menu(l), parse_mode='Markdown')
     else:
-        # ✅ Non-premium gets main menu too (can use coins to search)
         coins = gc(c.from_user.id)
         try:
             bot.edit_message_text(
                 f"{L[l]['main_menu']}\n\n🪙 Coins: {coins}",
                 c.message.chat.id, c.message.message_id,
-                reply_markup=main_menu(l),
-                parse_mode='Markdown'
+                reply_markup=main_menu(l), parse_mode='Markdown'
             )
         except:
             bot.send_message(
                 c.message.chat.id,
                 f"{L[l]['main_menu']}\n\n🪙 Coins: {coins}",
-                reply_markup=main_menu(l),
-                parse_mode='Markdown'
+                reply_markup=main_menu(l), parse_mode='Markdown'
             )
     bot.answer_callback_query(c.id, "✅")
 
@@ -850,7 +855,6 @@ def clear_cb(c):
 @bot.callback_query_handler(func=lambda c: c.data == "main_menu")
 def main_menu_cb(c):
     l = gl(c.from_user.id)
-    # ✅ Show coins info for non-premium
     if ip(c.from_user.id):
         text = L[l]['main_menu']
     else:
@@ -862,11 +866,9 @@ def main_menu_cb(c):
         bot.send_message(c.message.chat.id, text, reply_markup=main_menu(l), parse_mode='Markdown')
     bot.answer_callback_query(c.id, "🔙")
 
-# ✅ FIXED: search_menu now works for non-premium with coins
 @bot.callback_query_handler(func=lambda c: c.data == "search_menu")
 def search_menu_cb(c):
     l = gl(c.from_user.id)
-    # ✅ Show coins info for non-premium
     coins_info = ""
     if not ip(c.from_user.id):
         coins = gc(c.from_user.id)
@@ -887,18 +889,15 @@ def search_menu_cb(c):
         )
     bot.answer_callback_query(c.id, "🔍")
 
-# ✅ FIXED: info_cb now works for non-premium with coins
 @bot.callback_query_handler(func=lambda c: c.data in ["info", "vehicle_info", "vehicle_special_info", "aadhaar_info"])
 def info_cb(c):
     l = gl(c.from_user.id)
-    # ✅ Check coins for non-premium, but DON'T block if has coins
     if not ip(c.from_user.id):
         coins = gc(c.from_user.id)
         if coins <= 0:
             bot.answer_callback_query(c.id, "❌ No coins! Claim daily 1 FREE", True)
             bot.send_message(c.message.chat.id, no_coin_msg(l), reply_markup=premium_upsell_kb(l), parse_mode='Markdown')
             return
-    # Show prompt
     if c.data == "aadhaar_info":
         bot.send_message(c.message.chat.id, L[l]['enter_aadhaar'])
     elif c.data == "vehicle_special_info":
@@ -950,6 +949,20 @@ def pin_callback(c):
 def st(m):
     au(m.from_user.id, m.from_user.first_name or "", m.from_user.username or "")
     bot.send_message(m.chat.id, L['en']['lang'], reply_markup=lang_selection(), parse_mode='Markdown')
+
+@bot.message_handler(commands=['myid', 'id', 'whoami'])
+def myid_cmd(m):
+    uid = m.from_user.id
+    un = m.from_user.username or "N/A"
+    fn = m.from_user.first_name or "N/A"
+    ensure_user(uid, fn, un)
+    bot.reply_to(m,
+        f"🆔 **Your Telegram Info**\n\n"
+        f"👤 Name: {fn}\n"
+        f"📛 Username: @{un}\n"
+        f"🆔 **User ID:** `{uid}`\n\n"
+        f"📌 Send this ID to admin to get Premium or Coins.",
+        parse_mode='Markdown')
 
 @bot.message_handler(commands=['num', 'search'], chat_types=['private'])
 def nc(m):
@@ -1052,7 +1065,6 @@ def gs(m):
     bot.reply_to(m, "👋 /num 9661756498 | /vehicle RJ14CV0002 | /vehiclespecial RJ14CV0002 | /aadhaar 962397300673 | /special 9661756498\n🪙 1 FREE Coin/day = 1 Search!\n💎 1D ₹10, 5D ₹30, 1W ₹35, 1M ₹70\n🌐 cyberwithranjan.in", reply_markup=group_menu(l))
 
 # ==================== GENERAL COMMANDS ====================
-# ✅ FIXED: Non-premium can also see main menu
 @bot.message_handler(commands=['menu'])
 def me(m):
     l = gl(m.from_user.id)
@@ -1096,6 +1108,7 @@ def pm(m):
 @bot.message_handler(commands=['profile'])
 def pr2(m):
     uid = m.from_user.id
+    ensure_user(uid, m.from_user.first_name or "User", m.from_user.username or "")
     coins = gc(uid)
     prem = "✅" if ip(uid) else "❌"
     searches = 0
@@ -1153,10 +1166,25 @@ def ap2(m):
     if m.from_user.id != ADMIN_ID: return
     try:
         _, uid, days = m.text.split()
-        if ap(int(uid), int(days)):
-            bot.reply_to(m, f"✅ Premium added to {uid} for {days} days!")
-            bot.send_message(int(uid), f"🎉 Premium activated for {days} days!\n✅ Unlimited access to all searches!")
-    except: bot.reply_to(m, "❌ /addpremium [uid] [days]")
+        uid_int = int(uid)
+        days_int = int(days)
+        if ap(uid_int, days_int):
+            bot.reply_to(m,
+                f"✅ **Premium Added**\n\n"
+                f"🆔 User ID: `{uid_int}`\n"
+                f"📅 Days: {days_int}\n"
+                f"💎 Status: Unlimited Access",
+                parse_mode='Markdown')
+            try:
+                bot.send_message(uid_int,
+                    f"🎉 **Premium Activated!**\n\n"
+                    f"⏰ Duration: {days_int} days\n"
+                    f"✅ Unlimited searches unlocked!\n\n"
+                    f"🔍 Now send any number to search!",
+                    parse_mode='Markdown')
+            except: pass
+    except:
+        bot.reply_to(m, "❌ Use: `/addpremium [user_id] [days]`", parse_mode='Markdown')
 
 @bot.message_handler(commands=['removepremium'])
 def rp(m):
@@ -1164,7 +1192,7 @@ def rp(m):
     try:
         _, uid = m.text.split()
         c.execute("UPDATE users SET premium=0, premium_expiry=NULL WHERE user_id=?", (int(uid),)); conn.commit()
-        bot.reply_to(m, f"✅ Removed premium from {uid}")
+        bot.reply_to(m, f"✅ Removed premium from `{uid}`", parse_mode='Markdown')
     except: bot.reply_to(m, "❌ /removepremium [uid]")
 
 @bot.message_handler(commands=['addcoins'])
@@ -1172,24 +1200,67 @@ def ac(m):
     if m.from_user.id != ADMIN_ID: return
     try:
         _, uid, coins = m.text.split()
-        c.execute("UPDATE users SET coins=coins+? WHERE user_id=?", (int(coins), int(uid))); conn.commit()
-        new_coins = gc(int(uid))
-        bot.reply_to(m, f"✅ Added {coins} coins to {uid}\n🪙 Total now: {new_coins}")
-        bot.send_message(int(uid), f"🪙 +{coins} coins added!\n🪙 Total: {new_coins}\n\n✅ Now you can search {new_coins} times!")
-    except: bot.reply_to(m, "❌ /addcoins [uid] [coins]")
+        uid_int = int(uid)
+        coins_int = int(coins)
+        new_coins = add_coins_db(uid_int, coins_int)
+        bot.reply_to(m,
+            f"✅ **Coins Added**\n\n"
+            f"🆔 User ID: `{uid_int}`\n"
+            f"🪙 Added: {coins_int}\n"
+            f"🪙 Total now: **{new_coins}**",
+            parse_mode='Markdown')
+        try:
+            bot.send_message(uid_int,
+                f"🪙 **+{coins_int} Coins Added!**\n\n"
+                f"🪙 Total Coins: **{new_coins}**\n\n"
+                f"✅ Now you can search {new_coins} times!\n"
+                f"🔍 1 Coin = 1 Search",
+                parse_mode='Markdown')
+        except: pass
+    except:
+        bot.reply_to(m, "❌ Use: `/addcoins [user_id] [coins]`", parse_mode='Markdown')
+
+@bot.message_handler(commands=['userinfo'])
+def userinfo_cmd(m):
+    if m.from_user.id != ADMIN_ID: return
+    try:
+        _, uid = m.text.split()
+        uid_int = int(uid)
+        cur = conn.cursor()
+        cur.execute("SELECT user_id, first_name, username, coins, premium, premium_expiry, searches FROM users WHERE user_id=?", (uid_int,))
+        r = cur.fetchone()
+        if not r:
+            bot.reply_to(m,
+                f"❌ **User `{uid_int}` not in DB.**\n\n"
+                f"⚠️ Ask user to send `/myid` first!",
+                parse_mode='Markdown')
+            return
+        prem_status = "✅ YES" if ip(uid_int) else "❌ NO"
+        bot.reply_to(m,
+            f"👤 **User Info**\n\n"
+            f"🆔 ID: `{r[0]}`\n"
+            f"👤 Name: {r[1]}\n"
+            f"📛 Username: @{r[2] or 'N/A'}\n"
+            f"🪙 Coins: **{r[3]}**\n"
+            f"💎 Premium: {prem_status}\n"
+            f"📅 Expiry: {r[5] or 'N/A'}\n"
+            f"🔍 Searches: {r[6]}",
+            parse_mode='Markdown')
+    except:
+        bot.reply_to(m, "❌ Use: `/userinfo [user_id]`", parse_mode='Markdown')
 
 @bot.message_handler(commands=['users'])
 def us(m):
     if m.from_user.id != ADMIN_ID: return
     try:
-        c.execute("SELECT user_id, username, access, coins, premium FROM users LIMIT 20")
+        c.execute("SELECT user_id, username, coins, premium FROM users ORDER BY user_id DESC LIMIT 20")
         users = c.fetchall()
         if not users:
             bot.reply_to(m, "No users."); return
-        text = "📋 Users:\n"
+        text = "📋 **Last 20 Users:**\n\n"
         for u in users:
-            text += f"🆔 {u[0]} | {u[1]} | {'✅' if u[2] else '❌'} | 🪙{u[3]} | {'💎' if u[4] else ''}\n"
-        bot.reply_to(m, text)
+            text += f"🆔 `{u[0]}` | @{u[1] or 'N/A'} | 🪙{u[2]} | {'💎' if u[3] else ''}\n"
+        bot.reply_to(m, text, parse_mode='Markdown')
     except: pass
 
 @bot.message_handler(commands=['stats'])
@@ -1242,27 +1313,15 @@ def test_api(m):
 # ==================== MAIN ====================
 if __name__ == "__main__":
     print("=" * 55)
-    print("🔥 HACKER OSINT BOT v3.0 — FINAL BUG-FREE")
+    print("🔥 HACKER OSINT BOT v3.0 — FINAL FIXED")
     print("=" * 55)
     print(f"👨‍💻 Owner: {OWNER}")
     print(f"🌐 Website: {WEBSITE}")
-    print(f"📢 Channel: {CHANNEL}")
     print("-" * 55)
-    print("✅ /num        → Special API (anurixx)")
-    print("✅ /special    → Normal API (paid_key@REDZONE21)")
-    print("✅ /vehicle    → Vehicle Info")
-    print("✅ /vehiclespecial → Vehicle Special")
-    print("✅ /aadhaar    → Aadhaar Info")
-    print("-" * 55)
-    print("🎬 ULTRA HACKER LOADING (Green)  : ON")
-    print("📊 Auto JSON Output              : ON")
-    print("🪙 Auto Daily Coin (1/day)       : ON")
-    print("💎 Premium Upsell Message        : ON")
-    print("🌍 6 Languages                   : ON")
-    print("🌐 Website Button (11x)          : ON")
-    print("✅ Non-Premium Coins Working     : ON")
-    print("✅ Add Premium / Add Coins       : ON")
-    print("=" * 55)
-    print("✅ ALL SYSTEMS READY")
+    print("✅ /addpremium → Auto-creates user")
+    print("✅ /addcoins   → Auto-creates user")
+    print("✅ /myid       → User sees own ID")
+    print("✅ /userinfo   → Admin checks user")
+    print("✅ Non-premium coins fully working")
     print("=" * 55)
     bot.infinity_polling()
