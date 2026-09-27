@@ -5,10 +5,18 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 BOT_TOKEN = "8622116851:AAG6kEKsxsDithf4ea85nZ9X4v2ia3ueJwc"
 ADMIN_ID = 6936978343
 
-NUMBER_API_URL = "https://num-info-redzone.susxbunny.workers.dev/api"
-NUMBER_API_KEY = "paid_key@REDZONE21"
+# ---- Normal Number API (Veriphone) ----
+VERIPHONE_API_URL = "https://api.veriphone.io/v2/verify"
+VERIPHONE_API_KEY = "738C00CEFCA6406E8F73D9F0C7AC5E04"
 
-SPECIAL_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_b3a91f"
+# ---- /num API (Rezone) ----
+REZONE_NUM_API_URL = "https://rezone-aadhar-info.bunxred5.workers.dev/api"
+REZONE_NUM_API_KEY = "paid_key_redzone12"
+
+# ---- /special API (DarkApiX) ----
+DARK_SPECIAL_API_URL = "https://bot.userinfo.site/apixadmin/DarkApiX.php?api=api_fad768"
+
+# ---- Other APIs ----
 TG_NUMBER_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_6182a6"
 AADHAAR_SPECIAL_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_e5ba5c"
 PAKISTAN_API_URL = "https://sarkariupdate.online/osint/APIX.php?api=api_9bfe12"
@@ -71,12 +79,12 @@ BOMBER_STATE = {}
 
 # ==================== LANGUAGES ====================
 L = {
-    'en': {'lang': "🌐 **Select Language:**", 'welcome': "🎁 **Welcome to OSINT Bot!**\n\n🪙 **FREE Daily Coin**\n• Claim 1 coin every day\n• 1 Coin = 1 Search\n\n💎 **Premium Plans**\n• 1 Day – ₹10\n• 1 Week – ₹60\n• 1 Month – ₹101\n\n📸 Scan QR to buy premium\n👇 Or claim FREE coin now!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 Buy Premium", 'already_claimed': "✅ Aaj ka coin already claim kar chuke ho!\n\n⏰ Kal phir aana", 'coin_claimed': "🎉 **Congratulations!**\n\n🪙 You got 1 FREE Coin!\n🪙 Total Coins: {coins}\n\n✅ Now you can search!", 'main_menu': "📱 **Main Menu**", 'search': "🔍 Search", 'premium': "💎 Premium", 'number': "📱 Number", 'vehicle': "🚗 Vehicle", 'vehicle_special': "🚘 Vehicle Spl", 'aadhaar': "🆔 Aadhaar", 'profile_btn': "👤 Profile", 'help_btn': "❓ Help", 'about_btn': "ℹ️ About", 'clear_btn': "🗑️ Clear", 'back': "🔙 Back", 'owner': "👨‍💻 Owner", 'admin_only': "⚠️ Not authorized.", 'enter_number': "📱 Send 10-digit number:", 'enter_vehicle': "🚗 Send vehicle number:", 'enter_vehicle_special': "🚘 Send vehicle for Special:", 'enter_aadhaar': "🆔 Send 12-digit Aadhaar:", 'enter_special': "🔍 Send number for Special lookup:", 'enter_aadhaar_special': "🆔 Send 12-digit Aadhaar for Special:", 'enter_tg_number': "📞 Send Telegram ID:", 'enter_pakistan': "🇵🇰 Send Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **Profile**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 Premium: {prem}\n🔍 Searches: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ No coins! Claim daily 1 FREE coin.", 'stats_text': "📊 Stats\n👥 Total: {total}\n💎 Premium: {premium}\n🪙 Coins: {coins}\n🔍 Searches: {searches}"},
-    'hi': {'lang': "🌐 **भाषा चुनें:**", 'welcome': "🎁 **OSINT Bot में स्वागत!**\n\n🪙 **FREE Daily Coin**\n• रोज 1 FREE Coin claim करें\n• 1 Coin = 1 Search\n\n💎 **प्रीमियम प्लान**\n• 1 दिन – ₹10\n• 1 सप्ताह – ₹60\n• 1 महीना – ₹101\n\n📸 QR स्कैन करके premium खरीदें\n👇 या अभी FREE coin claim करें!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरीदें", 'already_claimed': "✅ आज का coin already claim कर चुके हो!\n\n⏰ कल फिर आना", 'coin_claimed': "🎉 **बधाई हो!**\n\n🪙 आपको 1 FREE Coin मिला!\n🪙 Total Coins: {coins}\n\n✅ अब search कर सकते हैं!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 खोज", 'premium': "💎 प्रीमियम", 'number': "📱 नंबर", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Spl", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदद", 'about_btn': "ℹ️ जानकारी", 'clear_btn': "🗑️ साफ करें", 'back': "🔙 वापस", 'owner': "👨‍💻 मालिक", 'admin_only': "⚠️ अधिकृत नहीं।", 'enter_number': "📱 10 अंकों का नंबर भेजें:", 'enter_vehicle': "🚗 वाहन नंबर भेजें:", 'enter_vehicle_special': "🚘 Special वाहन:", 'enter_aadhaar': "🆔 12 अंकों का आधार:", 'enter_special': "🔍 Special के लिए number भेजें:", 'enter_aadhaar_special': "🆔 12-digit Aadhaar for Special:", 'enter_tg_number': "📞 Telegram ID भेजें:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 खोज: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नहीं! रोज 1 FREE coin claim करें।", 'stats_text': "📊 आँकड़े\n👥 कुल: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 खोज: {searches}"},
-    'bn': {'lang': "🌐 **ভাষা নির্বাচন:**", 'welcome': "🎁 **OSINT Bot এ স্বাগতম!**\n\n🪙 **FREE Daily Coin**\n• প্রতিদিন ১টি FREE Coin\n• ১ Coin = ১ Search\n\n💎 **প্রিমিয়াম প্ল্যান**\n• ১ দিন – ₹১০\n• ১ সপ্তাহ – ₹৬০\n• ১ মাস – ₹১০১\n\n📸 QR স্ক্যান করুন\n👇 অথবা FREE coin claim করুন!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 প্রিমিয়াম কিনুন", 'already_claimed': "✅ আজকের coin claim হয়েছেন!\n\n⏰ কাল আবার আসুন", 'coin_claimed': "🎉 **অভিনন্দন!**\n\n🪙 ১টি FREE Coin পেয়েছেন!\n🪙 Total: {coins}\n\n✅ এখন search করুন!", 'main_menu': "📱 **মেনু**", 'search': "🔍 অনুসন্ধান", 'premium': "💎 প্রিমিয়াম", 'number': "📱 নম্বর", 'vehicle': "🚗 গাড়ি", 'vehicle_special': "🚘 গাড়ি Spl", 'aadhaar': "🆔 আধার", 'profile_btn': "👤 প্রোফাইল", 'help_btn': "❓ সাহায্য", 'about_btn': "ℹ️ তথ্য", 'clear_btn': "🗑️ মুছুন", 'back': "🔙 ফিরে", 'owner': "👨‍💻 মালিক", 'admin_only': "⚠️ অনুমতি নেই।", 'enter_number': "📱 ১০ অঙ্কের নম্বর:", 'enter_vehicle': "🚗 গাড়ির নম্বর:", 'enter_vehicle_special': "🚘 স্পেশাল গাড়ি:", 'enter_aadhaar': "🆔 ১২ অঙ্কের আধার:", 'enter_special': "🔍 Special নম্বর:", 'enter_aadhaar_special': "🆔 ১২ অঙ্কের আধার Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **প্রোফাইল**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 প্রিমিয়াম: {prem}\n🔍 অনুসন্ধান: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin নেই! দৈনিক ১ FREE coin নিন।", 'stats_text': "📊 পরিসংখ্যান\n👥 মোট: {total}\n💎 প্রিমিয়াম: {premium}\n🪙 Coins: {coins}\n🔍 অনুসন্ধান: {searches}"},
-    'mr': {'lang': "🌐 **भाषा निवडा:**", 'welcome': "🎁 **OSINT Bot मध्ये स्वागत!**\n\n🪙 **FREE Daily Coin**\n• रोज १ FREE Coin\n• १ Coin = १ Search\n\n💎 **प्रीमियम प्लान**\n• १ दिवस – ₹१०\n• १ आठवडा – ₹६०\n• १ महिना – ₹१०१\n\n📸 QR स्कॅन करा\n👇 किंवा FREE coin claim करा!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरेदी", 'already_claimed': "✅ आजचा coin claim केला!\n\n⏰ उद्या या", 'coin_claimed': "🎉 **अभिनंदन!**\n\n🪙 १ FREE Coin मिळाला!\n🪙 Total: {coins}\n\n✅ आता search करा!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 शोध", 'premium': "💎 प्रीमियम", 'number': "📱 क्रमांक", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Spl", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदत", 'about_btn': "ℹ️ माहिती", 'clear_btn': "🗑️ साफ करा", 'back': "🔙 मागे", 'owner': "👨‍💻 मालक", 'admin_only': "⚠️ अधिकार नाही.", 'enter_number': "📱 १० अंकी क्रमांक:", 'enter_vehicle': "🚗 वाहन क्रमांक:", 'enter_vehicle_special': "🚘 स्पेशल वाहन:", 'enter_aadhaar': "🆔 १२ अंकी आधार:", 'enter_special': "🔍 Special क्रमांक:", 'enter_aadhaar_special': "🆔 १२ अंकी आधार Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 शोध: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नाही! रोज १ FREE coin.", 'stats_text': "📊 आकडेवारी\n👥 एकूण: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 शोध: {searches}"},
-    'ur': {'lang': "🌐 **زبان منتخب:**", 'welcome': "🎁 **OSINT Bot میں خوش آمدید!**\n\n🪙 **FREE Daily Coin**\n• روزانہ ۱ FREE Coin\n• ۱ Coin = ۱ Search\n\n💎 **پریمیم پلان**\n• ۱ دن – ₹۱۰\n• ۱ ہفتہ – ₹۶۰\n• ۱ مہینہ – ₹۱۰۱\n\n📸 QR اسکین کریں\n👇 یا FREE coin claim کریں!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 پریمیم خریدیں", 'already_claimed': "✅ آج کا coin claim کر چکے!\n\n⏰ کل آئیں", 'coin_claimed': "🎉 **مبارک ہو!**\n\n🪙 ۱ FREE Coin ملا!\n🪙 Total: {coins}\n\n✅ اب search کریں!", 'main_menu': "📱 **مین مینو**", 'search': "🔍 تلاش", 'premium': "💎 پریمیم", 'number': "📱 نمبر", 'vehicle': "🚗 گاڑی", 'vehicle_special': "🚘 گاڑی Spl", 'aadhaar': "🆔 آدھار", 'profile_btn': "👤 پروفائل", 'help_btn': "❓ مدد", 'about_btn': "ℹ️ معلومات", 'clear_btn': "🗑️ صاف", 'back': "🔙 واپس", 'owner': "👨‍💻 مالک", 'admin_only': "⚠️ مجاز نہیں۔", 'enter_number': "📱 ۱۰ ہندسی نمبر:", 'enter_vehicle': "🚗 گاڑی نمبر:", 'enter_vehicle_special': "🚘 سپیشل گاڑی:", 'enter_aadhaar': "🆔 ۱۲ ہندسی آدھار:", 'enter_special': "🔍 Special نمبر:", 'enter_aadhaar_special': "🆔 ۱۲ ہندسی آدھار Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **پروفائل**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 پریمیم: {prem}\n🔍 تلاش: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin نہیں! روزانہ ۱ FREE coin.", 'stats_text': "📊 اعداد\n👥 کل: {total}\n💎 پریمیم: {premium}\n🪙 Coins: {coins}\n🔍 تلاش: {searches}"},
-    'ta': {'lang': "🌐 **மொழி தேர்வு:**", 'welcome': "🎁 **OSINT Bot க்கு வரவேற்கிறோம்!**\n\n🪙 **FREE Daily Coin**\n• தினமும் 1 FREE Coin\n• 1 Coin = 1 Search\n\n💎 **பிரீமியம் திட்டம்**\n• 1 நாள் – ₹10\n• 1 வாரம் – ₹60\n• 1 மாதம் – ₹101\n\n📸 QR ஸ்கேன் செய்யவும்\n👇 அல்லது FREE coin claim!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 பிரீமியம் வாங்க", 'already_claimed': "✅ இன்றைய coin claim!\n\n⏰ நாளை வாருங்கள்", 'coin_claimed': "🎉 **வாழ்த்துக்கள்!**\n\n🪙 1 FREE Coin!\n🪙 Total: {coins}\n\n✅ Search செய்யுங்கள்!", 'main_menu': "📱 **மெனு**", 'search': "🔍 தேடு", 'premium': "💎 பிரீமியம்", 'number': "📱 எண்", 'vehicle': "🚗 வாகனம்", 'vehicle_special': "🚘 வாகனம் Spl", 'aadhaar': "🆔 ஆதார்", 'profile_btn': "👤 சுயவிவரம்", 'help_btn': "❓ உதவி", 'about_btn': "ℹ️ தகவல்", 'clear_btn': "🗑️ அழி", 'back': "🔙 பின்", 'owner': "👨‍💻 உரிமை", 'admin_only': "⚠️ அனுமதி இல்லை.", 'enter_number': "📱 10 இலக்க எண்:", 'enter_vehicle': "🚗 வாகன எண்:", 'enter_vehicle_special': "🚘 ஸ்பெஷல் வாகனம்:", 'enter_aadhaar': "🆔 12 இலக்க ஆதார்:", 'enter_special': "🔍 Special எண்:", 'enter_aadhaar_special': "🆔 12 இலக்க ஆதார் Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **சுயவிவரம்**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 பிரீமியம்: {prem}\n🔍 தேடல்: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin இல்லை! தினமும் 1 FREE coin.", 'stats_text': "📊 புள்ளி\n👥 மொத்தம்: {total}\n💎 பிரீமியம்: {premium}\n🪙 Coins: {coins}\n🔍 தேடல்: {searches}"}
+    'en': {'lang': "🌐 **Select Language:**", 'welcome': "🎁 **Welcome to OSINT Bot!**\n\n🪙 **FREE Daily Coin**\n• Claim 1 coin every day\n• 1 Coin = 1 Search\n\n💎 **Premium Plans**\n• 1 Day – ₹10\n• 1 Week – ₹60\n• 1 Month – ₹101\n\n📸 Scan QR to buy premium\n👇 Or claim FREE coin now!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 Buy Premium", 'already_claimed': "✅ Aaj ka coin already claim kar chuke ho!\n\n⏰ Kal phir aana", 'coin_claimed': "🎉 **Congratulations!**\n\n🪙 You got 1 FREE Coin!\n🪙 Total Coins: {coins}\n\n✅ Now you can search!", 'main_menu': "📱 **Main Menu**", 'search': "🔍 Search", 'premium': "💎 Premium", 'number': "📱 Number", 'vehicle': "🚗 Vehicle", 'vehicle_special': "🚘 Vehicle Spl", 'aadhaar': "🆔 Aadhaar", 'profile_btn': "👤 Profile", 'help_btn': "❓ Help", 'about_btn': "ℹ️ About", 'clear_btn': "🗑️ Clear", 'back': "🔙 Back", 'owner': "👨‍💻 Owner", 'admin_only': "⚠️ Not authorized.", 'enter_number': "📱 Send 10-digit number:", 'enter_vehicle': "🚗 Send vehicle number:", 'enter_vehicle_special': "🚘 Send vehicle for Special:", 'enter_aadhaar': "🆔 Send 12-digit Aadhaar:", 'enter_special': "🔍 Send number for Special lookup:", 'enter_aadhaar_special': "🆔 Send 12-digit Aadhaar for Special:", 'enter_tg_number': "📞 Send Telegram ID:", 'enter_pakistan': "🇵🇰 Send Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /normal /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **Profile**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 Premium: {prem}\n🔍 Searches: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ No coins! Claim daily 1 FREE coin.", 'stats_text': "📊 Stats\n👥 Total: {total}\n💎 Premium: {premium}\n🪙 Coins: {coins}\n🔍 Searches: {searches}"},
+    'hi': {'lang': "🌐 **भाषा चुनें:**", 'welcome': "🎁 **OSINT Bot में स्वागत!**\n\n🪙 **FREE Daily Coin**\n• रोज 1 FREE Coin claim करें\n• 1 Coin = 1 Search\n\n💎 **प्रीमियम प्लान**\n• 1 दिन – ₹10\n• 1 सप्ताह – ₹60\n• 1 महीना – ₹101\n\n📸 QR स्कैन करके premium खरीदें\n👇 या अभी FREE coin claim करें!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरीदें", 'already_claimed': "✅ आज का coin already claim कर चुके हो!\n\n⏰ कल फिर आना", 'coin_claimed': "🎉 **बधाई हो!**\n\n🪙 आपको 1 FREE Coin मिला!\n🪙 Total Coins: {coins}\n\n✅ अब search कर सकते हैं!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 खोज", 'premium': "💎 प्रीमियम", 'number': "📱 नंबर", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Spl", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदद", 'about_btn': "ℹ️ जानकारी", 'clear_btn': "🗑️ साफ करें", 'back': "🔙 वापस", 'owner': "👨‍💻 मालिक", 'admin_only': "⚠️ अधिकृत नहीं।", 'enter_number': "📱 10 अंकों का नंबर भेजें:", 'enter_vehicle': "🚗 वाहन नंबर भेजें:", 'enter_vehicle_special': "🚘 Special वाहन:", 'enter_aadhaar': "🆔 12 अंकों का आधार:", 'enter_special': "🔍 Special के लिए number भेजें:", 'enter_aadhaar_special': "🆔 12-digit Aadhaar for Special:", 'enter_tg_number': "📞 Telegram ID भेजें:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /normal /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 ID: `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 खोज: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नहीं! रोज 1 FREE coin claim करें।", 'stats_text': "📊 आँकड़े\n👥 कुल: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 खोज: {searches}"},
+    'bn': {'lang': "🌐 **ভাষা নির্বাচন:**", 'welcome': "🎁 **OSINT Bot এ স্বাগতম!**\n\n🪙 **FREE Daily Coin**\n• প্রতিদিন ১টি FREE Coin\n• ১ Coin = ১ Search\n\n💎 **প্রিমিয়াম প্ল্যান**\n• ১ দিন – ₹১০\n• ১ সপ্তাহ – ₹৬০\n• ১ মাস – ₹১০১\n\n📸 QR স্ক্যান করুন\n👇 অথবা FREE coin claim করুন!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 প্রিমিয়াম কিনুন", 'already_claimed': "✅ আজকের coin claim হয়েছেন!\n\n⏰ কাল আবার আসুন", 'coin_claimed': "🎉 **অভিনন্দন!**\n\n🪙 ১টি FREE Coin পেয়েছেন!\n🪙 Total: {coins}\n\n✅ এখন search করুন!", 'main_menu': "📱 **মেনু**", 'search': "🔍 অনুসন্ধান", 'premium': "💎 প্রিমিয়াম", 'number': "📱 নম্বর", 'vehicle': "🚗 গাড়ি", 'vehicle_special': "🚘 গাড়ি Spl", 'aadhaar': "🆔 আধার", 'profile_btn': "👤 প্রোফাইল", 'help_btn': "❓ সাহায্য", 'about_btn': "ℹ️ তথ্য", 'clear_btn': "🗑️ মুছুন", 'back': "🔙 ফিরে", 'owner': "👨‍💻 মালিক", 'admin_only': "⚠️ অনুমতি নেই।", 'enter_number': "📱 ১০ অঙ্কের নম্বর:", 'enter_vehicle': "🚗 গাড়ির নম্বর:", 'enter_vehicle_special': "🚘 স্পেশাল গাড়ি:", 'enter_aadhaar': "🆔 ১২ অঙ্কের আধার:", 'enter_special': "🔍 Special নম্বর:", 'enter_aadhaar_special': "🆔 ১২ অঙ্কের আধার Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /normal /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **প্রোফাইল**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 প্রিমিয়াম: {prem}\n🔍 অনুসন্ধান: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin নেই! দৈনিক ১ FREE coin নিন।", 'stats_text': "📊 পরিসংখ্যান\n👥 মোট: {total}\n💎 প্রিমিয়াম: {premium}\n🪙 Coins: {coins}\n🔍 অনুসন্ধান: {searches}"},
+    'mr': {'lang': "🌐 **भाषा निवडा:**", 'welcome': "🎁 **OSINT Bot मध्ये स्वागत!**\n\n🪙 **FREE Daily Coin**\n• रोज १ FREE Coin\n• १ Coin = १ Search\n\n💎 **प्रीमियम प्लान**\n• १ दिवस – ₹१०\n• १ आठवडा – ₹६०\n• १ महिना – ₹१०१\n\n📸 QR स्कॅन करा\n👇 किंवा FREE coin claim करा!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 प्रीमियम खरेदी", 'already_claimed': "✅ आजचा coin claim केला!\n\n⏰ उद्या या", 'coin_claimed': "🎉 **अभिनंदन!**\n\n🪙 १ FREE Coin मिळाला!\n🪙 Total: {coins}\n\n✅ आता search करा!", 'main_menu': "📱 **मुख्य मेनू**", 'search': "🔍 शोध", 'premium': "💎 प्रीमियम", 'number': "📱 क्रमांक", 'vehicle': "🚗 वाहन", 'vehicle_special': "🚘 वाहन Spl", 'aadhaar': "🆔 आधार", 'profile_btn': "👤 प्रोफाइल", 'help_btn': "❓ मदत", 'about_btn': "ℹ️ माहिती", 'clear_btn': "🗑️ साफ करा", 'back': "🔙 मागे", 'owner': "👨‍💻 मालक", 'admin_only': "⚠️ अधिकार नाही.", 'enter_number': "📱 १० अंकी क्रमांक:", 'enter_vehicle': "🚗 वाहन क्रमांक:", 'enter_vehicle_special': "🚘 स्पेशल वाहन:", 'enter_aadhaar': "🆔 १२ अंकी आधार:", 'enter_special': "🔍 Special क्रमांक:", 'enter_aadhaar_special': "🆔 १२ अंकी आधार Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /normal /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **प्रोफाइल**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 प्रीमियम: {prem}\n🔍 शोध: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin नाही! रोज १ FREE coin.", 'stats_text': "📊 आकडेवारी\n👥 एकूण: {total}\n💎 प्रीमियम: {premium}\n🪙 Coins: {coins}\n🔍 शोध: {searches}"},
+    'ur': {'lang': "🌐 **زبان منتخب:**", 'welcome': "🎁 **OSINT Bot میں خوش آمدید!**\n\n🪙 **FREE Daily Coin**\n• روزانہ ۱ FREE Coin\n• ۱ Coin = ۱ Search\n\n💎 **پریمیم پلان**\n• ۱ دن – ₹۱۰\n• ۱ ہفتہ – ₹۶۰\n• ۱ مہینہ – ₹۱۰۱\n\n📸 QR اسکین کریں\n👇 یا FREE coin claim کریں!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 پریمیم خریدیں", 'already_claimed': "✅ آج کا coin claim کر چکے!\n\n⏰ کل آئیں", 'coin_claimed': "🎉 **مبارک ہو!**\n\n🪙 ۱ FREE Coin ملا!\n🪙 Total: {coins}\n\n✅ اب search کریں!", 'main_menu': "📱 **مین مینو**", 'search': "🔍 تلاش", 'premium': "💎 پریمیم", 'number': "📱 نمبر", 'vehicle': "🚗 گاڑی", 'vehicle_special': "🚘 گاڑی Spl", 'aadhaar': "🆔 آدھار", 'profile_btn': "👤 پروفائل", 'help_btn': "❓ مدد", 'about_btn': "ℹ️ معلومات", 'clear_btn': "🗑️ صاف", 'back': "🔙 واپس", 'owner': "👨‍💻 مالک", 'admin_only': "⚠️ مجاز نہیں۔", 'enter_number': "📱 ۱۰ ہندسی نمبر:", 'enter_vehicle': "🚗 گاڑی نمبر:", 'enter_vehicle_special': "🚘 سپیشل گاڑی:", 'enter_aadhaar': "🆔 ۱۲ ہندسی آدھار:", 'enter_special': "🔍 Special نمبر:", 'enter_aadhaar_special': "🆔 ۱۲ ہندسی آدھار Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /normal /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **پروفائل**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 پریمیم: {prem}\n🔍 تلاش: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin نہیں! روزانہ ۱ FREE coin.", 'stats_text': "📊 اعداد\n👥 کل: {total}\n💎 پریمیم: {premium}\n🪙 Coins: {coins}\n🔍 تلاش: {searches}"},
+    'ta': {'lang': "🌐 **மொழி தேர்வு:**", 'welcome': "🎁 **OSINT Bot க்கு வரவேற்கிறோம்!**\n\n🪙 **FREE Daily Coin**\n• தினமும் 1 FREE Coin\n• 1 Coin = 1 Search\n\n💎 **பிரீமியம் திட்டம்**\n• 1 நாள் – ₹10\n• 1 வாரம் – ₹60\n• 1 மாதம் – ₹101\n\n📸 QR ஸ்கேன் செய்யவும்\n👇 அல்லது FREE coin claim!", 'claim_btn': "🎁 FREE Daily Coin Claim", 'buy_premium': "💳 பிரீமியம் வாங்க", 'already_claimed': "✅ இன்றைய coin claim!\n\n⏰ நாளை வாருங்கள்", 'coin_claimed': "🎉 **வாழ்த்துக்கள்!**\n\n🪙 1 FREE Coin!\n🪙 Total: {coins}\n\n✅ Search செய்யுங்கள்!", 'main_menu': "📱 **மெனு**", 'search': "🔍 தேடு", 'premium': "💎 பிரீமியம்", 'number': "📱 எண்", 'vehicle': "🚗 வாகனம்", 'vehicle_special': "🚘 வாகனம் Spl", 'aadhaar': "🆔 ஆதார்", 'profile_btn': "👤 சுயவிவரம்", 'help_btn': "❓ உதவி", 'about_btn': "ℹ️ தகவல்", 'clear_btn': "🗑️ அழி", 'back': "🔙 பின்", 'owner': "👨‍💻 உரிமை", 'admin_only': "⚠️ அனுமதி இல்லை.", 'enter_number': "📱 10 இலக்க எண்:", 'enter_vehicle': "🚗 வாகன எண்:", 'enter_vehicle_special': "🚘 ஸ்பெஷல் வாகனம்:", 'enter_aadhaar': "🆔 12 இலக்க ஆதார்:", 'enter_special': "🔍 Special எண்:", 'enter_aadhaar_special': "🆔 12 இலக்க ஆதார் Special:", 'enter_tg_number': "📞 Telegram ID:", 'enter_pakistan': "🇵🇰 Pakistan number (03XXXXXXXXX):", 'help': "📖 /start /menu /num /normal /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom /claim /premium /profile /contact /clear /language /website /myid", 'profile': "👤 **சுயவிவரம்**\n\n🆔 `{uid}`\n🪙 Coins: **{coins}**\n💎 பிரீமியம்: {prem}\n🔍 தேடல்: {searches}", 'about': "🤖 OSINT v3.0\n👨‍💻 @Cyber_With_Ranjan", 'nc': "❌ Coin இல்லை! தினமும் 1 FREE coin.", 'stats_text': "📊 புள்ளி\n👥 மொத்தம்: {total}\n💎 பிரீமியம்: {premium}\n🪙 Coins: {coins}\n🔍 தேடல்: {searches}"}
 }
 
 # ==================== HELPERS ====================
@@ -212,19 +220,55 @@ def hacker_loading(chat_id, msg_id, query, search_type='NUMBER'):
         except: pass
 
 # ==================== API FUNCTIONS ====================
+def _clean_digits(s):
+    return re.sub(r'\D', '', str(s or ''))
+
 def fetch_number(num):
+    """Veriphone — /normal & 10-digit auto-detect"""
     try:
-        r = SESSION.get(f"{NUMBER_API_URL}?key={NUMBER_API_KEY}&number={num}", timeout=6)
-        if r.status_code == 200: return r.json()
+        clean = _clean_digits(num)
+        if len(clean) == 10:
+            full = '91' + clean
+        elif len(clean) == 12 and clean.startswith('91'):
+            full = clean
+        elif len(clean) == 11 and clean.startswith('0'):
+            full = '91' + clean[1:]
+        else:
+            full = clean
+        r = SESSION.get(
+            f"{VERIPHONE_API_URL}?key={VERIPHONE_API_KEY}&phone={full}",
+            timeout=6
+        )
+        if r.status_code == 200:
+            return r.json()
         return None
-    except: return None
+    except Exception:
+        return None
+
+def fetch_num_rezone(num):
+    """Rezone Aadhaar/Number API — /num command"""
+    try:
+        clean = _clean_digits(num)
+        r = SESSION.get(
+            f"{REZONE_NUM_API_URL}?key={REZONE_NUM_API_KEY}&id={clean}",
+            timeout=8
+        )
+        if r.status_code == 200:
+            return r.json()
+        return None
+    except Exception:
+        return None
 
 def fetch_special(phone):
+    """DarkApiX — /special command"""
     try:
-        r = SESSION.get(f"{SPECIAL_API_URL}&q={phone}", timeout=7)
-        if r.status_code == 200: return r.json()
+        clean = _clean_digits(phone)
+        r = SESSION.get(f"{DARK_SPECIAL_API_URL}&q={clean}", timeout=7)
+        if r.status_code == 200:
+            return r.json()
         return None
-    except: return None
+    except Exception:
+        return None
 
 def fetch_tg_number(tg_id):
     try:
@@ -249,7 +293,8 @@ def fetch_pakistan(pk_num):
 
 def fetch_aadhaar(aadhaar_num):
     try:
-        r = SESSION.get(f"{AADHAAR_API_URL}?key={AADHAAR_API_KEY}&id={aadhaar_num}", timeout=8)
+        clean = _clean_digits(aadhaar_num)
+        r = SESSION.get(f"{AADHAAR_API_URL}?key={AADHAAR_API_KEY}&id={clean}", timeout=8)
         if r.status_code == 200: return r.json()
         return None
     except: return None
@@ -272,7 +317,39 @@ def fetch_vehicle_special(vehicle_num):
 
 # ==================== FORMAT RESULT ====================
 def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False,
-                  is_aadhaar_special=False, is_tg_number=False, is_pakistan=False):
+                  is_aadhaar_special=False, is_tg_number=False, is_pakistan=False, is_num_rezone=False):
+
+    # ---------- /num → Rezone ----------
+    if is_num_rezone:
+        if not data:
+            return f"`❌ No data`\n`🔎 Query: {query}`"
+        info = data
+        if isinstance(data, dict):
+            if 'data' in data and isinstance(data['data'], dict): info = data['data']
+            elif 'result' in data and isinstance(data['result'], dict): info = data['result']
+        name = info.get('name') or info.get('Name') or 'N/A'
+        father = info.get('father') or info.get('fname') or info.get('Father') or 'N/A'
+        aadhar = info.get('aadhaar') or info.get('aadhar') or info.get('Aadhaar') or query
+        address = info.get('address') or info.get('addr') or info.get('Address') or 'N/A'
+        phone = info.get('phone') or info.get('mobile') or info.get('Phone') or query
+        circle = info.get('circle') or info.get('operator') or info.get('Circle') or 'N/A'
+        email = info.get('email') or info.get('Email') or 'N/A'
+        if name == 'N/A' and father == 'N/A' and address == 'N/A':
+            return f"`❌ No records found`\n`🔎 Query: {query}`"
+        return (
+            f"`🆔 REZONE INTEL`\n"
+            f"`━━━━━━━━━━━━━━━━━━━━━`\n"
+            f"`🔎 Query: {query}`\n"
+            f"`👤 Name: {name}`\n"
+            f"`👨 Father: {father}`\n"
+            f"`🆔 Aadhaar: {aadhar}`\n"
+            f"`🏠 Address: {str(address)[:120]}`\n"
+            f"`📱 Phone: {phone}`\n"
+            f"`📡 Circle: {circle}`\n"
+            f"`📧 Email: {email}`\n"
+            f"`🔐 {OWNER}`"
+        )
+
     if is_aadhaar_special:
         if not data or data.get('status') != 'success': return "`❌ No data`"
         records = data.get('data', [])
@@ -312,18 +389,42 @@ def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=Fa
         country = d.get('Country-Code') or 'N/A'
         return f"`📞 TG TO NUMBER`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🆔 TG ID: {tg_id}`\n`📱 Owner Number: {owner_num}`\n`🌍 Country: {country}`\n`🔐 {OWNER}`"
     elif is_number_special:
-        if not data or data.get('status') != 'success': return "`❌ No data`"
-        records = data.get('data', [])
-        if not records: return "`❌ No records`"
+        if not data:
+            return f"`❌ No data`\n`🔎 Query: {query}`"
+        # DarkApiX returns either {status,data:[...]} or {result:[...]} or direct
+        records = []
+        if isinstance(data, dict):
+            if isinstance(data.get('data'), list):
+                records = data['data']
+            elif isinstance(data.get('result'), list):
+                records = data['result']
+            elif isinstance(data.get('records'), list):
+                records = data['records']
+            elif data.get('status') == 'success' and isinstance(data.get('data'), dict):
+                records = [data['data']]
+        if not records:
+            # try single dict
+            single = data.get('data') if isinstance(data, dict) and isinstance(data.get('data'), dict) else (data if isinstance(data, dict) else {})
+            if single and any(single.get(k) for k in ['name', 'mobile', 'phone', 'address', 'fname']):
+                records = [single]
+        if not records:
+            return f"`❌ No records`\n`🔎 Query: {query}`"
         text = f"`🔍 SPECIAL LOOKUP`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🔎 Query: {query}`\n`📊 Total: {len(records)}`\n"
         for i, rec in enumerate(records[:3], 1):
+            if not isinstance(rec, dict): continue
             text += f"\n`📌 Record #{i}`\n"
-            text += f"`📱 Mobile: {rec.get('mobile', 'N/A')}`\n"
-            text += f"`👤 Name: {rec.get('name', 'N/A')}`\n"
-            text += f"`👨 Father: {rec.get('fname', 'N/A')}`\n"
-            text += f"`🏠 Address: {str(rec.get('address', 'N/A'))[:80]}`\n"
-            text += f"`📞 Alt: {rec.get('alt', 'N/A')}`\n"
-            text += f"`📡 Circle: {rec.get('circle', 'N/A')}`\n"
+            mob = rec.get('mobile') or rec.get('phone') or rec.get('number') or 'N/A'
+            nm = rec.get('name') or rec.get('Name') or 'N/A'
+            fnm = rec.get('fname') or rec.get('father') or rec.get('Father') or 'N/A'
+            addr = rec.get('address') or rec.get('addr') or 'N/A'
+            alt = rec.get('alt') or rec.get('alt_number') or 'N/A'
+            cir = rec.get('circle') or rec.get('operator') or 'N/A'
+            text += f"`📱 Mobile: {mob}`\n"
+            text += f"`👤 Name: {nm}`\n"
+            text += f"`👨 Father: {fnm}`\n"
+            text += f"`🏠 Address: {str(addr)[:80]}`\n"
+            text += f"`📞 Alt: {alt}`\n"
+            text += f"`📡 Circle: {cir}`\n"
             if rec.get('id'): text += f"`🆔 ID: {rec.get('id')}`\n"
             if rec.get('email'): text += f"`📧 Email: {rec.get('email')}`\n"
         if len(records) > 3: text += f"\n`... and {len(records)-3} more`"
@@ -336,7 +437,8 @@ def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=Fa
             if 'data' in data and isinstance(data['data'], dict): info = data['data']
             elif 'result' in data and isinstance(data['result'], dict): info = data['result']
             else: info = data
-        if not info or not info.get('name'): return "`❌ No records`"
+        if not info or not (info.get('name') or info.get('Name')):
+            return "`❌ No records`"
         return f"`🆔 AADHAAR INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🆔 {info.get('aadhaar') or info.get('aadhar', query)}`\n`👤 Name: {info.get('name', 'N/A')}`\n`👨 Father: {info.get('father') or info.get('fname', 'N/A')}`\n`📅 DOB: {info.get('dob') or 'N/A'}`\n`⚥ Gender: {info.get('gender') or 'N/A'}`\n`🏠 Address: {info.get('address') or info.get('addr', 'N/A')}`\n`📱 Phone: {info.get('phone') or info.get('mobile', 'N/A')}`\n`📧 Email: {info.get('email') or 'N/A'}`\n`🔐 {OWNER}`"
     elif is_special:
         if not data or not data.get('reg_no'): return "`❌ Not found`"
@@ -347,17 +449,35 @@ def format_result(data, query, is_vehicle=False, is_special=False, is_aadhaar=Fa
         i = data.get('response', {}); rto = i.get('rtoData', {})
         return f"`🚗 VEHICLE INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`🚘 {data.get('regNo', 'N/A')}`\n`👤 Owner: {i.get('ownerName', 'N/A')}`\n`🏭 Company: {i.get('manufacturer', 'N/A')}`\n`🚗 Model: {i.get('vehicle', 'N/A')}`\n`📅 Reg: {i.get('regDate', 'N/A')}`\n`🏢 RTO: {rto.get('rtoCode', 'N/A')}`\n`🏠 Address: {i.get('presentAddress', 'N/A')}`\n`🔐 {OWNER}`"
     else:
-        if not data: return "`❌ No data`"
+        # ---------- Default → Veriphone ----------
+        if not data:
+            return f"`❌ No data`\n`📱 Query: {query}`"
+        if isinstance(data, dict) and data.get('status') == 'success':
+            valid = data.get('phone_valid', False)
+            return (
+                f"`📱 NUMBER VERIFY`\n"
+                f"`━━━━━━━━━━━━━━━━━━━━━`\n"
+                f"`📱 Query: {query}`\n"
+                f"`✅ Valid: {'YES ✅' if valid else 'NO ❌'}`\n"
+                f"`📞 Type: {data.get('phone_type', 'N/A')}`\n"
+                f"`🌍 Country: {data.get('country', 'N/A')}`\n"
+                f"`🔢 Prefix: +{data.get('country_prefix', 'N/A')}`\n"
+                f"`📡 Carrier: {data.get('carrier', 'N/A')}`\n"
+                f"`☎️ E164: {data.get('e164', 'N/A')}`\n"
+                f"`📞 Local: {data.get('local_number', 'N/A')}`\n"
+                f"`🌐 Intl: {data.get('international_number', 'N/A')}`\n"
+                f"`🔐 {OWNER}`"
+            )
+        # fallback for old-style number API
+        info = {}
         if isinstance(data, dict):
             if 'result' in data and isinstance(data['result'], list) and data['result']: info = data['result'][0]
             elif 'data' in data and isinstance(data['data'], dict): info = data['data']
             else: info = data
-        else: info = {}
         if not info or not info.get('name'): return "`❌ No records`"
         return f"`📱 NUMBER INTEL`\n`━━━━━━━━━━━━━━━━━━━━━`\n`📱 {query}`\n`👤 Name: {info.get('name', 'N/A')}`\n`👨 Father: {info.get('fname') or info.get('father', 'N/A')}`\n`🆔 Aadhar: {info.get('aadhar') or info.get('aadhaar', 'N/A')}`\n`🏠 Address: {info.get('address') or info.get('addr', 'N/A')}`\n`📡 Circle: {info.get('circle') or info.get('operator', 'N/A')}`\n`📧 Email: {info.get('email') or 'N/A'}`\n`📞 Alt: {info.get('alt') or 'N/A'}`\n`🔐 {OWNER}`"
 
 def send_log(uid, un, query, data, stype="NUMBER"):
-    """✅ FIX: Markdown escape username"""
     try:
         un_safe = _md_escape(un or 'N/A')
         bot.send_message(ADMIN_ID, f"📊 {stype} LOG\n👤 @{un_safe} ({uid})\n🔍 {query}")
@@ -384,7 +504,7 @@ def run_sms_bomber(chat_id, msg_id, number, message):
     success = 0
     failed = 0
     lock = threading.Lock()
-    
+
     def hit_api(url, idx):
         nonlocal success, failed
         result = send_bomber_request(url, number, message)
@@ -405,19 +525,19 @@ def run_sms_bomber(chat_id, msg_id, number, message):
                         chat_id, msg_id, parse_mode='Markdown'
                     )
                 except: pass
-    
+
     threads = []
     for idx, url in enumerate(BOMBER_URLS, 1):
         t = threading.Thread(target=hit_api, args=(url, idx), daemon=True)
         threads.append(t); t.start()
-    
+
     for t in threads:
         try: t.join(timeout=8)
         except: pass
-    
+
     rate = int((success / total) * 100) if total > 0 else 0
     verdict = "🔥 SUCCESSFUL" if rate >= 70 else "⚠️ PARTIAL" if rate >= 40 else "❌ FAILED"
-    
+
     try:
         bot.edit_message_text(
             f"`💥 ATTACK COMPLETE`\n`━━━━━━━━━━━━━━━━━━━━━`\n"
@@ -429,7 +549,7 @@ def run_sms_bomber(chat_id, msg_id, number, message):
             chat_id, msg_id, parse_mode='Markdown'
         )
     except: pass
-    
+
     try:
         bot.send_message(ADMIN_ID, f"💥 BOMBER LOG\n👤 {chat_id}\n📱 {number}\n💬 {message}\n✅ {success}/{total}")
     except: pass
@@ -493,7 +613,7 @@ def group_menu(l):
     mk.add(InlineKeyboardButton("🌐 Website", url=WEBSITE))
     return mk
 
-def result_btn(query, lang, flags="0000000", message_id=None, is_group=False):
+def result_btn(query, lang, flags="00000000", message_id=None, is_group=False):
     mk = InlineKeyboardMarkup(row_width=2)
     mk.add(InlineKeyboardButton("📊 JSON", callback_data=f"json_{query}_{flags}"))
     mk.add(InlineKeyboardButton("🌐 Website", url=WEBSITE))
@@ -591,7 +711,6 @@ def pay_cb(c):
             bot.send_photo(c.message.chat.id, qr, caption=text, parse_mode='Markdown')
     except:
         bot.send_message(c.message.chat.id, text, parse_mode='Markdown')
-    bot.answer_callback_query(c.id, "💳")
 
 @bot.callback_query_handler(func=lambda c: c.data == "bomber_start")
 def bomber_start_cb(c):
@@ -622,7 +741,7 @@ def bomber_confirm_cb(c):
     try:
         msg = bot.send_message(c.message.chat.id, "`💥 LAUNCHING...`", parse_mode='Markdown')
         threading.Thread(target=run_sms_bomber, args=(c.message.chat.id, msg.message_id, number, message), daemon=True).start()
-    except Exception as e:
+    except Exception:
         bot.send_message(c.message.chat.id, "❌ Error launching bomber.")
     BOMBER_STATE.pop(uid, None)
 
@@ -733,7 +852,7 @@ def json_cb(c):
     if len(parts) < 3:
         bot.answer_callback_query(c.id, "❌", True); return
     q = parts[1]
-    flags = parts[2] if parts[2] else "0000000"
+    flags = parts[2] if parts[2] else "00000000"
     is_vehicle = len(flags) > 0 and flags[0] == '1'
     is_special = len(flags) > 1 and flags[1] == '1'
     is_aadhaar = len(flags) > 2 and flags[2] == '1'
@@ -741,9 +860,11 @@ def json_cb(c):
     is_aadhaar_special = len(flags) > 4 and flags[4] == '1'
     is_tg_number = len(flags) > 5 and flags[5] == '1'
     is_pakistan = len(flags) > 6 and flags[6] == '1'
+    is_num_rezone = len(flags) > 7 and flags[7] == '1'
 
     bot.answer_callback_query(c.id, "📊 Loading...")
-    if is_aadhaar_special: d = fetch_aadhaar_special(q)
+    if is_num_rezone: d = fetch_num_rezone(q)
+    elif is_aadhaar_special: d = fetch_aadhaar_special(q)
     elif is_pakistan: d = fetch_pakistan(q)
     elif is_tg_number: d = fetch_tg_number(q)
     elif is_aadhaar: d = fetch_aadhaar(q)
@@ -774,7 +895,7 @@ def pin_callback(c):
 
 # ==================== PROCESS QUERY ====================
 def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is_number_special=False,
-                  is_aadhaar_special=False, is_tg_number=False, is_pakistan=False):
+                  is_aadhaar_special=False, is_tg_number=False, is_pakistan=False, is_num_rezone=False):
     l = gl(m.from_user.id)
     ensure_user(m.from_user.id, m.from_user.first_name or "User", m.from_user.username or "")
     is_premium_user = ip(m.from_user.id)
@@ -792,20 +913,24 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
             bot.reply_to(m, L[l]['nc'], reply_markup=main_menu(l))
             return
 
-    if is_aadhaar_special: stype = "AADHAAR SPL"
+    if is_num_rezone: stype = "NUM-REZONE"
+    elif is_aadhaar_special: stype = "AADHAAR SPL"
     elif is_pakistan: stype = "PAKISTAN"
     elif is_tg_number: stype = "TG-NUMBER"
     elif is_aadhaar: stype = "AADHAAR"
     elif is_number_special: stype = "SPECIAL"
     elif is_special: stype = "VEHICLE SPL"
     elif is_vehicle: stype = "VEHICLE"
-    else: stype = "NUMBER"
+    else: stype = "NORMAL"
 
-    flags = f"{int(is_vehicle)}{int(is_special)}{int(is_aadhaar)}{int(is_number_special)}{int(is_aadhaar_special)}{int(is_tg_number)}{int(is_pakistan)}"
+    flags = (f"{int(is_vehicle)}{int(is_special)}{int(is_aadhaar)}"
+             f"{int(is_number_special)}{int(is_aadhaar_special)}"
+             f"{int(is_tg_number)}{int(is_pakistan)}{int(is_num_rezone)}")
 
     data_holder = {"d": None}
     def fetch_data():
-        if is_aadhaar_special: data_holder["d"] = fetch_aadhaar_special(q)
+        if is_num_rezone: data_holder["d"] = fetch_num_rezone(q)
+        elif is_aadhaar_special: data_holder["d"] = fetch_aadhaar_special(q)
         elif is_pakistan: data_holder["d"] = fetch_pakistan(q)
         elif is_tg_number: data_holder["d"] = fetch_tg_number(q)
         elif is_aadhaar: data_holder["d"] = fetch_aadhaar(q)
@@ -834,7 +959,8 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         return
 
     send_log(m.from_user.id, m.from_user.username, q, d, stype)
-    res = format_result(d, q, is_vehicle, is_special, is_aadhaar, is_number_special, is_aadhaar_special, is_tg_number, is_pakistan)
+    res = format_result(d, q, is_vehicle, is_special, is_aadhaar, is_number_special,
+                        is_aadhaar_special, is_tg_number, is_pakistan, is_num_rezone)
 
     try:
         bot.edit_message_text(
@@ -847,8 +973,7 @@ def process_query(m, q, is_vehicle=False, is_special=False, is_aadhaar=False, is
         )
         markup = result_btn(q, l, flags, msg.message_id if is_group else None, is_group)
         bot.edit_message_reply_markup(m.chat.id, msg.message_id, reply_markup=markup)
-    except Exception as e:
-        # ✅ FIX: safe error message (no markdown parse on exception string)
+    except Exception:
         try:
             bot.send_message(m.chat.id, "❌ Error occurred. Try again.")
         except: pass
@@ -872,7 +997,6 @@ def myid_cmd(m):
     un = m.from_user.username or "N/A"
     fn = m.from_user.first_name or "N/A"
     ensure_user(uid, fn, un)
-    # ✅ FIX: escape markdown from user name
     fn_safe = _md_escape(fn)
     un_safe = _md_escape(un)
     try:
@@ -934,10 +1058,31 @@ def bomber_input_handler(m):
         mk.add(InlineKeyboardButton("🚀 LAUNCH", callback_data="bomber_confirm"), InlineKeyboardButton("❌ Cancel", callback_data="bomber_cancel"))
         bot.reply_to(m, f"`💥 CONFIRM`\n`📱 {state['number']}`\n`💬 {text}`", reply_markup=mk, parse_mode='Markdown')
 
-@bot.message_handler(commands=['num', 'search'], chat_types=['private'])
+# ---- /num → Rezone API ----
+@bot.message_handler(commands=['num'], chat_types=['private'])
 def nc(m):
     p = m.text.split()
-    if len(p) < 2: bot.reply_to(m, L[gl(m.from_user.id)]['enter_number']); return
+    if len(p) < 2:
+        bot.reply_to(m, "📱 Send number for /num:\n`/num 9876543210`", parse_mode='Markdown')
+        return
+    process_query(m, p[1].strip(), is_num_rezone=True)
+
+# ---- /normal → Veriphone ----
+@bot.message_handler(commands=['normal', 'verify'], chat_types=['private'])
+def normal_cmd(m):
+    p = m.text.split()
+    if len(p) < 2:
+        bot.reply_to(m, "📱 Send number for /normal:\n`/normal 9876543210`", parse_mode='Markdown')
+        return
+    process_query(m, p[1].strip())
+
+# ---- /search → Veriphone (alias) ----
+@bot.message_handler(commands=['search'], chat_types=['private'])
+def search_cmd(m):
+    p = m.text.split()
+    if len(p) < 2:
+        bot.reply_to(m, L[gl(m.from_user.id)]['enter_number'])
+        return
     process_query(m, p[1].strip())
 
 @bot.message_handler(commands=['special'], chat_types=['private'])
@@ -999,13 +1144,19 @@ def ahn(m): process_query(m, m.text.strip(), is_aadhaar=True)
 @bot.message_handler(commands=['num'], chat_types=['group', 'supergroup'])
 def gn(m):
     p = m.text.split()
-    if len(p) < 2: bot.reply_to(m, "❌ /num 9661756498"); return
+    if len(p) < 2: bot.reply_to(m, "❌ /num 9876543210"); return
+    process_query(m, p[1].strip(), is_num_rezone=True)
+
+@bot.message_handler(commands=['normal'], chat_types=['group', 'supergroup'])
+def gnormal(m):
+    p = m.text.split()
+    if len(p) < 2: bot.reply_to(m, "❌ /normal 9876543210"); return
     process_query(m, p[1].strip())
 
 @bot.message_handler(commands=['special'], chat_types=['group', 'supergroup'])
 def gspecial(m):
     p = m.text.split()
-    if len(p) < 2: bot.reply_to(m, "❌ /special 9661756498"); return
+    if len(p) < 2: bot.reply_to(m, "❌ /special 9876543210"); return
     process_query(m, p[1].strip(), is_number_special=True)
 
 @bot.message_handler(commands=['vehicle'], chat_types=['group', 'supergroup'])
@@ -1047,7 +1198,7 @@ def gpak(m):
 @bot.message_handler(commands=['start', 'help'], chat_types=['group', 'supergroup'])
 def gs(m):
     l = gl(m.from_user.id)
-    bot.reply_to(m, "👋 /num /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom\n💎 1D ₹10, 1W ₹60, 1M ₹101\n\n⚡ Or just send a 10-digit number / vehicle / aadhaar directly!", reply_markup=group_menu(l))
+    bot.reply_to(m, "👋 /num /normal /special /vehicle /vehiclespecial /aadhaar /aadharspecial /tgnumber /pakistan /boom\n💎 1D ₹10, 1W ₹60, 1M ₹101\n\n⚡ Or just send a 10-digit number / vehicle / aadhaar directly!", reply_markup=group_menu(l))
 
 # ==================== GENERAL ====================
 @bot.message_handler(commands=['menu'])
@@ -1215,14 +1366,13 @@ def broadcast(m):
             sent = 0
             for uid in users:
                 try:
-                    # ✅ FIX: no parse_mode to avoid markdown crash
                     bot.send_message(uid[0], "📢 Announcement\n\n" + msg)
                     sent += 1
                     time.sleep(0.05)
                 except: pass
             bot.send_message(ADMIN_ID, f"✅ Broadcast sent to {sent} users!")
-        except Exception as e:
-            try: bot.send_message(ADMIN_ID, f"❌ Broadcast error")
+        except Exception:
+            try: bot.send_message(ADMIN_ID, "❌ Broadcast error")
             except: pass
     threading.Thread(target=send_bc, daemon=True).start()
     bot.reply_to(m, "📢 Broadcasting in background...")
@@ -1231,16 +1381,18 @@ def broadcast(m):
 def test_api(m):
     if m.from_user.id != ADMIN_ID: return
     parts = m.text.split()
-    if len(parts) < 3: bot.reply_to(m, "❌ /testapi [type] [value]\nTypes: num, special, tg, aadharspl, pk, aadhaar"); return
+    if len(parts) < 3:
+        bot.reply_to(m, "❌ /testapi [type] [value]\nTypes: normal, num, special, tg, aadharspl, pk, aadhaar"); return
     typ = parts[1].lower(); val = parts[2].strip()
-    if typ == "num": data = fetch_number(val)
+    if typ == "normal": data = fetch_number(val)
+    elif typ == "num": data = fetch_num_rezone(val)
     elif typ == "special": data = fetch_special(val)
     elif typ == "tg": data = fetch_tg_number(val)
     elif typ == "aadharspl": data = fetch_aadhaar_special(val)
     elif typ == "pk": data = fetch_pakistan(val)
     elif typ == "aadhaar": data = fetch_aadhaar(val)
     else: bot.reply_to(m, "❌ Invalid type"); return
-    if data: 
+    if data:
         try: bot.reply_to(m, f"✅ ```json\n{json.dumps(data, indent=2)[:3500]}\n```", parse_mode='Markdown')
         except: bot.reply_to(m, "✅ Data received but too complex")
     else: bot.reply_to(m, "❌ No data")
@@ -1248,18 +1400,20 @@ def test_api(m):
 # ==================== MAIN ====================
 if __name__ == "__main__":
     print("=" * 55)
-    print("🔥 HACKER OSINT BOT v3.0 — FINAL PATCHED")
+    print("🔥 HACKER OSINT BOT v3.0 — FINAL (3 NEW APIs)")
     print("=" * 55)
     print(f"👨‍💻 Owner: {OWNER}")
     print(f"🌐 Website: {WEBSITE}")
     print("-" * 55)
-    print("✅ 4 Bugs Fixed (markdown escapes)")
+    print("✅ /num      → Rezone API")
+    print("✅ /normal   → Veriphone API")
+    print("✅ /special  → DarkApiX API")
+    print("✅ 10-digit auto → Veriphone")
     print("✅ 2x FASTER (ultra fast loading)")
     print("✅ Connection pooling (persistent TCP)")
     print("✅ Premium status cached (60s)")
     print("✅ Language cached (in-memory)")
-    print("✅ Parallel API fetch")
-    print("-" * 55)
+    print("✅ Parallel API fetch (threads)")
     print("✅ 8 Search Types")
     print("✅ SMS Bomber (11 APIs)")
     print("✅ 6 Languages")
